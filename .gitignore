@@ -1,0 +1,37 @@
+# Contnets of this file are ignored by Git
+Content/Assets/
+
+# --- Unreal Engine ---
+Binaries/
+Build/
+DerivedDataCache/
+Intermediate/
+Saved/
+
+# --- Unreal Auto-Generated Files ---
+.vs/
+*.sln
+*.suo
+*.opensdf
+*.sdf
+*.VC.db
+*.VC.opendb
+
+# --- IDE: Visual Studio Code ---
+.vscode/
+
+# --- IDE: JetBrains Rider ---
+.idea/
+*.iml
+*.iws
+.idea_modules/
+
+# --- OS / Temp ---
+.DS_Store
+Thumbs.db
+desktop.ini
+*.log
+*.tmp
+*.bak
+*.swp
+*.lock
