@@ -1,5 +1,3 @@
-
-
 #pragma once
 
 #include "CoreMinimal.h"
@@ -9,8 +7,8 @@
 UENUM(BlueprintType)
 enum class EWarriorAbilityActivationPolicy : uint8
 {
-	OnTriggered,
-	OnGiven,
+	OnTriggered, // 일반적인 방식: 입력 등으로 수동 발동
+	OnGiven,     // 능력이 부여되자마자 자동 발동됨
 };
 
 /**

@@ -6,6 +6,7 @@
 
 #include "WarriorBaseCharacter.generated.h"
 
+class UDataAsset_StartUpDataBase;
 class UWarriorAbilitySystemComponent;
 class UWarriorAttributeSet;
 
@@ -26,14 +27,17 @@ protected:
 	//~ Begin APawn Interface.
 	virtual void PossessedBy(AController* NewController) override;
 	//~ End APawn Interface
-	
+
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "AbilitySystem")
 	TObjectPtr<UWarriorAbilitySystemComponent> WarriorAbilitySystemComponent;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "AbilitySystem")
 	TObjectPtr<UWarriorAttributeSet> WarriorAttributeSet;
 
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "CharacterData", meta = (AllowPrivateAccess = "true"))
+	TSoftObjectPtr<UDataAsset_StartUpDataBase> CharacterStartUpData;
+
 public:
 	FORCEINLINE UWarriorAbilitySystemComponent* GetWarriorAbilitySystemComponent() const { return WarriorAbilitySystemComponent; }
-	FORCEINLINE UWarriorAttributeSet* GetWarriorAttributeSet() const { return WarriorAttributeSet; }
+	FORCEINLINE UWarriorAttributeSet*           GetWarriorAttributeSet() const { return WarriorAttributeSet; }
 };

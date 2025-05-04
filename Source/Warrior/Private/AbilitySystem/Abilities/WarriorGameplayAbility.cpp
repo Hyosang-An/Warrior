@@ -1,6 +1,3 @@
-
-
-
 #include "AbilitySystem/Abilities/WarriorGameplayAbility.h"
 
 #include "AbilitySystemComponent.h"
@@ -28,6 +25,5 @@ void UWarriorGameplayAbility::EndAbility(const FGameplayAbilitySpecHandle Handle
 		{
 			ActorInfo->AbilitySystemComponent->ClearAbility(Handle);
 		}
-
 	}
 }
