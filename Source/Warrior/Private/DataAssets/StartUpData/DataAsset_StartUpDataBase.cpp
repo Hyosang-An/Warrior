@@ -27,6 +27,5 @@ void UDataAsset_StartUpDataBase::GrantAbilities(const TArray<TSubclassOf<UWarrio
 		AbilitySpec.Level = ApplyLevel;
 		
 		InASCToGive->GiveAbility(AbilitySpec);
-
 	}
 }
