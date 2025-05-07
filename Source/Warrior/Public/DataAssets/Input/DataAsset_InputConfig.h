@@ -14,7 +14,8 @@ struct FWarriorInputActionConfig
 	GENERATED_BODY()
 
 public:
-	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, meta = (Categories = "InputTag"))
+	// meta = (Categories = "InputTag") : “InputTag.” 로 시작하는 태그들만 보이도록 필터링
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, meta = (Categories = "InputTag")) 
 	FGameplayTag InputTag;
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)

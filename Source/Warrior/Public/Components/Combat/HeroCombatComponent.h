@@ -8,7 +8,7 @@
 
 class AWarriorHeroWeapon;
 /**
- * 
+ *
  */
 UCLASS()
 class WARRIOR_API UHeroCombatComponent : public UPawnCombatComponent
