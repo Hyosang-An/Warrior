@@ -40,6 +40,11 @@ AWarriorHeroCharacter::AWarriorHeroCharacter()
 	HeroCombatComponent = CreateDefaultSubobject<UHeroCombatComponent>(TEXT("HeroCombatComponent"));
 }
 
+UPawnCombatComponent* AWarriorHeroCharacter::GetPawnCombatComponent() const
+{
+	return HeroCombatComponent;
+}
+
 void AWarriorHeroCharacter::PossessedBy(AController* NewController)
 {
 	Super::PossessedBy(NewController);
@@ -64,7 +69,7 @@ void AWarriorHeroCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInp
 
 	checkf(InputConfigDataAsset, TEXT("Forgot to assign a valid data asset as input config"));
 
-	ULocalPlayer*						LocalPlayer = GetController<APlayerController>()->GetLocalPlayer();
+	ULocalPlayer*                       LocalPlayer = GetController<APlayerController>()->GetLocalPlayer();
 	UEnhancedInputLocalPlayerSubsystem* Subsystem = LocalPlayer->GetSubsystem<UEnhancedInputLocalPlayerSubsystem>();
 
 	check(Subsystem);
@@ -87,7 +92,7 @@ void AWarriorHeroCharacter::BeginPlay()
 void AWarriorHeroCharacter::Input_Move(const FInputActionValue& InputActionValue)
 {
 	const FVector2D MovementVector = InputActionValue.Get<FVector2D>();
-	const FRotator	MovementRotation = FRotator(0.f, Controller->GetControlRotation().Yaw, 0.f);
+	const FRotator  MovementRotation = FRotator(0.f, Controller->GetControlRotation().Yaw, 0.f);
 
 	if (MovementVector.Y != 0.f)
 	{
