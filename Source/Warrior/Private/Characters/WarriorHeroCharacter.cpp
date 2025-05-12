@@ -47,11 +47,6 @@ UPawnCombatComponent* AWarriorHeroCharacter::GetPawnCombatComponent() const
 	return HeroCombatComponent;
 }
 
-void AWarriorHeroCharacter::OnRealTimeTimerTest()
-{
-	Debug::Print(TEXT("RealTimeTimer Test"), FColor::Red);
-}
-
 void AWarriorHeroCharacter::PossessedBy(AController* NewController)
 {
 	Super::PossessedBy(NewController);
@@ -63,18 +58,6 @@ void AWarriorHeroCharacter::PossessedBy(AController* NewController)
 			LoadedData->GiveToAbilitySystemComponent(WarriorAbilitySystemComponent);
 		}
 	}
-
-	// RealTImeTimer Test
-	FRealTimeTimerDynamicDelegate TimerDelegate;
-	TimerDelegate.BindDynamic(this, &AWarriorHeroCharacter::OnRealTimeTimerTest);
-	URealTimeTimerLibrary::GetTimerManager()->StartRealTimeTimer(3, TimerDelegate);
-
-	URealTimeTimerLibrary::GetTimerManager()->StartRealTimeTimer(4,
-		FRealTimeTimerDelegate::CreateLambda([]()
-		{
-			Debug::Print(TEXT("RealTimeTimer Test Lambda"), FColor::Green);
-		}));
-
 }
 
 void AWarriorHeroCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
