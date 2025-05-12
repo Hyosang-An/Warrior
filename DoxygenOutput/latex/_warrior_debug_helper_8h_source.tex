@@ -1,0 +1,33 @@
+\doxysection{Warrior\+Debug\+Helper.\+h}
+\hypertarget{_warrior_debug_helper_8h_source}{}\label{_warrior_debug_helper_8h_source}\index{Source/Warrior/Public/WarriorDebugHelper.h@{Source/Warrior/Public/WarriorDebugHelper.h}}
+\mbox{\hyperlink{_warrior_debug_helper_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_debug}{Debug}}}
+\DoxyCodeLine{00004\ \{}
+\DoxyCodeLine{00005\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ Print(\textcolor{keyword}{const}\ FString\&\ Msg,\ \textcolor{keyword}{const}\ FColor\&\ Color\ =\ FColor::MakeRandomColor(),\ int32\ InKey\ =\ -\/1)}
+\DoxyCodeLine{00006\ \ \ \ \ \{}
+\DoxyCodeLine{00007\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (GEngine)}
+\DoxyCodeLine{00008\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ \ \ \ \ GEngine-\/>AddOnScreenDebugMessage(InKey,\ 7.f,\ Color,\ Msg);}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \ \ \ \ UE\_LOG(LogTemp,\ Warning,\ TEXT(\textcolor{stringliteral}{"{}\%s"{}}),\ *Msg);}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00013\ \ \ \ \ \}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ Print(\textcolor{keyword}{const}\ FString\&\ FloatTitle,\ \textcolor{keywordtype}{float}\ FloatValueToPrint,\ \textcolor{keyword}{const}\ FColor\&\ Color\ =\ FColor::MakeRandomColor(),\ int32\ InKey\ =\ -\/1)}
+\DoxyCodeLine{00016\ \ \ \ \ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (GEngine)}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ FString\ FinalMsg\ =\ FloatTitle\ +\ TEXT(\textcolor{stringliteral}{"{}:\ "{}})\ +\ FString::SanitizeFloat(FloatValueToPrint);}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ GEngine-\/>AddOnScreenDebugMessage(InKey,\ 7.f,\ Color,\ FinalMsg);}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ UE\_LOG(LogTemp,\ Warning,\ TEXT(\textcolor{stringliteral}{"{}\%s"{}}),\ *FinalMsg);}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00025\ \ \ \ \ \}}
+\DoxyCodeLine{00026\ \ \ \ \ }
+\DoxyCodeLine{00027\ \}}
+
+\end{DoxyCode}

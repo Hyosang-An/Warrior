@@ -1,0 +1,40 @@
+\doxysection{Warrior\+Character\+Anim\+Instance.\+h}
+\hypertarget{_warrior_character_anim_instance_8h_source}{}\label{_warrior_character_anim_instance_8h_source}\index{Source/Warrior/Public/AnimInstances/WarriorCharacterAnimInstance.h@{Source/Warrior/Public/AnimInstances/WarriorCharacterAnimInstance.h}}
+\mbox{\hyperlink{_warrior_character_anim_instance_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}CoreMinimal.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_warrior_base_anim_instance_8h}{AnimInstances/WarriorBaseAnimInstance.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}WarriorCharacterAnimInstance.generated.h"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }UCharacterMovementComponent;}
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_a_warrior_base_character}{AWarriorBaseCharacter}};}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00015\ UCLASS()}
+\DoxyCodeLine{00016\ class\ WARRIOR\_API\ \mbox{\hyperlink{class_u_warrior_character_anim_instance}{UWarriorCharacterAnimInstance}}\ :\ public\ \mbox{\hyperlink{class_u_warrior_base_anim_instance}{UWarriorBaseAnimInstance}}}
+\DoxyCodeLine{00017\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ GENERATED\_BODY()}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_warrior_character_anim_instance_a67d5b046e82f9a64cc44b48bbf2d4484}{NativeInitializeAnimation}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_warrior_character_anim_instance_a332dc920713e16af04abfd88c8d48fd6}{NativeThreadSafeUpdateAnimation}}(\textcolor{keywordtype}{float}\ DeltaSeconds)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00025\ \ \ \ \ UPROPERTY()}
+\DoxyCodeLine{00026\ \ \ \ \ TObjectPtr<\mbox{\hyperlink{class_a_warrior_base_character}{AWarriorBaseCharacter}}>\ \mbox{\hyperlink{class_u_warrior_character_anim_instance_ac3eebfc33ce5575a5469b88970bff5f7}{OwningCharacter}};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ UPROPERTY()}
+\DoxyCodeLine{00029\ \ \ \ \ TObjectPtr<UCharacterMovementComponent>\ \mbox{\hyperlink{class_u_warrior_character_anim_instance_ad00ce0032cc2f037a3712f1363f22839}{OwningMovementComponent}};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ UPROPERTY(VisibleDefaultsOnly,\ BlueprintReadOnly,\ Category\ =\ \textcolor{stringliteral}{"{}AnimData|LocomotionData"{}})}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_u_warrior_character_anim_instance_aea70a362677e2078864e34af517186dc}{GroundSpeed}};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ UPROPERTY(VisibleDefaultsOnly,\ BlueprintReadOnly,\ Category\ =\ \textcolor{stringliteral}{"{}AnimData|LocomotionData"{}})}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_u_warrior_character_anim_instance_a942f3666827764c66aaa696cb6817459}{bHasAcceleration}};}
+\DoxyCodeLine{00036\ \ \ \ \ }
+\DoxyCodeLine{00037\ \};}
+
+\end{DoxyCode}

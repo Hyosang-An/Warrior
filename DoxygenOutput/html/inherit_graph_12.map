@@ -1,0 +1,11 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,33,150,65"/>
+<area shape="rect" id="Node000001" href="$class_u_warrior_base_anim_instance.html" title=" " alt="" coords="198,33,442,65"/>
+<area shape="poly" id="edge15_Node000000_Node000001" title=" " alt="" coords="165,46,197,46,197,52,165,52"/>
+<area shape="rect" id="Node000002" href="$class_u_warrior_character_anim_instance.html" title=" " alt="" coords="490,5,772,37"/>
+<area shape="poly" id="edge16_Node000001_Node000002" title=" " alt="" coords="457,34,489,31,490,37,458,39"/>
+<area shape="rect" id="Node000004" href="$class_u_warrior_hero_linked_anim_layer.html" title=" " alt="" coords="495,61,767,93"/>
+<area shape="poly" id="edge18_Node000001_Node000004" title=" " alt="" coords="458,59,495,62,495,68,457,64"/>
+<area shape="rect" id="Node000003" href="$class_u_warrior_hero_anim_instance.html" title=" " alt="" coords="820,5,1063,37"/>
+<area shape="poly" id="edge17_Node000002_Node000003" title=" " alt="" coords="788,18,820,18,820,24,788,24"/>
+</map>

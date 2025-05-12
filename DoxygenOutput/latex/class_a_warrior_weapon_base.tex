@@ -1,0 +1,157 @@
+\doxysection{AWarrior\+Weapon\+Base Class Reference}
+\hypertarget{class_a_warrior_weapon_base}{}\label{class_a_warrior_weapon_base}\index{AWarriorWeaponBase@{AWarriorWeaponBase}}
+
+
+{\ttfamily \#include $<$Warrior\+Weapon\+Base.\+h$>$}
+
+
+
+Inheritance diagram for AWarrior\+Weapon\+Base\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=230pt]{class_a_warrior_weapon_base__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for AWarrior\+Weapon\+Base\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=230pt]{class_a_warrior_weapon_base__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_a_warrior_weapon_base_a3a36e9d62efefec46dca1e348c24993b}{AWarrior\+Weapon\+Base}} ()
+\item 
+FORCEINLINE UBox\+Component \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_a_warrior_weapon_base_a4e6c6a0c9a04be800addb2f2ec051418}{Get\+Weapon\+Collision\+Box}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+FOn\+Target\+Interacted\+Delegate \mbox{\hyperlink{class_a_warrior_weapon_base_a0b110efae2b58e0d8b55556c48eeab8e}{On\+Weapon\+Hit\+Target}}
+\item 
+FOn\+Target\+Interacted\+Delegate \mbox{\hyperlink{class_a_warrior_weapon_base_af6b9c5974eadf58b535e6aca08b98869}{On\+Weapon\+Pulled\+From\+Target}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_a_warrior_weapon_base_a54facf522da0142d8c6ff61e07f76f67}{On\+Collision\+Box\+Begin\+Overlap}} (UPrimitive\+Component \texorpdfstring{$\ast$}{*}Overlapped\+Component, AActor \texorpdfstring{$\ast$}{*}Other\+Actor, UPrimitive\+Component \texorpdfstring{$\ast$}{*}Other\+Comp, int32 Other\+Body\+Index, bool b\+From\+Sweep, const FHit\+Result \&Sweep\+Result)
+\item 
+virtual void \mbox{\hyperlink{class_a_warrior_weapon_base_a7e2443ff22c00e864047d82b215d5acd}{On\+Collision\+Box\+End\+Overlap}} (UPrimitive\+Component \texorpdfstring{$\ast$}{*}Overlapped\+Component, AActor \texorpdfstring{$\ast$}{*}Other\+Actor, UPrimitive\+Component \texorpdfstring{$\ast$}{*}Other\+Comp, int32 Other\+Body\+Index)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+TObject\+Ptr$<$ UStatic\+Mesh\+Component $>$ \mbox{\hyperlink{class_a_warrior_weapon_base_a2068fd295887e6e2add5faa63adc8d2a}{Weapon\+Mesh}}
+\item 
+TObject\+Ptr$<$ UBox\+Component $>$ \mbox{\hyperlink{class_a_warrior_weapon_base_af4191b27697d1218f13339872260f592}{Weapon\+Collision\+Box}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_a_warrior_weapon_base_a3a36e9d62efefec46dca1e348c24993b}\index{AWarriorWeaponBase@{AWarriorWeaponBase}!AWarriorWeaponBase@{AWarriorWeaponBase}}
+\index{AWarriorWeaponBase@{AWarriorWeaponBase}!AWarriorWeaponBase@{AWarriorWeaponBase}}
+\doxysubsubsection{\texorpdfstring{AWarriorWeaponBase()}{AWarriorWeaponBase()}}
+{\footnotesize\ttfamily \label{class_a_warrior_weapon_base_a3a36e9d62efefec46dca1e348c24993b} 
+AWarrior\+Weapon\+Base\+::\+AWarrior\+Weapon\+Base (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_a_warrior_weapon_base_a3a36e9d62efefec46dca1e348c24993b_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_a_warrior_weapon_base_a4e6c6a0c9a04be800addb2f2ec051418}\index{AWarriorWeaponBase@{AWarriorWeaponBase}!GetWeaponCollisionBox@{GetWeaponCollisionBox}}
+\index{GetWeaponCollisionBox@{GetWeaponCollisionBox}!AWarriorWeaponBase@{AWarriorWeaponBase}}
+\doxysubsubsection{\texorpdfstring{GetWeaponCollisionBox()}{GetWeaponCollisionBox()}}
+{\footnotesize\ttfamily \label{class_a_warrior_weapon_base_a4e6c6a0c9a04be800addb2f2ec051418} 
+FORCEINLINE UBox\+Component \texorpdfstring{$\ast$}{*} AWarrior\+Weapon\+Base\+::\+Get\+Weapon\+Collision\+Box (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=251pt]{class_a_warrior_weapon_base_a4e6c6a0c9a04be800addb2f2ec051418_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_a_warrior_weapon_base_a4e6c6a0c9a04be800addb2f2ec051418_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_a_warrior_weapon_base_a54facf522da0142d8c6ff61e07f76f67}\index{AWarriorWeaponBase@{AWarriorWeaponBase}!OnCollisionBoxBeginOverlap@{OnCollisionBoxBeginOverlap}}
+\index{OnCollisionBoxBeginOverlap@{OnCollisionBoxBeginOverlap}!AWarriorWeaponBase@{AWarriorWeaponBase}}
+\doxysubsubsection{\texorpdfstring{OnCollisionBoxBeginOverlap()}{OnCollisionBoxBeginOverlap()}}
+{\footnotesize\ttfamily \label{class_a_warrior_weapon_base_a54facf522da0142d8c6ff61e07f76f67} 
+void AWarrior\+Weapon\+Base\+::\+On\+Collision\+Box\+Begin\+Overlap (\begin{DoxyParamCaption}\item[{UPrimitive\+Component \texorpdfstring{$\ast$}{*}}]{Overlapped\+Component}{, }\item[{AActor \texorpdfstring{$\ast$}{*}}]{Other\+Actor}{, }\item[{UPrimitive\+Component \texorpdfstring{$\ast$}{*}}]{Other\+Comp}{, }\item[{int32}]{Other\+Body\+Index}{, }\item[{bool}]{b\+From\+Sweep}{, }\item[{const FHit\+Result \&}]{Sweep\+Result}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_a_warrior_weapon_base_a54facf522da0142d8c6ff61e07f76f67_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_a_warrior_weapon_base_a7e2443ff22c00e864047d82b215d5acd}\index{AWarriorWeaponBase@{AWarriorWeaponBase}!OnCollisionBoxEndOverlap@{OnCollisionBoxEndOverlap}}
+\index{OnCollisionBoxEndOverlap@{OnCollisionBoxEndOverlap}!AWarriorWeaponBase@{AWarriorWeaponBase}}
+\doxysubsubsection{\texorpdfstring{OnCollisionBoxEndOverlap()}{OnCollisionBoxEndOverlap()}}
+{\footnotesize\ttfamily \label{class_a_warrior_weapon_base_a7e2443ff22c00e864047d82b215d5acd} 
+void AWarrior\+Weapon\+Base\+::\+On\+Collision\+Box\+End\+Overlap (\begin{DoxyParamCaption}\item[{UPrimitive\+Component \texorpdfstring{$\ast$}{*}}]{Overlapped\+Component}{, }\item[{AActor \texorpdfstring{$\ast$}{*}}]{Other\+Actor}{, }\item[{UPrimitive\+Component \texorpdfstring{$\ast$}{*}}]{Other\+Comp}{, }\item[{int32}]{Other\+Body\+Index}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_a_warrior_weapon_base_a7e2443ff22c00e864047d82b215d5acd_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_a_warrior_weapon_base_a0b110efae2b58e0d8b55556c48eeab8e}\index{AWarriorWeaponBase@{AWarriorWeaponBase}!OnWeaponHitTarget@{OnWeaponHitTarget}}
+\index{OnWeaponHitTarget@{OnWeaponHitTarget}!AWarriorWeaponBase@{AWarriorWeaponBase}}
+\doxysubsubsection{\texorpdfstring{OnWeaponHitTarget}{OnWeaponHitTarget}}
+{\footnotesize\ttfamily \label{class_a_warrior_weapon_base_a0b110efae2b58e0d8b55556c48eeab8e} 
+FOn\+Target\+Interacted\+Delegate AWarrior\+Weapon\+Base\+::\+On\+Weapon\+Hit\+Target}
+
+\Hypertarget{class_a_warrior_weapon_base_af6b9c5974eadf58b535e6aca08b98869}\index{AWarriorWeaponBase@{AWarriorWeaponBase}!OnWeaponPulledFromTarget@{OnWeaponPulledFromTarget}}
+\index{OnWeaponPulledFromTarget@{OnWeaponPulledFromTarget}!AWarriorWeaponBase@{AWarriorWeaponBase}}
+\doxysubsubsection{\texorpdfstring{OnWeaponPulledFromTarget}{OnWeaponPulledFromTarget}}
+{\footnotesize\ttfamily \label{class_a_warrior_weapon_base_af6b9c5974eadf58b535e6aca08b98869} 
+FOn\+Target\+Interacted\+Delegate AWarrior\+Weapon\+Base\+::\+On\+Weapon\+Pulled\+From\+Target}
+
+\Hypertarget{class_a_warrior_weapon_base_af4191b27697d1218f13339872260f592}\index{AWarriorWeaponBase@{AWarriorWeaponBase}!WeaponCollisionBox@{WeaponCollisionBox}}
+\index{WeaponCollisionBox@{WeaponCollisionBox}!AWarriorWeaponBase@{AWarriorWeaponBase}}
+\doxysubsubsection{\texorpdfstring{WeaponCollisionBox}{WeaponCollisionBox}}
+{\footnotesize\ttfamily \label{class_a_warrior_weapon_base_af4191b27697d1218f13339872260f592} 
+TObject\+Ptr$<$UBox\+Component$>$ AWarrior\+Weapon\+Base\+::\+Weapon\+Collision\+Box\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_a_warrior_weapon_base_a2068fd295887e6e2add5faa63adc8d2a}\index{AWarriorWeaponBase@{AWarriorWeaponBase}!WeaponMesh@{WeaponMesh}}
+\index{WeaponMesh@{WeaponMesh}!AWarriorWeaponBase@{AWarriorWeaponBase}}
+\doxysubsubsection{\texorpdfstring{WeaponMesh}{WeaponMesh}}
+{\footnotesize\ttfamily \label{class_a_warrior_weapon_base_a2068fd295887e6e2add5faa63adc8d2a} 
+TObject\+Ptr$<$UStatic\+Mesh\+Component$>$ AWarrior\+Weapon\+Base\+::\+Weapon\+Mesh\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Source/\+Warrior/\+Public/\+Items/\+Weapons/\mbox{\hyperlink{_warrior_weapon_base_8h}{Warrior\+Weapon\+Base.\+h}}\item 
+Source/\+Warrior/\+Private/\+Items/\+Weapons/\mbox{\hyperlink{_warrior_weapon_base_8cpp}{Warrior\+Weapon\+Base.\+cpp}}\end{DoxyCompactItemize}

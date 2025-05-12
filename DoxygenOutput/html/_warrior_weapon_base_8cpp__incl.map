@@ -1,0 +1,15 @@
+<map id="Source/Warrior/Private/Items/Weapons/WarriorWeaponBase.cpp" name="Source/Warrior/Private/Items/Weapons/WarriorWeaponBase.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="403,5,686,79"/>
+<area shape="rect" id="Node000002" href="$_warrior_weapon_base_8h.html" title=" " alt="" coords="141,127,420,180"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="457,82,357,123,355,118,455,77"/>
+<area shape="rect" id="Node000006" href="$_warrior_debug_helper_8h.html" title=" " alt="" coords="444,138,644,169"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="547,80,547,122,542,122,542,80"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="668,138,938,169"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="631,77,754,129,752,133,629,82"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,228,145,259"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="221,183,125,224,123,219,219,178"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="168,228,392,259"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="283,180,283,212,278,212,278,180"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="417,228,706,259"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="364,178,500,220,498,225,362,183"/>
+</map>

@@ -1,0 +1,47 @@
+\doxysection{Warrior\+Struct\+Types.\+h}
+\hypertarget{_warrior_struct_types_8h_source}{}\label{_warrior_struct_types_8h_source}\index{Source/Warrior/Public/WarriorTypes/WarriorStructTypes.h@{Source/Warrior/Public/WarriorTypes/WarriorStructTypes.h}}
+\mbox{\hyperlink{_warrior_struct_types_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}GameplayTagContainer.h"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}ScalableFloat.h"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}WarriorStructTypes.generated.h"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_u_warrior_hero_gameplay_ability}{UWarriorHeroGameplayAbility}};}
+\DoxyCodeLine{00008\ \textcolor{keyword}{class\ }UInputMappingContext;}
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_u_warrior_hero_linked_anim_layer}{UWarriorHeroLinkedAnimLayer}};}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ USTRUCT(BlueprintType)}
+\DoxyCodeLine{00012\ struct\ \mbox{\hyperlink{struct_f_warrior_hero_ability_set}{FWarriorHeroAbilitySet}}}
+\DoxyCodeLine{00013\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ GENERATED\_BODY()}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ UPROPERTY(EditDefaultsOnly,\ BlueprintReadOnly,\ meta\ =\ (Categories\ =\ \textcolor{stringliteral}{"{}InputTag"{}}))}
+\DoxyCodeLine{00017\ \ \ \ \ FGameplayTag\ \mbox{\hyperlink{struct_f_warrior_hero_ability_set_a5a139ebfe230c750d7eb3d5976cc155e}{InputTag}};}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ UPROPERTY(EditDefaultsOnly,\ BlueprintReadOnly,\ meta\ =\ (Categories\ =\ \textcolor{stringliteral}{"{}InputTag"{}}))}
+\DoxyCodeLine{00020\ \ \ \ \ TSubclassOf<\mbox{\hyperlink{class_u_warrior_hero_gameplay_ability}{UWarriorHeroGameplayAbility}}>\ \mbox{\hyperlink{struct_f_warrior_hero_ability_set_ab06e2d0ff489430313af25065b7342b1}{AbilityToGrant}};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_f_warrior_hero_ability_set_a6d3346a7cda68aea1025b48cfe15b222}{IsValid}}()\ const;}
+\DoxyCodeLine{00023\ \};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ USTRUCT(BlueprintType)}
+\DoxyCodeLine{00026\ struct\ \mbox{\hyperlink{struct_f_warrior_hero_weapon_data}{FWarriorHeroWeaponData}}}
+\DoxyCodeLine{00027\ \{}
+\DoxyCodeLine{00028\ \ \ \ \ GENERATED\_BODY()}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ UPROPERTY(EditDefaultsOnly,\ BlueprintReadOnly)}
+\DoxyCodeLine{00031\ \ \ \ \ TSubclassOf<\mbox{\hyperlink{class_u_warrior_hero_linked_anim_layer}{UWarriorHeroLinkedAnimLayer}}>\ \mbox{\hyperlink{struct_f_warrior_hero_weapon_data_a2f048aca8331d346dd612977f1350391}{WeaponAnimLayerToLink}};}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ UPROPERTY(EditDefaultsOnly,\ BlueprintReadOnly)}
+\DoxyCodeLine{00034\ \ \ \ \ TObjectPtr<UInputMappingContext>\ \mbox{\hyperlink{struct_f_warrior_hero_weapon_data_a4661871eff41f3c84d5b84aeb2ff51c9}{WeaponInputMappingContext}};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ UPROPERTY(EditDefaultsOnly,\ BlueprintReadOnly,\ meta\ =\ (Categories\ =\ \textcolor{stringliteral}{"{}InputTag"{}}))}
+\DoxyCodeLine{00037\ \ \ \ \ TArray<\mbox{\hyperlink{struct_f_warrior_hero_ability_set}{FWarriorHeroAbilitySet}}>\ \mbox{\hyperlink{struct_f_warrior_hero_weapon_data_a1975da0bf2e77e0ebec41cca1cacde67}{DefaultWeaponAbilities}};}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ UPROPERTY(EditDefaultsOnly,\ BlueprintReadOnly)}
+\DoxyCodeLine{00040\ \ \ \ \ FScalableFloat\ \mbox{\hyperlink{struct_f_warrior_hero_weapon_data_af1f34f6cffc5d7ced410c00e33fc90c0}{WeaponBaseDamage}};}
+\DoxyCodeLine{00041\ \};}
+
+\end{DoxyCode}

@@ -1,0 +1,44 @@
+\doxysection{Warrior\+Weapon\+Base.\+h}
+\hypertarget{_warrior_weapon_base_8h_source}{}\label{_warrior_weapon_base_8h_source}\index{Source/Warrior/Public/Items/Weapons/WarriorWeaponBase.h@{Source/Warrior/Public/Items/Weapons/WarriorWeaponBase.h}}
+\mbox{\hyperlink{_warrior_weapon_base_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}CoreMinimal.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}GameFramework/Actor.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}WarriorWeaponBase.generated.h"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }UBoxComponent;}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \mbox{\hyperlink{_warrior_weapon_base_8h_acd1dd41d820976d33c6058ec691ecb3f}{DECLARE\_DELEGATE\_OneParam}}(FOnTargetInteractedDelegate,\ AActor*);}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ UCLASS()}
+\DoxyCodeLine{00012\ class\ WARRIOR\_API\ \mbox{\hyperlink{class_a_warrior_weapon_base_a3a36e9d62efefec46dca1e348c24993b}{AWarriorWeaponBase}}\ :\ public\ AActor}
+\DoxyCodeLine{00013\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ GENERATED\_BODY()}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{comment}{//\ Sets\ default\ values\ for\ this\ actor's\ properties}}
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{class_a_warrior_weapon_base_a3a36e9d62efefec46dca1e348c24993b}{AWarriorWeaponBase}}();}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ FOnTargetInteractedDelegate\ \mbox{\hyperlink{class_a_warrior_weapon_base_a0b110efae2b58e0d8b55556c48eeab8e}{OnWeaponHitTarget}};}
+\DoxyCodeLine{00021\ \ \ \ \ FOnTargetInteractedDelegate\ \mbox{\hyperlink{class_a_warrior_weapon_base_af6b9c5974eadf58b535e6aca08b98869}{OnWeaponPulledFromTarget}};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00024\ \ \ \ \ UPROPERTY(VisibleAnywhere,\ BlueprintReadOnly,\ Category\ =\ \textcolor{stringliteral}{"{}Weapons"{}})}
+\DoxyCodeLine{00025\ \ \ \ \ TObjectPtr<UStaticMeshComponent>\ \mbox{\hyperlink{class_a_warrior_weapon_base_a2068fd295887e6e2add5faa63adc8d2a}{WeaponMesh}};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ UPROPERTY(VisibleAnywhere,\ BlueprintReadOnly,\ Category\ =\ \textcolor{stringliteral}{"{}Weapons"{}})}
+\DoxyCodeLine{00028\ \ \ \ \ TObjectPtr<UBoxComponent>\ \mbox{\hyperlink{class_a_warrior_weapon_base_af4191b27697d1218f13339872260f592}{WeaponCollisionBox}};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ UFUNCTION()}
+\DoxyCodeLine{00031\ \ \ \ \ virtual\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_a_warrior_weapon_base_a54facf522da0142d8c6ff61e07f76f67}{OnCollisionBoxBeginOverlap}}(UPrimitiveComponent*\ OverlappedComponent,\ AActor*\ OtherActor,\ UPrimitiveComponent*\ OtherComp,\ int32\ OtherBodyIndex,\ \textcolor{keywordtype}{bool}\ bFromSweep,\ const\ FHitResult\&\ SweepResult);}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ UFUNCTION()}
+\DoxyCodeLine{00034\ \ \ \ \ virtual\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_a_warrior_weapon_base_a7e2443ff22c00e864047d82b215d5acd}{OnCollisionBoxEndOverlap}}(UPrimitiveComponent*\ OverlappedComponent,\ AActor*\ OtherActor,\ UPrimitiveComponent*\ OtherComp,\ int32\ OtherBodyIndex);}
+\DoxyCodeLine{00035\ \ \ \ \ }
+\DoxyCodeLine{00036\ public:}
+\DoxyCodeLine{00037\ \ \ \ \ FORCEINLINE\ UBoxComponent*\ \mbox{\hyperlink{class_a_warrior_weapon_base_a4e6c6a0c9a04be800addb2f2ec051418}{GetWeaponCollisionBox}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_a_warrior_weapon_base_af4191b27697d1218f13339872260f592}{WeaponCollisionBox}};\ \}}
+\DoxyCodeLine{00038\ \};}
+
+\end{DoxyCode}

@@ -1,0 +1,51 @@
+\doxysection{Warrior\+Input\+Component.\+h}
+\hypertarget{_warrior_input_component_8h_source}{}\label{_warrior_input_component_8h_source}\index{Source/Warrior/Public/Components/Input/WarriorInputComponent.h@{Source/Warrior/Public/Components/Input/WarriorInputComponent.h}}
+\mbox{\hyperlink{_warrior_input_component_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}CoreMinimal.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}EnhancedInputComponent.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_data_asset___input_config_8h}{DataAssets/Input/DataAsset\_InputConfig.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}WarriorInputComponent.generated.h"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00011\ UCLASS()}
+\DoxyCodeLine{00012\ class\ WARRIOR\_API\ \mbox{\hyperlink{class_u_warrior_input_component}{UWarriorInputComponent}}\ :\ public\ UEnhancedInputComponent}
+\DoxyCodeLine{00013\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ GENERATED\_BODY()}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ UserObject,\ \textcolor{keyword}{typename}\ CallbackFunc>}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_warrior_input_component_acc16bc8705e7c62436abeb657ca50856}{BindNativeInputAction}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_u_data_asset___input_config}{UDataAsset\_InputConfig}}*\ InInputConfig,\ \textcolor{keyword}{const}\ FGameplayTag\&\ InInputTag,\ ETriggerEvent\ TriggerEvent,\ UserObject*\ ContextObject,\ CallbackFunc\ Func);}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ UserObject,\ \textcolor{keyword}{typename}\ CallbackFunc>}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_warrior_input_component_a46e33bc57e035c71eb223024c4daa59a}{BindAbilityInputAction}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_u_data_asset___input_config}{UDataAsset\_InputConfig}}*\ InInputConfig,\ UserObject*\ ContextObject,\ CallbackFunc\ InputPressedFunc,\ CallbackFunc\ InputReleasedFunc);}
+\DoxyCodeLine{00022\ \};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ UserObject,\ \textcolor{keyword}{typename}\ CallbackFunc>}
+\DoxyCodeLine{00025\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_warrior_input_component_acc16bc8705e7c62436abeb657ca50856}{UWarriorInputComponent::BindNativeInputAction}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_u_data_asset___input_config}{UDataAsset\_InputConfig}}*\ InInputConfig,\ \textcolor{keyword}{const}\ FGameplayTag\&\ InInputTag,\ ETriggerEvent\ TriggerEvent,\ UserObject*\ ContextObject,\ CallbackFunc\ Func)}
+\DoxyCodeLine{00026\ \{}
+\DoxyCodeLine{00027\ \ \ \ \ checkf(InInputConfig,\ TEXT(\textcolor{stringliteral}{"{}Input\ config\ data\ asset\ is\ null,\ can\ not\ proceed\ with\ binding"{}}));}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordflow}{if}\ (UInputAction*\ FoundAction\ =\ InInputConfig-\/>\mbox{\hyperlink{class_u_data_asset___input_config_a354b1175e54c25ecb3cd53b5dc23168c}{FindNativeInputActionByTag}}(InInputTag))}
+\DoxyCodeLine{00030\ \ \ \ \ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ BindAction(FoundAction,\ TriggerEvent,\ ContextObject,\ Func);}
+\DoxyCodeLine{00032\ \ \ \ \ \}}
+\DoxyCodeLine{00033\ \}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ UserObject,\ \textcolor{keyword}{typename}\ CallbackFunc>}
+\DoxyCodeLine{00036\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_warrior_input_component_a46e33bc57e035c71eb223024c4daa59a}{UWarriorInputComponent::BindAbilityInputAction}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_u_data_asset___input_config}{UDataAsset\_InputConfig}}*\ InInputConfig,\ UserObject*\ ContextObject,\ CallbackFunc\ InputPressedFunc,\ CallbackFunc\ InputReleasedFunc)}
+\DoxyCodeLine{00037\ \{}
+\DoxyCodeLine{00038\ \ \ \ \ checkf(InInputConfig,\ TEXT(\textcolor{stringliteral}{"{}Input\ config\ data\ asset\ is\ null,\ can\ not\ proceed\ with\ binding"{}}));}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_f_warrior_input_action_config}{FWarriorInputActionConfig}}\&\ AbilityInputActionConfig\ :\ InInputConfig-\/>\mbox{\hyperlink{class_u_data_asset___input_config_a1d2ef14343b265a9f5b08c8ce1803955}{AbilityInputActions}})}
+\DoxyCodeLine{00041\ \ \ \ \ \{}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!AbilityInputActionConfig.\mbox{\hyperlink{struct_f_warrior_input_action_config_a867111347b7ac0fc24966c6519251b2e}{IsValid}}())}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ BindAction(AbilityInputActionConfig.\mbox{\hyperlink{struct_f_warrior_input_action_config_ae351bd58585baec734ccb3a051ebb628}{InputAction}},\ ETriggerEvent::Started,\ ContextObject,\ InputPressedFunc,\ AbilityInputActionConfig.\mbox{\hyperlink{struct_f_warrior_input_action_config_a645df129d81318650e4727527b9cd08d}{InputTag}});}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ BindAction(AbilityInputActionConfig.\mbox{\hyperlink{struct_f_warrior_input_action_config_ae351bd58585baec734ccb3a051ebb628}{InputAction}},\ ETriggerEvent::Completed,\ ContextObject,\ InputReleasedFunc,\ AbilityInputActionConfig.\mbox{\hyperlink{struct_f_warrior_input_action_config_a645df129d81318650e4727527b9cd08d}{InputTag}});}
+\DoxyCodeLine{00047\ \ \ \ \ \}}
+\DoxyCodeLine{00048\ \}}
+
+\end{DoxyCode}

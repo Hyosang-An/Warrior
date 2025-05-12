@@ -1,0 +1,56 @@
+\doxysection{Pawn\+Combat\+Component.\+h}
+\hypertarget{_pawn_combat_component_8h_source}{}\label{_pawn_combat_component_8h_source}\index{Source/Warrior/Public/Components/Combat/PawnCombatComponent.h@{Source/Warrior/Public/Components/Combat/PawnCombatComponent.h}}
+\mbox{\hyperlink{_pawn_combat_component_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}CoreMinimal.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}GameplayTagContainer.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_pawn_extension_component_base_8h}{Components/PawnExtensionComponentBase.h}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}PawnCombatComponent.generated.h"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_a_warrior_weapon_base}{AWarriorWeaponBase}};}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ UENUM(BlueprintType)}
+\DoxyCodeLine{00013\ enum\ class\ \mbox{\hyperlink{_pawn_combat_component_8h_ac394cb2ab330dd6ec17d5f1db2e4ba79}{EToggleDamageType}}\ :\ uint8}
+\DoxyCodeLine{00014\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{_pawn_combat_component_8h_ac394cb2ab330dd6ec17d5f1db2e4ba79a38a59af5302deb905ed9ebcd64596ebf}{CurrentEquippedWeapon}},}
+\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{_pawn_combat_component_8h_ac394cb2ab330dd6ec17d5f1db2e4ba79a03f7bbbc02c9006ea393ec4ef5843d7b}{LeftHand}},}
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{_pawn_combat_component_8h_ac394cb2ab330dd6ec17d5f1db2e4ba79aa51983e0f69f76a68e55efe2e7b700b5}{RightHand}},}
+\DoxyCodeLine{00018\ \};}
+\DoxyCodeLine{00022\ UCLASS()}
+\DoxyCodeLine{00023\ class\ WARRIOR\_API\ \mbox{\hyperlink{class_u_pawn_combat_component}{UPawnCombatComponent}}\ :\ public\ UPawnExtensionComponentBase}
+\DoxyCodeLine{00024\ \{}
+\DoxyCodeLine{00025\ \ \ \ \ GENERATED\_BODY()}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00028\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category\ =\ \textcolor{stringliteral}{"{}Warrior|Combat"{}})}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_pawn_combat_component_a8d8b98992b6071c8fc9429c33783231e}{RegisterSpawnedWeapon}}(FGameplayTag\ InWeaponTagToRegister,\mbox{\hyperlink{class_a_warrior_weapon_base}{AWarriorWeaponBase}}*\ InWeaponToRegister,\textcolor{keywordtype}{bool}\ bRegisterAsEquippedWeapon\ =\ \textcolor{keyword}{false});}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category\ =\ \textcolor{stringliteral}{"{}Warrior|Combat"{}})}
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{class_a_warrior_weapon_base}{AWarriorWeaponBase}}*\ \mbox{\hyperlink{class_u_pawn_combat_component_a3734739144b2a3f70a67dd3fac633ae7}{GetCharacterCarriedWeaponByTag}}(FGameplayTag\ InWeaponTagToGet)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ UPROPERTY(BlueprintReadWrite,\ Category\ =\ \textcolor{stringliteral}{"{}Warrior|Combat"{}})}
+\DoxyCodeLine{00035\ \ \ \ \ FGameplayTag\ \mbox{\hyperlink{class_u_pawn_combat_component_a7f8f481bcb250b06832ed09e4270bfbf}{CurrentEquippedWeaponTag}};}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category\ =\ \textcolor{stringliteral}{"{}Warrior|Combat"{}})}
+\DoxyCodeLine{00038\ \ \ \ \ \mbox{\hyperlink{class_a_warrior_weapon_base}{AWarriorWeaponBase}}*\ \mbox{\hyperlink{class_u_pawn_combat_component_ab669f96f25b4574384d8606e51621cef}{GetCharacterCurrentEquippedWeapon}}()\ const;}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category\ =\ \textcolor{stringliteral}{"{}Warrior|Combat"{}})}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_pawn_combat_component_a7728465b87abe639d707ac610e2a486b}{ToggleWeaponCollision}}(\textcolor{keywordtype}{bool}\ bShouldEnable,\ \mbox{\hyperlink{_pawn_combat_component_8h_ac394cb2ab330dd6ec17d5f1db2e4ba79}{EToggleDamageType}}\ ToggleDamageType\ =\ \mbox{\hyperlink{_pawn_combat_component_8h_ac394cb2ab330dd6ec17d5f1db2e4ba79}{EToggleDamageType}}::\mbox{\hyperlink{_pawn_combat_component_8h_ac394cb2ab330dd6ec17d5f1db2e4ba79a38a59af5302deb905ed9ebcd64596ebf}{CurrentEquippedWeapon}});}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ virtual\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_pawn_combat_component_a45df3e63d3481c5153a548ac9732f239}{OnHitTargetActor}}(AActor*\ HitActor);}
+\DoxyCodeLine{00044\ \ \ \ \ virtual\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_pawn_combat_component_a5671a19b2f06de23935b6f67830bc7a5}{OnWeaponPulledFromTargetActor}}(AActor*\ InteractedActor);}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ protected:}
+\DoxyCodeLine{00047\ \ \ \ \ UPROPERTY()}
+\DoxyCodeLine{00048\ \ \ \ \ TArray<AActor*>\ \mbox{\hyperlink{class_u_pawn_combat_component_aae4f22e217d5cbaa59ec53097d2f68ff}{OverlappedActors}};}
+\DoxyCodeLine{00049\ \ \ \ \ }
+\DoxyCodeLine{00050\ private:}
+\DoxyCodeLine{00051\ \ \ \ \ UPROPERTY()}
+\DoxyCodeLine{00052\ \ \ \ \ TMap<FGameplayTag,\ \mbox{\hyperlink{class_a_warrior_weapon_base}{AWarriorWeaponBase}}*>\ CharacterCarriedWeaponMap;}
+\DoxyCodeLine{00053\ \};}
+
+\end{DoxyCode}

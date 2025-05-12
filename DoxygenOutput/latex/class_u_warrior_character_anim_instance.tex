@@ -1,0 +1,100 @@
+\doxysection{UWarrior\+Character\+Anim\+Instance Class Reference}
+\hypertarget{class_u_warrior_character_anim_instance}{}\label{class_u_warrior_character_anim_instance}\index{UWarriorCharacterAnimInstance@{UWarriorCharacterAnimInstance}}
+
+
+{\ttfamily \#include $<$Warrior\+Character\+Anim\+Instance.\+h$>$}
+
+
+
+Inheritance diagram for UWarrior\+Character\+Anim\+Instance\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=292pt]{class_u_warrior_character_anim_instance__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for UWarrior\+Character\+Anim\+Instance\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=292pt]{class_u_warrior_character_anim_instance__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_u_warrior_character_anim_instance_a67d5b046e82f9a64cc44b48bbf2d4484}{Native\+Initialize\+Animation}} () override
+\item 
+virtual void \mbox{\hyperlink{class_u_warrior_character_anim_instance_a332dc920713e16af04abfd88c8d48fd6}{Native\+Thread\+Safe\+Update\+Animation}} (float Delta\+Seconds) override
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+TObject\+Ptr$<$ \mbox{\hyperlink{class_a_warrior_base_character}{AWarrior\+Base\+Character}} $>$ \mbox{\hyperlink{class_u_warrior_character_anim_instance_ac3eebfc33ce5575a5469b88970bff5f7}{Owning\+Character}}
+\item 
+TObject\+Ptr$<$ UCharacter\+Movement\+Component $>$ \mbox{\hyperlink{class_u_warrior_character_anim_instance_ad00ce0032cc2f037a3712f1363f22839}{Owning\+Movement\+Component}}
+\item 
+float \mbox{\hyperlink{class_u_warrior_character_anim_instance_aea70a362677e2078864e34af517186dc}{Ground\+Speed}}
+\item 
+bool \mbox{\hyperlink{class_u_warrior_character_anim_instance_a942f3666827764c66aaa696cb6817459}{b\+Has\+Acceleration}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_u_warrior_character_anim_instance_a67d5b046e82f9a64cc44b48bbf2d4484}\index{UWarriorCharacterAnimInstance@{UWarriorCharacterAnimInstance}!NativeInitializeAnimation@{NativeInitializeAnimation}}
+\index{NativeInitializeAnimation@{NativeInitializeAnimation}!UWarriorCharacterAnimInstance@{UWarriorCharacterAnimInstance}}
+\doxysubsubsection{\texorpdfstring{NativeInitializeAnimation()}{NativeInitializeAnimation()}}
+{\footnotesize\ttfamily \label{class_u_warrior_character_anim_instance_a67d5b046e82f9a64cc44b48bbf2d4484} 
+void UWarrior\+Character\+Anim\+Instance\+::\+Native\+Initialize\+Animation (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_u_warrior_hero_anim_instance_a997ae9bccd4b277550226ee32349f010}{UWarrior\+Hero\+Anim\+Instance}}.
+
+\Hypertarget{class_u_warrior_character_anim_instance_a332dc920713e16af04abfd88c8d48fd6}\index{UWarriorCharacterAnimInstance@{UWarriorCharacterAnimInstance}!NativeThreadSafeUpdateAnimation@{NativeThreadSafeUpdateAnimation}}
+\index{NativeThreadSafeUpdateAnimation@{NativeThreadSafeUpdateAnimation}!UWarriorCharacterAnimInstance@{UWarriorCharacterAnimInstance}}
+\doxysubsubsection{\texorpdfstring{NativeThreadSafeUpdateAnimation()}{NativeThreadSafeUpdateAnimation()}}
+{\footnotesize\ttfamily \label{class_u_warrior_character_anim_instance_a332dc920713e16af04abfd88c8d48fd6} 
+void UWarrior\+Character\+Anim\+Instance\+::\+Native\+Thread\+Safe\+Update\+Animation (\begin{DoxyParamCaption}\item[{float}]{Delta\+Seconds}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_u_warrior_hero_anim_instance_abe99efb6fab6c19d8b617d5c0ec01862}{UWarrior\+Hero\+Anim\+Instance}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_u_warrior_character_anim_instance_a942f3666827764c66aaa696cb6817459}\index{UWarriorCharacterAnimInstance@{UWarriorCharacterAnimInstance}!bHasAcceleration@{bHasAcceleration}}
+\index{bHasAcceleration@{bHasAcceleration}!UWarriorCharacterAnimInstance@{UWarriorCharacterAnimInstance}}
+\doxysubsubsection{\texorpdfstring{bHasAcceleration}{bHasAcceleration}}
+{\footnotesize\ttfamily \label{class_u_warrior_character_anim_instance_a942f3666827764c66aaa696cb6817459} 
+bool UWarrior\+Character\+Anim\+Instance\+::b\+Has\+Acceleration\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_u_warrior_character_anim_instance_aea70a362677e2078864e34af517186dc}\index{UWarriorCharacterAnimInstance@{UWarriorCharacterAnimInstance}!GroundSpeed@{GroundSpeed}}
+\index{GroundSpeed@{GroundSpeed}!UWarriorCharacterAnimInstance@{UWarriorCharacterAnimInstance}}
+\doxysubsubsection{\texorpdfstring{GroundSpeed}{GroundSpeed}}
+{\footnotesize\ttfamily \label{class_u_warrior_character_anim_instance_aea70a362677e2078864e34af517186dc} 
+float UWarrior\+Character\+Anim\+Instance\+::\+Ground\+Speed\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_u_warrior_character_anim_instance_ac3eebfc33ce5575a5469b88970bff5f7}\index{UWarriorCharacterAnimInstance@{UWarriorCharacterAnimInstance}!OwningCharacter@{OwningCharacter}}
+\index{OwningCharacter@{OwningCharacter}!UWarriorCharacterAnimInstance@{UWarriorCharacterAnimInstance}}
+\doxysubsubsection{\texorpdfstring{OwningCharacter}{OwningCharacter}}
+{\footnotesize\ttfamily \label{class_u_warrior_character_anim_instance_ac3eebfc33ce5575a5469b88970bff5f7} 
+TObject\+Ptr$<$\mbox{\hyperlink{class_a_warrior_base_character}{AWarrior\+Base\+Character}}$>$ UWarrior\+Character\+Anim\+Instance\+::\+Owning\+Character\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_u_warrior_character_anim_instance_ad00ce0032cc2f037a3712f1363f22839}\index{UWarriorCharacterAnimInstance@{UWarriorCharacterAnimInstance}!OwningMovementComponent@{OwningMovementComponent}}
+\index{OwningMovementComponent@{OwningMovementComponent}!UWarriorCharacterAnimInstance@{UWarriorCharacterAnimInstance}}
+\doxysubsubsection{\texorpdfstring{OwningMovementComponent}{OwningMovementComponent}}
+{\footnotesize\ttfamily \label{class_u_warrior_character_anim_instance_ad00ce0032cc2f037a3712f1363f22839} 
+TObject\+Ptr$<$UCharacter\+Movement\+Component$>$ UWarrior\+Character\+Anim\+Instance\+::\+Owning\+Movement\+Component\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Source/\+Warrior/\+Public/\+Anim\+Instances/\mbox{\hyperlink{_warrior_character_anim_instance_8h}{Warrior\+Character\+Anim\+Instance.\+h}}\item 
+Source/\+Warrior/\+Private/\+Anim\+Instances/\mbox{\hyperlink{_warrior_character_anim_instance_8cpp}{Warrior\+Character\+Anim\+Instance.\+cpp}}\end{DoxyCompactItemize}

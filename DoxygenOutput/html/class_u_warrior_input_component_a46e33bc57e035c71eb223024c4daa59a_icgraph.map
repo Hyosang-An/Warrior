@@ -1,0 +1,5 @@
+<map id="UWarriorInputComponent::BindAbilityInputAction" name="UWarriorInputComponent::BindAbilityInputAction">
+<area shape="rect" id="Node000001" title=" " alt="" coords="317,5,544,58"/>
+<area shape="rect" id="Node000002" href="$class_a_warrior_hero_character.html#acd686945498a20ea865c08fb10692fc6" title=" " alt="" coords="5,5,269,58"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="301,34,269,34,269,29,301,29"/>
+</map>

@@ -1,0 +1,27 @@
+\doxysection{Data\+Asset\+\_\+\+Hero\+Start\+Up\+Data.\+h}
+\hypertarget{_data_asset___hero_start_up_data_8h_source}{}\label{_data_asset___hero_start_up_data_8h_source}\index{Source/Warrior/Public/DataAssets/StartUpData/DataAsset\_HeroStartUpData.h@{Source/Warrior/Public/DataAssets/StartUpData/DataAsset\_HeroStartUpData.h}}
+\mbox{\hyperlink{_data_asset___hero_start_up_data_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}CoreMinimal.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_data_asset___start_up_data_base_8h}{DataAssets/StartUpData/DataAsset\_StartUpDataBase.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_warrior_struct_types_8h}{WarriorTypes/WarriorStructTypes.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}DataAsset\_HeroStartUpData.generated.h"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00012\ UCLASS()}
+\DoxyCodeLine{00013\ class\ WARRIOR\_API\ \mbox{\hyperlink{class_u_data_asset___hero_start_up_data}{UDataAsset\_HeroStartUpData}}\ :\ public\ \mbox{\hyperlink{class_u_data_asset___start_up_data_base}{UDataAsset\_StartUpDataBase}}}
+\DoxyCodeLine{00014\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ GENERATED\_BODY()}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_data_asset___hero_start_up_data_a330bf6aa8725d41ea07365e140c66144}{GiveToAbilitySystemComponent}}(\textcolor{keyword}{class}\ \mbox{\hyperlink{class_u_warrior_ability_system_component}{UWarriorAbilitySystemComponent}}*\ InASCToGive,\ int32\ ApplyLevel\ =\ 1)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00021\ \ \ \ \ UPROPERTY(EditDefaultsOnly,\ Category\ =\ \textcolor{stringliteral}{"{}StartUpData"{}},\ meta\ =\ (TitleProperty\ =\ \textcolor{stringliteral}{"{}InputTag"{}}))}
+\DoxyCodeLine{00022\ \ \ \ \ TArray<FWarriorHeroAbilitySet>\ HeroStartUpAbilitySets;}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \};}
+
+\end{DoxyCode}

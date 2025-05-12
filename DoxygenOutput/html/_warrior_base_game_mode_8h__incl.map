@@ -1,0 +1,9 @@
+<map id="Source/Warrior/Public/GameModes/WarriorBaseGameMode.h" name="Source/Warrior/Public/GameModes/WarriorBaseGameMode.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="155,5,504,58"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,106,145,138"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="256,61,134,103,132,98,254,56"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="169,106,490,138"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="332,58,332,91,327,91,327,58"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="514,106,833,138"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="431,56,600,99,599,104,430,61"/>
+</map>

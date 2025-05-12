@@ -1,0 +1,52 @@
+\doxysection{Data\+Asset\+\_\+\+Input\+Config.\+h}
+\hypertarget{_data_asset___input_config_8h_source}{}\label{_data_asset___input_config_8h_source}\index{Source/Warrior/Public/DataAssets/Input/DataAsset\_InputConfig.h@{Source/Warrior/Public/DataAssets/Input/DataAsset\_InputConfig.h}}
+\mbox{\hyperlink{_data_asset___input_config_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}CoreMinimal.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}GameplayTagContainer.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}Engine/DataAsset.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}DataAsset\_InputConfig.generated.h"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{class\ }UInputAction;}
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }UInputMappingContext;}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ USTRUCT(BlueprintType)}
+\DoxyCodeLine{00012\ struct\ \mbox{\hyperlink{struct_f_warrior_input_action_config}{FWarriorInputActionConfig}}}
+\DoxyCodeLine{00013\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ GENERATED\_BODY()}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{comment}{//\ meta\ =\ (Categories\ =\ "{}InputTag"{})\ :\ “InputTag.”\ 로\ 시작하는\ 태그들만\ 보이도록\ 필터링}}
+\DoxyCodeLine{00018\ \ \ \ \ UPROPERTY(EditDefaultsOnly,\ BlueprintReadOnly,\ meta\ =\ (Categories\ =\ \textcolor{stringliteral}{"{}InputTag"{}}))\ }
+\DoxyCodeLine{00019\ \ \ \ \ FGameplayTag\ \mbox{\hyperlink{struct_f_warrior_input_action_config_a645df129d81318650e4727527b9cd08d}{InputTag}};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ UPROPERTY(EditDefaultsOnly,\ BlueprintReadOnly)}
+\DoxyCodeLine{00022\ \ \ \ \ TObjectPtr<UInputAction>\ \mbox{\hyperlink{struct_f_warrior_input_action_config_ae351bd58585baec734ccb3a051ebb628}{InputAction}};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_f_warrior_input_action_config_a867111347b7ac0fc24966c6519251b2e}{IsValid}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00025\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{struct_f_warrior_input_action_config_a645df129d81318650e4727527b9cd08d}{InputTag}}.IsValid()\ \&\&\ \mbox{\hyperlink{struct_f_warrior_input_action_config_ae351bd58585baec734ccb3a051ebb628}{InputAction}};}
+\DoxyCodeLine{00027\ \ \ \ \ \}}
+\DoxyCodeLine{00028\ \};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00033\ UCLASS()}
+\DoxyCodeLine{00034\ class\ WARRIOR\_API\ \mbox{\hyperlink{class_u_data_asset___input_config}{UDataAsset\_InputConfig}}\ :\ public\ UDataAsset}
+\DoxyCodeLine{00035\ \{}
+\DoxyCodeLine{00036\ \ \ \ \ GENERATED\_BODY()}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00039\ \ \ \ \ UPROPERTY(EditDefaultsOnly,\ BlueprintReadOnly)}
+\DoxyCodeLine{00040\ \ \ \ \ TObjectPtr<UInputMappingContext>\ \mbox{\hyperlink{class_u_data_asset___input_config_a29b051639111413767eddd48381a763d}{DefaultMappingContext}};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ UPROPERTY(EditDefaultsOnly,\ BlueprintReadOnly,\ meta\ =\ (TitleProperty\ =\ \textcolor{stringliteral}{"{}InputTag"{}}))}
+\DoxyCodeLine{00043\ \ \ \ \ TArray<\mbox{\hyperlink{struct_f_warrior_input_action_config}{FWarriorInputActionConfig}}>\ \mbox{\hyperlink{class_u_data_asset___input_config_a5b4671c6ed6e5ca20cb204311f428a1a}{NativeInputActions}};}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ UInputAction*\ \mbox{\hyperlink{class_u_data_asset___input_config_a354b1175e54c25ecb3cd53b5dc23168c}{FindNativeInputActionByTag}}(const\ FGameplayTag\&\ InInputTag)\ const;}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ UPROPERTY(EditDefaultsOnly,\ BlueprintReadOnly,\ meta\ =\ (TitleProperty\ =\ \textcolor{stringliteral}{"{}InputTag"{}}))}
+\DoxyCodeLine{00048\ \ \ \ \ TArray<\mbox{\hyperlink{struct_f_warrior_input_action_config}{FWarriorInputActionConfig}}>\ \mbox{\hyperlink{class_u_data_asset___input_config_a1d2ef14343b265a9f5b08c8ce1803955}{AbilityInputActions}};}
+\DoxyCodeLine{00049\ \};}
+
+\end{DoxyCode}

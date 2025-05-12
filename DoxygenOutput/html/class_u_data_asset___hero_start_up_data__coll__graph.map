@@ -1,0 +1,7 @@
+<map id="UDataAsset_HeroStartUpData" name="UDataAsset_HeroStartUpData">
+<area shape="rect" id="Node000001" title=" " alt="" coords="6,165,272,196"/>
+<area shape="rect" id="Node000002" href="$class_u_data_asset___start_up_data_base.html" title=" " alt="" coords="5,85,273,117"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="142,132,142,164,136,164,136,132"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="80,5,198,37"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="142,52,142,85,136,85,136,52"/>
+</map>

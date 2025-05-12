@@ -1,0 +1,6 @@
+<map id="AWarriorWeaponBase::GetWeaponCollisionBox" name="AWarriorWeaponBase::GetWeaponCollisionBox">
+<area shape="rect" id="Node000001" title=" " alt="" coords="291,29,518,82"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="450,17,433,10,404,8,379,10,363,15,355,21,355,29,350,29,350,19,360,10,378,5,404,3,434,5,452,12"/>
+<area shape="rect" id="Node000002" href="$class_u_pawn_combat_component.html#a7728465b87abe639d707ac610e2a486b" title=" " alt="" coords="5,29,243,82"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="275,58,243,58,243,53,275,53"/>
+</map>

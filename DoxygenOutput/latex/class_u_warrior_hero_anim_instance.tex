@@ -1,0 +1,111 @@
+\doxysection{UWarrior\+Hero\+Anim\+Instance Class Reference}
+\hypertarget{class_u_warrior_hero_anim_instance}{}\label{class_u_warrior_hero_anim_instance}\index{UWarriorHeroAnimInstance@{UWarriorHeroAnimInstance}}
+
+
+{\ttfamily \#include $<$Warrior\+Hero\+Anim\+Instance.\+h$>$}
+
+
+
+Inheritance diagram for UWarrior\+Hero\+Anim\+Instance\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=292pt]{class_u_warrior_hero_anim_instance__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for UWarrior\+Hero\+Anim\+Instance\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=292pt]{class_u_warrior_hero_anim_instance__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_u_warrior_hero_anim_instance_a997ae9bccd4b277550226ee32349f010}{Native\+Initialize\+Animation}} () override
+\item 
+virtual void \mbox{\hyperlink{class_u_warrior_hero_anim_instance_abe99efb6fab6c19d8b617d5c0ec01862}{Native\+Thread\+Safe\+Update\+Animation}} (float Delta\+Seconds) override
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+TObject\+Ptr$<$ \mbox{\hyperlink{class_a_warrior_hero_character}{AWarrior\+Hero\+Character}} $>$ \mbox{\hyperlink{class_u_warrior_hero_anim_instance_a78998bad115ed298424248cc6224699c}{Owning\+Hero\+Character}}
+\item 
+bool \mbox{\hyperlink{class_u_warrior_hero_anim_instance_a2720b1283fe8eb956ad10c624c1de996}{b\+Should\+Enter\+Relax\+State}}
+\item 
+float \mbox{\hyperlink{class_u_warrior_hero_anim_instance_aa4f57e0cf3cc26c343e6ca02c51004c3}{Enter\+Relax\+State\+Threshold}} = 5.f
+\item 
+float \mbox{\hyperlink{class_u_warrior_hero_anim_instance_ae0f2c1128467cc0f3782c9981a8a5ddd}{Idle\+Elapsed\+Time}} = 0.f
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_u_warrior_character_anim_instance}{UWarrior\+Character\+Anim\+Instance}}}
+\begin{DoxyCompactItemize}
+\item 
+TObject\+Ptr$<$ \mbox{\hyperlink{class_a_warrior_base_character}{AWarrior\+Base\+Character}} $>$ \mbox{\hyperlink{class_u_warrior_character_anim_instance_ac3eebfc33ce5575a5469b88970bff5f7}{Owning\+Character}}
+\item 
+TObject\+Ptr$<$ UCharacter\+Movement\+Component $>$ \mbox{\hyperlink{class_u_warrior_character_anim_instance_ad00ce0032cc2f037a3712f1363f22839}{Owning\+Movement\+Component}}
+\item 
+float \mbox{\hyperlink{class_u_warrior_character_anim_instance_aea70a362677e2078864e34af517186dc}{Ground\+Speed}}
+\item 
+bool \mbox{\hyperlink{class_u_warrior_character_anim_instance_a942f3666827764c66aaa696cb6817459}{b\+Has\+Acceleration}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_u_warrior_hero_anim_instance_a997ae9bccd4b277550226ee32349f010}\index{UWarriorHeroAnimInstance@{UWarriorHeroAnimInstance}!NativeInitializeAnimation@{NativeInitializeAnimation}}
+\index{NativeInitializeAnimation@{NativeInitializeAnimation}!UWarriorHeroAnimInstance@{UWarriorHeroAnimInstance}}
+\doxysubsubsection{\texorpdfstring{NativeInitializeAnimation()}{NativeInitializeAnimation()}}
+{\footnotesize\ttfamily \label{class_u_warrior_hero_anim_instance_a997ae9bccd4b277550226ee32349f010} 
+void UWarrior\+Hero\+Anim\+Instance\+::\+Native\+Initialize\+Animation (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_u_warrior_character_anim_instance_a67d5b046e82f9a64cc44b48bbf2d4484}{UWarrior\+Character\+Anim\+Instance}}.
+
+\Hypertarget{class_u_warrior_hero_anim_instance_abe99efb6fab6c19d8b617d5c0ec01862}\index{UWarriorHeroAnimInstance@{UWarriorHeroAnimInstance}!NativeThreadSafeUpdateAnimation@{NativeThreadSafeUpdateAnimation}}
+\index{NativeThreadSafeUpdateAnimation@{NativeThreadSafeUpdateAnimation}!UWarriorHeroAnimInstance@{UWarriorHeroAnimInstance}}
+\doxysubsubsection{\texorpdfstring{NativeThreadSafeUpdateAnimation()}{NativeThreadSafeUpdateAnimation()}}
+{\footnotesize\ttfamily \label{class_u_warrior_hero_anim_instance_abe99efb6fab6c19d8b617d5c0ec01862} 
+void UWarrior\+Hero\+Anim\+Instance\+::\+Native\+Thread\+Safe\+Update\+Animation (\begin{DoxyParamCaption}\item[{float}]{Delta\+Seconds}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_u_warrior_character_anim_instance_a332dc920713e16af04abfd88c8d48fd6}{UWarrior\+Character\+Anim\+Instance}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_u_warrior_hero_anim_instance_a2720b1283fe8eb956ad10c624c1de996}\index{UWarriorHeroAnimInstance@{UWarriorHeroAnimInstance}!bShouldEnterRelaxState@{bShouldEnterRelaxState}}
+\index{bShouldEnterRelaxState@{bShouldEnterRelaxState}!UWarriorHeroAnimInstance@{UWarriorHeroAnimInstance}}
+\doxysubsubsection{\texorpdfstring{bShouldEnterRelaxState}{bShouldEnterRelaxState}}
+{\footnotesize\ttfamily \label{class_u_warrior_hero_anim_instance_a2720b1283fe8eb956ad10c624c1de996} 
+bool UWarrior\+Hero\+Anim\+Instance\+::b\+Should\+Enter\+Relax\+State\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_u_warrior_hero_anim_instance_aa4f57e0cf3cc26c343e6ca02c51004c3}\index{UWarriorHeroAnimInstance@{UWarriorHeroAnimInstance}!EnterRelaxStateThreshold@{EnterRelaxStateThreshold}}
+\index{EnterRelaxStateThreshold@{EnterRelaxStateThreshold}!UWarriorHeroAnimInstance@{UWarriorHeroAnimInstance}}
+\doxysubsubsection{\texorpdfstring{EnterRelaxStateThreshold}{EnterRelaxStateThreshold}}
+{\footnotesize\ttfamily \label{class_u_warrior_hero_anim_instance_aa4f57e0cf3cc26c343e6ca02c51004c3} 
+float UWarrior\+Hero\+Anim\+Instance\+::\+Enter\+Relax\+State\+Threshold = 5.f\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_u_warrior_hero_anim_instance_ae0f2c1128467cc0f3782c9981a8a5ddd}\index{UWarriorHeroAnimInstance@{UWarriorHeroAnimInstance}!IdleElapsedTime@{IdleElapsedTime}}
+\index{IdleElapsedTime@{IdleElapsedTime}!UWarriorHeroAnimInstance@{UWarriorHeroAnimInstance}}
+\doxysubsubsection{\texorpdfstring{IdleElapsedTime}{IdleElapsedTime}}
+{\footnotesize\ttfamily \label{class_u_warrior_hero_anim_instance_ae0f2c1128467cc0f3782c9981a8a5ddd} 
+float UWarrior\+Hero\+Anim\+Instance\+::\+Idle\+Elapsed\+Time = 0.f\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_u_warrior_hero_anim_instance_a78998bad115ed298424248cc6224699c}\index{UWarriorHeroAnimInstance@{UWarriorHeroAnimInstance}!OwningHeroCharacter@{OwningHeroCharacter}}
+\index{OwningHeroCharacter@{OwningHeroCharacter}!UWarriorHeroAnimInstance@{UWarriorHeroAnimInstance}}
+\doxysubsubsection{\texorpdfstring{OwningHeroCharacter}{OwningHeroCharacter}}
+{\footnotesize\ttfamily \label{class_u_warrior_hero_anim_instance_a78998bad115ed298424248cc6224699c} 
+TObject\+Ptr$<$\mbox{\hyperlink{class_a_warrior_hero_character}{AWarrior\+Hero\+Character}}$>$ UWarrior\+Hero\+Anim\+Instance\+::\+Owning\+Hero\+Character\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Source/\+Warrior/\+Public/\+Anim\+Instances/\+Hero/\mbox{\hyperlink{_warrior_hero_anim_instance_8h}{Warrior\+Hero\+Anim\+Instance.\+h}}\item 
+Source/\+Warrior/\+Private/\+Anim\+Instances/\+Hero/\mbox{\hyperlink{_warrior_hero_anim_instance_8cpp}{Warrior\+Hero\+Anim\+Instance.\+cpp}}\end{DoxyCompactItemize}

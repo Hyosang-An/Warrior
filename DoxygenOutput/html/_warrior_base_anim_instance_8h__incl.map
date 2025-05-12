@@ -1,0 +1,9 @@
+<map id="Source/Warrior/Public/AnimInstances/WarriorBaseAnimInstance.h" name="Source/Warrior/Public/AnimInstances/WarriorBaseAnimInstance.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="138,5,430,79"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,127,145,159"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="209,82,122,123,119,118,206,77"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="168,127,400,159"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="287,79,287,112,282,112,282,79"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="425,127,757,159"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="398,77,530,119,528,124,396,82"/>
+</map>

@@ -1,0 +1,50 @@
+\doxysection{Warrior\+Gameplay\+Ability.\+h}
+\hypertarget{_warrior_gameplay_ability_8h_source}{}\label{_warrior_gameplay_ability_8h_source}\index{Source/Warrior/Public/AbilitySystem/Abilities/WarriorGameplayAbility.h@{Source/Warrior/Public/AbilitySystem/Abilities/WarriorGameplayAbility.h}}
+\mbox{\hyperlink{_warrior_gameplay_ability_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}CoreMinimal.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Abilities/GameplayAbility.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_warrior_enum_types_8h}{WarriorTypes/WarriorEnumTypes.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}WarriorGameplayAbility.generated.h"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_u_warrior_ability_system_component}{UWarriorAbilitySystemComponent}};}
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_u_pawn_combat_component}{UPawnCombatComponent}};}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ UENUM(BlueprintType)}
+\DoxyCodeLine{00012\ enum\ class\ \mbox{\hyperlink{_warrior_gameplay_ability_8h_a394d9754f6ebff5ddd38f278d289f61e}{EWarriorAbilityActivationPolicy}}\ :\ uint8}
+\DoxyCodeLine{00013\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{_warrior_gameplay_ability_8h_a394d9754f6ebff5ddd38f278d289f61ea575dc4eff45105902da03c352a77c0e5}{OnTriggered}},\ \textcolor{comment}{//\ 일반적인\ 방식:\ 입력\ 등으로\ 수동\ 발동}}
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{_warrior_gameplay_ability_8h_a394d9754f6ebff5ddd38f278d289f61ead972fe5ea748e80af355c8d15881f646}{OnGiven}},\ \ \ \ \ \textcolor{comment}{//\ 능력이\ 부여되자마자\ 자동\ 발동됨}}
+\DoxyCodeLine{00016\ \};}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00021\ UCLASS()}
+\DoxyCodeLine{00022\ class\ WARRIOR\_API\ \mbox{\hyperlink{class_u_warrior_gameplay_ability}{UWarriorGameplayAbility}}\ :\ public\ UGameplayAbility}
+\DoxyCodeLine{00023\ \{}
+\DoxyCodeLine{00024\ \ \ \ \ GENERATED\_BODY()}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{comment}{//\string~\ Begin\ UGameplayAbility\ Interface}}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_warrior_gameplay_ability_aabef342613d22ec3326ff0fa8a2b0853}{OnGiveAbility}}(\textcolor{keyword}{const}\ FGameplayAbilityActorInfo*\ ActorInfo,\ \textcolor{keyword}{const}\ FGameplayAbilitySpec\&\ Spec)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_warrior_gameplay_ability_a9dd2224f1ba96aeb090a1e499de9eade}{EndAbility}}(\textcolor{keyword}{const}\ FGameplayAbilitySpecHandle\ Handle,\ \textcolor{keyword}{const}\ FGameplayAbilityActorInfo*\ ActorInfo,\ \textcolor{keyword}{const}\ FGameplayAbilityActivationInfo\ ActivationInfo,\ \textcolor{keywordtype}{bool}\ bReplicateEndAbility,\ \textcolor{keywordtype}{bool}\ bWasCancelled)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_u_warrior_gameplay_ability_acee4a5ae213535c1c1d1ba922d6bd7bc}{DoesAbilitySatisfyTagRequirements}}(\textcolor{keyword}{const}\ UAbilitySystemComponent\&\ AbilitySystemComponent,\ \textcolor{keyword}{const}\ FGameplayTagContainer*\ SourceTags\ =\ \textcolor{keyword}{nullptr},\ \textcolor{keyword}{const}\ FGameplayTagContainer*\ TargetTags\ =\ \textcolor{keyword}{nullptr},\ OUT\ FGameplayTagContainer*\ OptionalRelevantTags\ =\ \textcolor{keyword}{nullptr})\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{comment}{//\string~\ End\ UGameplayAbility\ Interface}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ UPROPERTY(EditDefaultsOnly,\ Category\ =\ \textcolor{stringliteral}{"{}Warrior|Ability"{}})}
+\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{_warrior_gameplay_ability_8h_a394d9754f6ebff5ddd38f278d289f61e}{EWarriorAbilityActivationPolicy}}\ \mbox{\hyperlink{class_u_warrior_gameplay_ability_aacc1f82e4ad5c3859ec85590d69feac3}{AbilityActivationPolicy}}\ =\ \mbox{\hyperlink{_warrior_gameplay_ability_8h_a394d9754f6ebff5ddd38f278d289f61e}{EWarriorAbilityActivationPolicy}}::\mbox{\hyperlink{_warrior_gameplay_ability_8h_a394d9754f6ebff5ddd38f278d289f61ea575dc4eff45105902da03c352a77c0e5}{OnTriggered}};}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ UFUNCTION(BlueprintPure,\ Category\ =\ \textcolor{stringliteral}{"{}Warrior|Ability"{}})}
+\DoxyCodeLine{00038\ \ \ \ \ \mbox{\hyperlink{class_u_pawn_combat_component}{UPawnCombatComponent}}*\ \mbox{\hyperlink{class_u_warrior_gameplay_ability_a14bf16ed90bc116b2482e4b39ae87440}{GetPawnCombatComponentFromActorInfo}}()\ const;}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ UFUNCTION(BlueprintPure,\ Category\ =\ \textcolor{stringliteral}{"{}Warrior|Ability"{}})}
+\DoxyCodeLine{00041\ \ \ \ \ \mbox{\hyperlink{class_u_warrior_ability_system_component}{UWarriorAbilitySystemComponent}}*\ \mbox{\hyperlink{class_u_warrior_gameplay_ability_a13ada6208458341446b7b40654487d97}{GetWarriorAbilitySystemComponentFromActorInfo}}()\ const;}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ FActiveGameplayEffectHandle\ \mbox{\hyperlink{class_u_warrior_gameplay_ability_acb4fe3fb51d4c81eac389c2e0875d124}{NativeApplyEffectSpecHandleToTarget}}(AActor*\ TargetActor,\ const\ FGameplayEffectSpecHandle\&\ InSpecHandle);}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category\ =\ \textcolor{stringliteral}{"{}Warrior|Ability"{}},\ meta\ =\ (DisplayName\ =\ \textcolor{stringliteral}{"{}Apply\ Gameplay\ Effect\ Spec\ Handle\ To\ Target"{}},\ ExpandEnumAsExecs\ =\ \textcolor{stringliteral}{"{}OutSuccessType"{}}))}
+\DoxyCodeLine{00046\ \ \ \ \ FActiveGameplayEffectHandle\ \mbox{\hyperlink{class_u_warrior_gameplay_ability_a974ff457514ddb69a74209560e9ebe33}{BP\_ApplyEffectSpecHandleToTarget}}(AActor*\ TargetActor,\ const\ FGameplayEffectSpecHandle\&\ InSpecHandle,\ \mbox{\hyperlink{_warrior_enum_types_8h_a8f48d2bc081931019b4df8dc50c5835c}{EWarriorSuccessType}}\&\ OutSuccessType);}
+\DoxyCodeLine{00047\ \};}
+
+\end{DoxyCode}

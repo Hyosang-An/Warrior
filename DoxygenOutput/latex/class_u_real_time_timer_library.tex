@@ -1,0 +1,99 @@
+\doxysection{UReal\+Time\+Timer\+Library Class Reference}
+\hypertarget{class_u_real_time_timer_library}{}\label{class_u_real_time_timer_library}\index{URealTimeTimerLibrary@{URealTimeTimerLibrary}}
+
+
+{\ttfamily \#include $<$Real\+Time\+Timer.\+h$>$}
+
+
+
+Inheritance diagram for UReal\+Time\+Timer\+Library\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=252pt]{class_u_real_time_timer_library__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for UReal\+Time\+Timer\+Library\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=252pt]{class_u_real_time_timer_library__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_u_real_time_timer_manager}{UReal\+Time\+Timer\+Manager}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_u_real_time_timer_library_a710faf00fd8f8fa1cc3938c5e26962ac}{Get\+Timer\+Manager}} ()
+\item 
+static FString \mbox{\hyperlink{class_u_real_time_timer_library_a023427b02563862d5cc761e054dfd49c}{Start\+Real\+Time\+Timer}} (float Duration, const FReal\+Time\+Timer\+Dynamic\+Delegate \&Callback)
+\item 
+static void \mbox{\hyperlink{class_u_real_time_timer_library_a3bcba8b68ec8d2f256ce1dfb371000d2}{Cancel\+Real\+Time\+Timer}} (const FString \&Timer\+Handle)
+\item 
+static void \mbox{\hyperlink{class_u_real_time_timer_library_a9e18e5285fae44a3c4e15c2ef1ea1e58}{Real\+Time\+Delay}} (const UObject \texorpdfstring{$\ast$}{*}World\+Context\+Object, float Duration, struct FLatent\+Action\+Info Latent\+Info)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+블루프린트에서 리얼타임 타이머를 사용하기 위한 함수 라이브러리 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_u_real_time_timer_library_a3bcba8b68ec8d2f256ce1dfb371000d2}\index{URealTimeTimerLibrary@{URealTimeTimerLibrary}!CancelRealTimeTimer@{CancelRealTimeTimer}}
+\index{CancelRealTimeTimer@{CancelRealTimeTimer}!URealTimeTimerLibrary@{URealTimeTimerLibrary}}
+\doxysubsubsection{\texorpdfstring{CancelRealTimeTimer()}{CancelRealTimeTimer()}}
+{\footnotesize\ttfamily \label{class_u_real_time_timer_library_a3bcba8b68ec8d2f256ce1dfb371000d2} 
+void UReal\+Time\+Timer\+Library\+::\+Cancel\+Real\+Time\+Timer (\begin{DoxyParamCaption}\item[{const FString \&}]{Timer\+Handle}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+리얼타임 타이머 취소 (블루프린트 호출 가능) Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_real_time_timer_library_a3bcba8b68ec8d2f256ce1dfb371000d2_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_u_real_time_timer_library_a710faf00fd8f8fa1cc3938c5e26962ac}\index{URealTimeTimerLibrary@{URealTimeTimerLibrary}!GetTimerManager@{GetTimerManager}}
+\index{GetTimerManager@{GetTimerManager}!URealTimeTimerLibrary@{URealTimeTimerLibrary}}
+\doxysubsubsection{\texorpdfstring{GetTimerManager()}{GetTimerManager()}}
+{\footnotesize\ttfamily \label{class_u_real_time_timer_library_a710faf00fd8f8fa1cc3938c5e26962ac} 
+\mbox{\hyperlink{class_u_real_time_timer_manager}{UReal\+Time\+Timer\+Manager}} \texorpdfstring{$\ast$}{*} UReal\+Time\+Timer\+Library\+::\+Get\+Timer\+Manager (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+싱글턴 인스턴스 가져오기
+
+리얼타임 타이머 라이브러리 구현 Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_real_time_timer_library_a710faf00fd8f8fa1cc3938c5e26962ac_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_u_real_time_timer_library_a9e18e5285fae44a3c4e15c2ef1ea1e58}\index{URealTimeTimerLibrary@{URealTimeTimerLibrary}!RealTimeDelay@{RealTimeDelay}}
+\index{RealTimeDelay@{RealTimeDelay}!URealTimeTimerLibrary@{URealTimeTimerLibrary}}
+\doxysubsubsection{\texorpdfstring{RealTimeDelay()}{RealTimeDelay()}}
+{\footnotesize\ttfamily \label{class_u_real_time_timer_library_a9e18e5285fae44a3c4e15c2ef1ea1e58} 
+void UReal\+Time\+Timer\+Library\+::\+Real\+Time\+Delay (\begin{DoxyParamCaption}\item[{const UObject \texorpdfstring{$\ast$}{*}}]{World\+Context\+Object}{, }\item[{float}]{Duration}{, }\item[{struct FLatent\+Action\+Info}]{Latent\+Info}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+지연 시간 후 이벤트 실행 (블루프린트 호출 가능) \Hypertarget{class_u_real_time_timer_library_a023427b02563862d5cc761e054dfd49c}\index{URealTimeTimerLibrary@{URealTimeTimerLibrary}!StartRealTimeTimer@{StartRealTimeTimer}}
+\index{StartRealTimeTimer@{StartRealTimeTimer}!URealTimeTimerLibrary@{URealTimeTimerLibrary}}
+\doxysubsubsection{\texorpdfstring{StartRealTimeTimer()}{StartRealTimeTimer()}}
+{\footnotesize\ttfamily \label{class_u_real_time_timer_library_a023427b02563862d5cc761e054dfd49c} 
+FString UReal\+Time\+Timer\+Library\+::\+Start\+Real\+Time\+Timer (\begin{DoxyParamCaption}\item[{float}]{Duration}{, }\item[{const FReal\+Time\+Timer\+Dynamic\+Delegate \&}]{Callback}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+리얼타임 타이머 시작 (블루프린트 호출 가능) Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_real_time_timer_library_a023427b02563862d5cc761e054dfd49c_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Source/\+Warrior/\+Public/\+Utilities/\mbox{\hyperlink{_real_time_timer_8h}{Real\+Time\+Timer.\+h}}\item 
+Source/\+Warrior/\+Private/\+Utilities/\mbox{\hyperlink{_real_time_timer_8cpp}{Real\+Time\+Timer.\+cpp}}\end{DoxyCompactItemize}

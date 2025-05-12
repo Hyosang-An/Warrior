@@ -1,0 +1,16 @@
+<map id="Source/Warrior/Public/Components/Combat/PawnCombatComponent.h" name="Source/Warrior/Public/Components/Combat/PawnCombatComponent.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="115,5,428,79"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="10,228,149,259"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="116,64,87,75,60,89,36,106,16,129,10,141,8,152,17,179,29,199,46,216,43,220,25,202,12,181,3,153,5,139,12,125,33,103,58,84,85,70,114,59"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="26,138,253,169"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="229,82,171,129,168,125,226,78"/>
+<area shape="rect" id="Node000004" href="$_pawn_extension_component_base_8h.html" title=" " alt="" coords="277,127,530,180"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="317,78,363,115,359,119,314,82"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="554,138,880,169"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="420,77,641,131,639,136,419,82"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="309,183,151,226,149,221,308,178"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="218,228,498,259"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="393,181,375,215,371,212,388,179"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="522,228,904,259"/>
+<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="495,178,646,220,644,226,494,183"/>
+</map>

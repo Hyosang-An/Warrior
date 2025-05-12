@@ -1,0 +1,35 @@
+\doxysection{Warrior\+Hero\+Weapon.\+h}
+\hypertarget{_warrior_hero_weapon_8h_source}{}\label{_warrior_hero_weapon_8h_source}\index{Source/Warrior/Public/Items/Weapons/WarriorHeroWeapon.h@{Source/Warrior/Public/Items/Weapons/WarriorHeroWeapon.h}}
+\mbox{\hyperlink{_warrior_hero_weapon_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}CoreMinimal.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}GameplayAbilitySpecHandle.h"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_warrior_weapon_base_8h}{Items/Weapons/WarriorWeaponBase.h}}"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_warrior_struct_types_8h}{WarriorTypes/WarriorStructTypes.h}}"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}WarriorHeroWeapon.generated.h"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00014\ UCLASS()}
+\DoxyCodeLine{00015\ class\ WARRIOR\_API\ \mbox{\hyperlink{class_a_warrior_hero_weapon}{AWarriorHeroWeapon}}\ :\ public\ \mbox{\hyperlink{class_a_warrior_weapon_base_a3a36e9d62efefec46dca1e348c24993b}{AWarriorWeaponBase}}}
+\DoxyCodeLine{00016\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ GENERATED\_BODY()}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ \ \ \ \ UPROPERTY(EditDefaultsOnly,\ BlueprintReadOnly,\ Category\ =\ \textcolor{stringliteral}{"{}WeaponData"{}})}
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{struct_f_warrior_hero_weapon_data}{FWarriorHeroWeaponData}}\ \mbox{\hyperlink{class_a_warrior_hero_weapon_a545d3b605c9b82f9e5079104ed45b0ce}{HeroWeaponData}};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ UFUNCTION(BlueprintCallable)}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_a_warrior_hero_weapon_a2e3d77601f618292db6ca01c3d09063c}{AssignGrantedAbilitySpecHandles}}(const\ TArray<FGameplayAbilitySpecHandle>\&\ InGrantedAbilitySpecHandles);}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ UFUNCTION(BlueprintPure)}
+\DoxyCodeLine{00027\ \ \ \ \ TArray<FGameplayAbilitySpecHandle>\ \mbox{\hyperlink{class_a_warrior_hero_weapon_a1c283794a506e0c2243466807211e86b}{GetGrantedAbilitySpecHandles}}()\ const;}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ private:}
+\DoxyCodeLine{00030\ \ \ \ \ UPROPERTY(BlueprintReadWrite,\ meta\ =\ (AllowPrivateAccess\ =\ \textcolor{stringliteral}{"{}true"{}}),\ Category\ =\ \textcolor{stringliteral}{"{}WeaponData"{}})}
+\DoxyCodeLine{00031\ \ \ \ \ TArray<FGameplayAbilitySpecHandle>\ GrantedAbilitySpecHandles;}
+\DoxyCodeLine{00032\ \};}
+
+\end{DoxyCode}

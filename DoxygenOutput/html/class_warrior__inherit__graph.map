@@ -1,0 +1,5 @@
+<map id="Warrior" name="Warrior">
+<area shape="rect" id="Node000001" title=" " alt="" coords="29,85,109,117"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,133,37"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="72,52,72,85,66,85,66,52"/>
+</map>

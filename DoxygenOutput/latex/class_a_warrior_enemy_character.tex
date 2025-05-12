@@ -1,0 +1,134 @@
+\doxysection{AWarrior\+Enemy\+Character Class Reference}
+\hypertarget{class_a_warrior_enemy_character}{}\label{class_a_warrior_enemy_character}\index{AWarriorEnemyCharacter@{AWarriorEnemyCharacter}}
+
+
+{\ttfamily \#include $<$Warrior\+Enemy\+Character.\+h$>$}
+
+
+
+Inheritance diagram for AWarrior\+Enemy\+Character\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_a_warrior_enemy_character__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for AWarrior\+Enemy\+Character\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_a_warrior_enemy_character__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_a_warrior_enemy_character_aee65cf43e5625cd4f653a7d6efe0b7d6}{AWarrior\+Enemy\+Character}} ()
+\item 
+virtual \mbox{\hyperlink{class_u_pawn_combat_component}{UPawn\+Combat\+Component}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_a_warrior_enemy_character_afba59582fe122bf60c52f3cfd1960ffe}{Get\+Pawn\+Combat\+Component}} () const override
+\item 
+FORCEINLINE \mbox{\hyperlink{class_u_enemy_combat_component}{UEnemy\+Combat\+Component}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_a_warrior_enemy_character_a90afabfcb8cb7c7f8f4e02901584a2b7}{Get\+Enemy\+Combat\+Component}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_a_warrior_base_character}{AWarrior\+Base\+Character}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_a_warrior_base_character_a28915712af2f9bb19b59de277e799439}{AWarrior\+Base\+Character}} ()
+\item 
+virtual UAbility\+System\+Component \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_a_warrior_base_character_a99eac9420d98276cf5b9697f18199faa}{Get\+Ability\+System\+Component}} () const override
+\item 
+FORCEINLINE \mbox{\hyperlink{class_u_warrior_ability_system_component}{UWarrior\+Ability\+System\+Component}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_a_warrior_base_character_a8ff42b2c2d4c0f5222b2a6a62ca1d95d}{Get\+Warrior\+Ability\+System\+Component}} () const
+\item 
+FORCEINLINE \mbox{\hyperlink{class_u_warrior_attribute_set}{UWarrior\+Attribute\+Set}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_a_warrior_base_character_a6632b00932ebb913c0fdbb6d9e3eb7d6}{Get\+Warrior\+Attribute\+Set}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_a_warrior_enemy_character_a10976d8f5ff85234b8d27030ce6c0e1f}{Possessed\+By}} (AController \texorpdfstring{$\ast$}{*}New\+Controller) override
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+TObject\+Ptr$<$ \mbox{\hyperlink{class_u_enemy_combat_component}{UEnemy\+Combat\+Component}} $>$ \mbox{\hyperlink{class_a_warrior_enemy_character_ac0ffae933045ea4b8429a060f1324f73}{Enemy\+Combat\+Component}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_a_warrior_base_character}{AWarrior\+Base\+Character}}}
+\begin{DoxyCompactItemize}
+\item 
+TObject\+Ptr$<$ \mbox{\hyperlink{class_u_warrior_ability_system_component}{UWarrior\+Ability\+System\+Component}} $>$ \mbox{\hyperlink{class_a_warrior_base_character_abfd4a07ed1818b0238c267e31f3bdf35}{Warrior\+Ability\+System\+Component}}
+\item 
+TObject\+Ptr$<$ \mbox{\hyperlink{class_u_warrior_attribute_set}{UWarrior\+Attribute\+Set}} $>$ \mbox{\hyperlink{class_a_warrior_base_character_a806f16435dc0587ced269154ccff2671}{Warrior\+Attribute\+Set}}
+\item 
+TSoft\+Object\+Ptr$<$ \mbox{\hyperlink{class_u_data_asset___start_up_data_base}{UData\+Asset\+\_\+\+Start\+Up\+Data\+Base}} $>$ \mbox{\hyperlink{class_a_warrior_base_character_ae25121b65b5c7505b2c865030c5cdf28}{Character\+Start\+Up\+Data}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_a_warrior_enemy_character_aee65cf43e5625cd4f653a7d6efe0b7d6}\index{AWarriorEnemyCharacter@{AWarriorEnemyCharacter}!AWarriorEnemyCharacter@{AWarriorEnemyCharacter}}
+\index{AWarriorEnemyCharacter@{AWarriorEnemyCharacter}!AWarriorEnemyCharacter@{AWarriorEnemyCharacter}}
+\doxysubsubsection{\texorpdfstring{AWarriorEnemyCharacter()}{AWarriorEnemyCharacter()}}
+{\footnotesize\ttfamily \label{class_a_warrior_enemy_character_aee65cf43e5625cd4f653a7d6efe0b7d6} 
+AWarrior\+Enemy\+Character\+::\+AWarrior\+Enemy\+Character (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_a_warrior_enemy_character_a90afabfcb8cb7c7f8f4e02901584a2b7}\index{AWarriorEnemyCharacter@{AWarriorEnemyCharacter}!GetEnemyCombatComponent@{GetEnemyCombatComponent}}
+\index{GetEnemyCombatComponent@{GetEnemyCombatComponent}!AWarriorEnemyCharacter@{AWarriorEnemyCharacter}}
+\doxysubsubsection{\texorpdfstring{GetEnemyCombatComponent()}{GetEnemyCombatComponent()}}
+{\footnotesize\ttfamily \label{class_a_warrior_enemy_character_a90afabfcb8cb7c7f8f4e02901584a2b7} 
+FORCEINLINE \mbox{\hyperlink{class_u_enemy_combat_component}{UEnemy\+Combat\+Component}} \texorpdfstring{$\ast$}{*} AWarrior\+Enemy\+Character\+::\+Get\+Enemy\+Combat\+Component (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=287pt]{class_a_warrior_enemy_character_a90afabfcb8cb7c7f8f4e02901584a2b7_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_a_warrior_enemy_character_a90afabfcb8cb7c7f8f4e02901584a2b7_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_a_warrior_enemy_character_afba59582fe122bf60c52f3cfd1960ffe}\index{AWarriorEnemyCharacter@{AWarriorEnemyCharacter}!GetPawnCombatComponent@{GetPawnCombatComponent}}
+\index{GetPawnCombatComponent@{GetPawnCombatComponent}!AWarriorEnemyCharacter@{AWarriorEnemyCharacter}}
+\doxysubsubsection{\texorpdfstring{GetPawnCombatComponent()}{GetPawnCombatComponent()}}
+{\footnotesize\ttfamily \label{class_a_warrior_enemy_character_afba59582fe122bf60c52f3cfd1960ffe} 
+\mbox{\hyperlink{class_u_pawn_combat_component}{UPawn\+Combat\+Component}} \texorpdfstring{$\ast$}{*} AWarrior\+Enemy\+Character\+::\+Get\+Pawn\+Combat\+Component (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_a_warrior_base_character_aa05693236cf6c1b04fff5cbf0928c49a}{AWarrior\+Base\+Character}}.
+
+\Hypertarget{class_a_warrior_enemy_character_a10976d8f5ff85234b8d27030ce6c0e1f}\index{AWarriorEnemyCharacter@{AWarriorEnemyCharacter}!PossessedBy@{PossessedBy}}
+\index{PossessedBy@{PossessedBy}!AWarriorEnemyCharacter@{AWarriorEnemyCharacter}}
+\doxysubsubsection{\texorpdfstring{PossessedBy()}{PossessedBy()}}
+{\footnotesize\ttfamily \label{class_a_warrior_enemy_character_a10976d8f5ff85234b8d27030ce6c0e1f} 
+void AWarrior\+Enemy\+Character\+::\+Possessed\+By (\begin{DoxyParamCaption}\item[{AController \texorpdfstring{$\ast$}{*}}]{New\+Controller}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_a_warrior_base_character_aad008f65ad6342a149ad10cab017164b}{AWarrior\+Base\+Character}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_a_warrior_enemy_character_ac0ffae933045ea4b8429a060f1324f73}\index{AWarriorEnemyCharacter@{AWarriorEnemyCharacter}!EnemyCombatComponent@{EnemyCombatComponent}}
+\index{EnemyCombatComponent@{EnemyCombatComponent}!AWarriorEnemyCharacter@{AWarriorEnemyCharacter}}
+\doxysubsubsection{\texorpdfstring{EnemyCombatComponent}{EnemyCombatComponent}}
+{\footnotesize\ttfamily \label{class_a_warrior_enemy_character_ac0ffae933045ea4b8429a060f1324f73} 
+TObject\+Ptr$<$\mbox{\hyperlink{class_u_enemy_combat_component}{UEnemy\+Combat\+Component}}$>$ AWarrior\+Enemy\+Character\+::\+Enemy\+Combat\+Component\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Source/\+Warrior/\+Public/\+Characters/\mbox{\hyperlink{_warrior_enemy_character_8h}{Warrior\+Enemy\+Character.\+h}}\item 
+Source/\+Warrior/\+Private/\+Characters/\mbox{\hyperlink{_warrior_enemy_character_8cpp}{Warrior\+Enemy\+Character.\+cpp}}\end{DoxyCompactItemize}

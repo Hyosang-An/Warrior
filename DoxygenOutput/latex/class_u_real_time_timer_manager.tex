@@ -1,0 +1,120 @@
+\doxysection{UReal\+Time\+Timer\+Manager Class Reference}
+\hypertarget{class_u_real_time_timer_manager}{}\label{class_u_real_time_timer_manager}\index{URealTimeTimerManager@{URealTimeTimerManager}}
+
+
+{\ttfamily \#include $<$Real\+Time\+Timer.\+h$>$}
+
+
+
+Inheritance diagram for UReal\+Time\+Timer\+Manager\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=254pt]{class_u_real_time_timer_manager__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for UReal\+Time\+Timer\+Manager\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=254pt]{class_u_real_time_timer_manager__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_u_real_time_timer_manager_a073ce59a9fae050ef7d5b13e4005fc5a}{UReal\+Time\+Timer\+Manager}} ()
+\item 
+FString \mbox{\hyperlink{class_u_real_time_timer_manager_a651e9aad9a648f00933c31ce9b40b3d0}{Start\+Real\+Time\+Timer}} (float In\+Duration, FReal\+Time\+Timer\+Dynamic\+Delegate In\+Callback)
+\item 
+FString \mbox{\hyperlink{class_u_real_time_timer_manager_a564a9f9db1f8c8844fbd347488a984c4}{Start\+Real\+Time\+Timer}} (float In\+Duration, FReal\+Time\+Timer\+Delegate In\+Callback)
+\item 
+void \mbox{\hyperlink{class_u_real_time_timer_manager_a13d922c63441970fa12280581f08cf4b}{Cancel\+Real\+Time\+Timer}} (const FString \&In\+Timer\+Handle)
+\item 
+void \mbox{\hyperlink{class_u_real_time_timer_manager_ade73ce7ec588a5bee97f4178caae8f8f}{Update\+Timers}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+전역으로 사용 가능한 리얼타임 타이머 시스템 Time Dilation의 영향을 받지 않는 실제 시간 기반 타이머 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_u_real_time_timer_manager_a073ce59a9fae050ef7d5b13e4005fc5a}\index{URealTimeTimerManager@{URealTimeTimerManager}!URealTimeTimerManager@{URealTimeTimerManager}}
+\index{URealTimeTimerManager@{URealTimeTimerManager}!URealTimeTimerManager@{URealTimeTimerManager}}
+\doxysubsubsection{\texorpdfstring{URealTimeTimerManager()}{URealTimeTimerManager()}}
+{\footnotesize\ttfamily \label{class_u_real_time_timer_manager_a073ce59a9fae050ef7d5b13e4005fc5a} 
+UReal\+Time\+Timer\+Manager\+::\+UReal\+Time\+Timer\+Manager (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+리얼타임 타이머 매니저 구현 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_u_real_time_timer_manager_a13d922c63441970fa12280581f08cf4b}\index{URealTimeTimerManager@{URealTimeTimerManager}!CancelRealTimeTimer@{CancelRealTimeTimer}}
+\index{CancelRealTimeTimer@{CancelRealTimeTimer}!URealTimeTimerManager@{URealTimeTimerManager}}
+\doxysubsubsection{\texorpdfstring{CancelRealTimeTimer()}{CancelRealTimeTimer()}}
+{\footnotesize\ttfamily \label{class_u_real_time_timer_manager_a13d922c63441970fa12280581f08cf4b} 
+void UReal\+Time\+Timer\+Manager\+::\+Cancel\+Real\+Time\+Timer (\begin{DoxyParamCaption}\item[{const FString \&}]{In\+Timer\+Handle}{}\end{DoxyParamCaption})}
+
+리얼타임 타이머 취소 
+\begin{DoxyParams}{Parameters}
+{\em In\+Timer\+Handle} & -\/ 취소할 타이머의 핸들 \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_real_time_timer_manager_a13d922c63441970fa12280581f08cf4b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_u_real_time_timer_manager_a564a9f9db1f8c8844fbd347488a984c4}\index{URealTimeTimerManager@{URealTimeTimerManager}!StartRealTimeTimer@{StartRealTimeTimer}}
+\index{StartRealTimeTimer@{StartRealTimeTimer}!URealTimeTimerManager@{URealTimeTimerManager}}
+\doxysubsubsection{\texorpdfstring{StartRealTimeTimer()}{StartRealTimeTimer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_u_real_time_timer_manager_a564a9f9db1f8c8844fbd347488a984c4} 
+FString UReal\+Time\+Timer\+Manager\+::\+Start\+Real\+Time\+Timer (\begin{DoxyParamCaption}\item[{float}]{In\+Duration}{, }\item[{FReal\+Time\+Timer\+Delegate}]{In\+Callback}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_u_real_time_timer_manager_a651e9aad9a648f00933c31ce9b40b3d0}\index{URealTimeTimerManager@{URealTimeTimerManager}!StartRealTimeTimer@{StartRealTimeTimer}}
+\index{StartRealTimeTimer@{StartRealTimeTimer}!URealTimeTimerManager@{URealTimeTimerManager}}
+\doxysubsubsection{\texorpdfstring{StartRealTimeTimer()}{StartRealTimeTimer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_u_real_time_timer_manager_a651e9aad9a648f00933c31ce9b40b3d0} 
+FString UReal\+Time\+Timer\+Manager\+::\+Start\+Real\+Time\+Timer (\begin{DoxyParamCaption}\item[{float}]{In\+Duration}{, }\item[{FReal\+Time\+Timer\+Dynamic\+Delegate}]{In\+Callback}{}\end{DoxyParamCaption})}
+
+리얼타임 타이머 시작 
+\begin{DoxyParams}{Parameters}
+{\em In\+Duration} & -\/ 지속 시간 (초) \\
+\hline
+{\em In\+Callback} & -\/ 타이머 완료 시 호출할 델리게이트 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ 타이머 핸들 (타이머 취소 시 사용) 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_real_time_timer_manager_a651e9aad9a648f00933c31ce9b40b3d0_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_u_real_time_timer_manager_ade73ce7ec588a5bee97f4178caae8f8f}\index{URealTimeTimerManager@{URealTimeTimerManager}!UpdateTimers@{UpdateTimers}}
+\index{UpdateTimers@{UpdateTimers}!URealTimeTimerManager@{URealTimeTimerManager}}
+\doxysubsubsection{\texorpdfstring{UpdateTimers()}{UpdateTimers()}}
+{\footnotesize\ttfamily \label{class_u_real_time_timer_manager_ade73ce7ec588a5bee97f4178caae8f8f} 
+void UReal\+Time\+Timer\+Manager\+::\+Update\+Timers (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+모든 타이머 업데이트 (내부적으로 호출) 
+\begin{DoxyParams}{Parameters}
+{\em Delta\+Time} & -\/ 경과 시간 \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Source/\+Warrior/\+Public/\+Utilities/\mbox{\hyperlink{_real_time_timer_8h}{Real\+Time\+Timer.\+h}}\item 
+Source/\+Warrior/\+Private/\+Utilities/\mbox{\hyperlink{_real_time_timer_8cpp}{Real\+Time\+Timer.\+cpp}}\end{DoxyCompactItemize}

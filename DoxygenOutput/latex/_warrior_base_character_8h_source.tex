@@ -1,0 +1,54 @@
+\doxysection{Warrior\+Base\+Character.\+h}
+\hypertarget{_warrior_base_character_8h_source}{}\label{_warrior_base_character_8h_source}\index{Source/Warrior/Public/Characters/WarriorBaseCharacter.h@{Source/Warrior/Public/Characters/WarriorBaseCharacter.h}}
+\mbox{\hyperlink{_warrior_base_character_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}CoreMinimal.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}GameFramework/Character.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}AbilitySystemInterface.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_pawn_combat_interface_8h}{Interfaces/PawnCombatInterface.h}}"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}WarriorBaseCharacter.generated.h"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_u_data_asset___start_up_data_base}{UDataAsset\_StartUpDataBase}};}
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_u_warrior_ability_system_component}{UWarriorAbilitySystemComponent}};}
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_u_warrior_attribute_set}{UWarriorAttributeSet}};}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ UCLASS()}
+\DoxyCodeLine{00015\ class\ WARRIOR\_API\ \mbox{\hyperlink{class_a_warrior_base_character_a28915712af2f9bb19b59de277e799439}{AWarriorBaseCharacter}}\ :\ public\ ACharacter,\ public\ IAbilitySystemInterface,\ public\ \mbox{\hyperlink{class_i_pawn_combat_interface}{IPawnCombatInterface}}}
+\DoxyCodeLine{00016\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ GENERATED\_BODY()}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{comment}{//\ Sets\ default\ values\ for\ this\ character's\ properties}}
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{class_a_warrior_base_character_a28915712af2f9bb19b59de277e799439}{AWarriorBaseCharacter}}();}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{comment}{//\string~\ Begin\ IAbilitySystemInterface\ Interface.}}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{virtual}\ UAbilitySystemComponent*\ \mbox{\hyperlink{class_a_warrior_base_character_a99eac9420d98276cf5b9697f18199faa}{GetAbilitySystemComponent}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{comment}{//\string~\ End\ IAbilitySystemInterface\ Interface}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{comment}{//\ \string~\ Begin\ IPawnCombatInterface\ Interface.}}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_u_pawn_combat_component}{UPawnCombatComponent}}*\ \mbox{\hyperlink{class_a_warrior_base_character_aa05693236cf6c1b04fff5cbf0928c49a}{GetPawnCombatComponent}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{comment}{//\string~\ End\ IPawnCombatInterface\ Interface}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{comment}{//\string~\ Begin\ APawn\ Interface.}}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_a_warrior_base_character_aad008f65ad6342a149ad10cab017164b}{PossessedBy}}(AController*\ NewController)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{comment}{//\string~\ End\ APawn\ Interface}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ UPROPERTY(VisibleAnywhere,\ BlueprintReadOnly,\ Category\ =\ \textcolor{stringliteral}{"{}AbilitySystem"{}})}
+\DoxyCodeLine{00037\ \ \ \ \ TObjectPtr<\mbox{\hyperlink{class_u_warrior_ability_system_component}{UWarriorAbilitySystemComponent}}>\ \mbox{\hyperlink{class_a_warrior_base_character_abfd4a07ed1818b0238c267e31f3bdf35}{WarriorAbilitySystemComponent}};}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ UPROPERTY(VisibleAnywhere,\ BlueprintReadOnly,\ Category\ =\ \textcolor{stringliteral}{"{}AbilitySystem"{}})}
+\DoxyCodeLine{00040\ \ \ \ \ TObjectPtr<\mbox{\hyperlink{class_u_warrior_attribute_set}{UWarriorAttributeSet}}>\ \mbox{\hyperlink{class_a_warrior_base_character_a806f16435dc0587ced269154ccff2671}{WarriorAttributeSet}};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ UPROPERTY(EditDefaultsOnly,\ BlueprintReadOnly,\ Category\ =\ \textcolor{stringliteral}{"{}CharacterData"{}},\ meta\ =\ (AllowPrivateAccess\ =\ \textcolor{stringliteral}{"{}true"{}}))}
+\DoxyCodeLine{00043\ \ \ \ \ TSoftObjectPtr<\mbox{\hyperlink{class_u_data_asset___start_up_data_base}{UDataAsset\_StartUpDataBase}}>\ \mbox{\hyperlink{class_a_warrior_base_character_ae25121b65b5c7505b2c865030c5cdf28}{CharacterStartUpData}};}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ public:}
+\DoxyCodeLine{00046\ \ \ \ \ FORCEINLINE\ \mbox{\hyperlink{class_u_warrior_ability_system_component}{UWarriorAbilitySystemComponent}}*\ \mbox{\hyperlink{class_a_warrior_base_character_a8ff42b2c2d4c0f5222b2a6a62ca1d95d}{GetWarriorAbilitySystemComponent}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_a_warrior_base_character_abfd4a07ed1818b0238c267e31f3bdf35}{WarriorAbilitySystemComponent}};\ \}}
+\DoxyCodeLine{00047\ \ \ \ \ FORCEINLINE\ \mbox{\hyperlink{class_u_warrior_attribute_set}{UWarriorAttributeSet}}*\ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_a_warrior_base_character_a6632b00932ebb913c0fdbb6d9e3eb7d6}{GetWarriorAttributeSet}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_a_warrior_base_character_a806f16435dc0587ced269154ccff2671}{WarriorAttributeSet}};\ \}}
+\DoxyCodeLine{00048\ \};}
+
+\end{DoxyCode}

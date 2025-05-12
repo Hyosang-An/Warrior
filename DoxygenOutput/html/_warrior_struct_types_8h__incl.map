@@ -1,0 +1,9 @@
+<map id="Source/Warrior/Public/WarriorTypes/WarriorStructTypes.h" name="Source/Warrior/Public/WarriorTypes/WarriorStructTypes.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="206,5,450,79"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,127,232,159"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="252,82,165,123,163,118,250,77"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="255,127,400,159"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="330,79,330,112,325,112,325,79"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="424,127,701,159"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="415,77,514,118,512,123,413,82"/>
+</map>

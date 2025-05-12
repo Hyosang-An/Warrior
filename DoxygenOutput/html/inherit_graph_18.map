@@ -1,0 +1,9 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,33,172,65"/>
+<area shape="rect" id="Node000001" href="$class_u_warrior_gameplay_ability.html" title=" " alt="" coords="220,33,445,65"/>
+<area shape="poly" id="edge28_Node000000_Node000001" title=" " alt="" coords="187,46,219,46,219,52,187,52"/>
+<area shape="rect" id="Node000002" href="$class_u_warrior_enemy_gameplay_ability.html" title=" " alt="" coords="493,5,775,37"/>
+<area shape="poly" id="edge29_Node000001_Node000002" title=" " alt="" coords="460,35,493,32,493,37,461,40"/>
+<area shape="rect" id="Node000003" href="$class_u_warrior_hero_gameplay_ability.html" title=" " alt="" coords="502,61,766,93"/>
+<area shape="poly" id="edge30_Node000001_Node000003" title=" " alt="" coords="461,58,502,62,501,68,460,64"/>
+</map>

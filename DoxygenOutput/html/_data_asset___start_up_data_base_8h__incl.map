@@ -1,0 +1,9 @@
+<map id="Source/Warrior/Public/DataAssets/StartUpData/DataAsset_StartUpDataBase.h" name="Source/Warrior/Public/DataAssets/StartUpData/DataAsset_StartUpDataBase.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="122,5,396,79"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,127,145,159"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="193,82,117,122,115,117,190,77"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="169,127,349,159"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="262,79,262,112,256,112,256,79"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="373,127,729,159"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="367,77,493,119,491,124,366,82"/>
+</map>

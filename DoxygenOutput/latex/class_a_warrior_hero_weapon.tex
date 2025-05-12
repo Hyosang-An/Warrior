@@ -1,0 +1,97 @@
+\doxysection{AWarrior\+Hero\+Weapon Class Reference}
+\hypertarget{class_a_warrior_hero_weapon}{}\label{class_a_warrior_hero_weapon}\index{AWarriorHeroWeapon@{AWarriorHeroWeapon}}
+
+
+{\ttfamily \#include $<$Warrior\+Hero\+Weapon.\+h$>$}
+
+
+
+Inheritance diagram for AWarrior\+Hero\+Weapon\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=230pt]{class_a_warrior_hero_weapon__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for AWarrior\+Hero\+Weapon\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_a_warrior_hero_weapon__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_a_warrior_hero_weapon_a2e3d77601f618292db6ca01c3d09063c}{Assign\+Granted\+Ability\+Spec\+Handles}} (const TArray$<$ FGameplay\+Ability\+Spec\+Handle $>$ \&In\+Granted\+Ability\+Spec\+Handles)
+\item 
+TArray$<$ FGameplay\+Ability\+Spec\+Handle $>$ \mbox{\hyperlink{class_a_warrior_hero_weapon_a1c283794a506e0c2243466807211e86b}{Get\+Granted\+Ability\+Spec\+Handles}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_a_warrior_weapon_base}{AWarrior\+Weapon\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_a_warrior_weapon_base_a3a36e9d62efefec46dca1e348c24993b}{AWarrior\+Weapon\+Base}} ()
+\item 
+FORCEINLINE UBox\+Component \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_a_warrior_weapon_base_a4e6c6a0c9a04be800addb2f2ec051418}{Get\+Weapon\+Collision\+Box}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_f_warrior_hero_weapon_data}{FWarrior\+Hero\+Weapon\+Data}} \mbox{\hyperlink{class_a_warrior_hero_weapon_a545d3b605c9b82f9e5079104ed45b0ce}{Hero\+Weapon\+Data}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_a_warrior_weapon_base}{AWarrior\+Weapon\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+FOn\+Target\+Interacted\+Delegate \mbox{\hyperlink{class_a_warrior_weapon_base_a0b110efae2b58e0d8b55556c48eeab8e}{On\+Weapon\+Hit\+Target}}
+\item 
+FOn\+Target\+Interacted\+Delegate \mbox{\hyperlink{class_a_warrior_weapon_base_af6b9c5974eadf58b535e6aca08b98869}{On\+Weapon\+Pulled\+From\+Target}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_a_warrior_weapon_base}{AWarrior\+Weapon\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_a_warrior_weapon_base_a54facf522da0142d8c6ff61e07f76f67}{On\+Collision\+Box\+Begin\+Overlap}} (UPrimitive\+Component \texorpdfstring{$\ast$}{*}Overlapped\+Component, AActor \texorpdfstring{$\ast$}{*}Other\+Actor, UPrimitive\+Component \texorpdfstring{$\ast$}{*}Other\+Comp, int32 Other\+Body\+Index, bool b\+From\+Sweep, const FHit\+Result \&Sweep\+Result)
+\item 
+virtual void \mbox{\hyperlink{class_a_warrior_weapon_base_a7e2443ff22c00e864047d82b215d5acd}{On\+Collision\+Box\+End\+Overlap}} (UPrimitive\+Component \texorpdfstring{$\ast$}{*}Overlapped\+Component, AActor \texorpdfstring{$\ast$}{*}Other\+Actor, UPrimitive\+Component \texorpdfstring{$\ast$}{*}Other\+Comp, int32 Other\+Body\+Index)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_a_warrior_weapon_base}{AWarrior\+Weapon\+Base}}}
+\begin{DoxyCompactItemize}
+\item 
+TObject\+Ptr$<$ UStatic\+Mesh\+Component $>$ \mbox{\hyperlink{class_a_warrior_weapon_base_a2068fd295887e6e2add5faa63adc8d2a}{Weapon\+Mesh}}
+\item 
+TObject\+Ptr$<$ UBox\+Component $>$ \mbox{\hyperlink{class_a_warrior_weapon_base_af4191b27697d1218f13339872260f592}{Weapon\+Collision\+Box}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_a_warrior_hero_weapon_a2e3d77601f618292db6ca01c3d09063c}\index{AWarriorHeroWeapon@{AWarriorHeroWeapon}!AssignGrantedAbilitySpecHandles@{AssignGrantedAbilitySpecHandles}}
+\index{AssignGrantedAbilitySpecHandles@{AssignGrantedAbilitySpecHandles}!AWarriorHeroWeapon@{AWarriorHeroWeapon}}
+\doxysubsubsection{\texorpdfstring{AssignGrantedAbilitySpecHandles()}{AssignGrantedAbilitySpecHandles()}}
+{\footnotesize\ttfamily \label{class_a_warrior_hero_weapon_a2e3d77601f618292db6ca01c3d09063c} 
+void AWarrior\+Hero\+Weapon\+::\+Assign\+Granted\+Ability\+Spec\+Handles (\begin{DoxyParamCaption}\item[{const TArray$<$ FGameplay\+Ability\+Spec\+Handle $>$ \&}]{In\+Granted\+Ability\+Spec\+Handles}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_a_warrior_hero_weapon_a1c283794a506e0c2243466807211e86b}\index{AWarriorHeroWeapon@{AWarriorHeroWeapon}!GetGrantedAbilitySpecHandles@{GetGrantedAbilitySpecHandles}}
+\index{GetGrantedAbilitySpecHandles@{GetGrantedAbilitySpecHandles}!AWarriorHeroWeapon@{AWarriorHeroWeapon}}
+\doxysubsubsection{\texorpdfstring{GetGrantedAbilitySpecHandles()}{GetGrantedAbilitySpecHandles()}}
+{\footnotesize\ttfamily \label{class_a_warrior_hero_weapon_a1c283794a506e0c2243466807211e86b} 
+TArray$<$ FGameplay\+Ability\+Spec\+Handle $>$ AWarrior\+Hero\+Weapon\+::\+Get\+Granted\+Ability\+Spec\+Handles (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_a_warrior_hero_weapon_a545d3b605c9b82f9e5079104ed45b0ce}\index{AWarriorHeroWeapon@{AWarriorHeroWeapon}!HeroWeaponData@{HeroWeaponData}}
+\index{HeroWeaponData@{HeroWeaponData}!AWarriorHeroWeapon@{AWarriorHeroWeapon}}
+\doxysubsubsection{\texorpdfstring{HeroWeaponData}{HeroWeaponData}}
+{\footnotesize\ttfamily \label{class_a_warrior_hero_weapon_a545d3b605c9b82f9e5079104ed45b0ce} 
+\mbox{\hyperlink{struct_f_warrior_hero_weapon_data}{FWarrior\+Hero\+Weapon\+Data}} AWarrior\+Hero\+Weapon\+::\+Hero\+Weapon\+Data}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Source/\+Warrior/\+Public/\+Items/\+Weapons/\mbox{\hyperlink{_warrior_hero_weapon_8h}{Warrior\+Hero\+Weapon.\+h}}\item 
+Source/\+Warrior/\+Private/\+Items/\+Weapons/\mbox{\hyperlink{_warrior_hero_weapon_8cpp}{Warrior\+Hero\+Weapon.\+cpp}}\end{DoxyCompactItemize}

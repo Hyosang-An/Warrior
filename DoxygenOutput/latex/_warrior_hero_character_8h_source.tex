@@ -1,0 +1,74 @@
+\doxysection{Warrior\+Hero\+Character.\+h}
+\hypertarget{_warrior_hero_character_8h_source}{}\label{_warrior_hero_character_8h_source}\index{Source/Warrior/Public/Characters/WarriorHeroCharacter.h@{Source/Warrior/Public/Characters/WarriorHeroCharacter.h}}
+\mbox{\hyperlink{_warrior_hero_character_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}CoreMinimal.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}GameplayTagContainer.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_warrior_base_character_8h}{Characters/WarriorBaseCharacter.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}WarriorHeroCharacter.generated.h"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_u_hero_combat_component}{UHeroCombatComponent}};}
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_u_data_asset___input_config}{UDataAsset\_InputConfig}};}
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }USpringArmComponent;}
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }UCameraComponent;}
+\DoxyCodeLine{00012\ \textcolor{keyword}{struct\ }FInputActionValue;}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00017\ UCLASS()}
+\DoxyCodeLine{00018\ class\ WARRIOR\_API\ \mbox{\hyperlink{class_a_warrior_hero_character_a841a24019eb5524ff3480f030f284063}{AWarriorHeroCharacter}}\ :\ public\ \mbox{\hyperlink{class_a_warrior_base_character_a28915712af2f9bb19b59de277e799439}{AWarriorBaseCharacter}}}
+\DoxyCodeLine{00019\ \{}
+\DoxyCodeLine{00020\ \ \ \ \ GENERATED\_BODY()}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{class_a_warrior_hero_character_a841a24019eb5524ff3480f030f284063}{AWarriorHeroCharacter}}();}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{comment}{//\ \string~\ Begin\ IPawnCombatInterface\ Interface.}}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_u_pawn_combat_component}{UPawnCombatComponent}}*\ \mbox{\hyperlink{class_a_warrior_hero_character_a623de14eab508e0043a2fea0e544e929}{GetPawnCombatComponent}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{comment}{//\string~\ End\ IPawnCombatInterface\ Interface}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ UFUNCTION()}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_a_warrior_hero_character_ab2286658cb1c9c0b1018d21dfa4e331e}{OnRealTimeTimerTest}}();}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{comment}{//\string~\ Begin\ APawn\ Interface.}}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_a_warrior_hero_character_a28149635301d5c75e86db6e6198ba21c}{PossessedBy}}(AController*\ NewController)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{comment}{//\string~\ End\ APawn\ Interface}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_a_warrior_hero_character_acd686945498a20ea865c08fb10692fc6}{SetupPlayerInputComponent}}(UInputComponent*\ PlayerInputComponent)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_a_warrior_hero_character_ad36e31fd99a8ae70d8b38f7f03169755}{BeginPlay}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#pragma\ region\ Components}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ UPROPERTY(VisibleAnywhere,\ BlueprintReadOnly,\ Category\ =\ \textcolor{stringliteral}{"{}Camera"{}},\ meta\ =\ (AllowPrivateAccess\ =\ \textcolor{stringliteral}{"{}true"{}}))}
+\DoxyCodeLine{00044\ \ \ \ \ TObjectPtr<USpringArmComponent>\ CameraBoom;}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ UPROPERTY(VisibleAnywhere,\ BlueprintReadOnly,\ Category\ =\ \textcolor{stringliteral}{"{}Camera"{}},\ meta\ =\ (AllowPrivateAccess\ =\ \textcolor{stringliteral}{"{}true"{}}))}
+\DoxyCodeLine{00047\ \ \ \ \ TObjectPtr<UCameraComponent>\ FollowCamera;}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ UPROPERTY(VisibleAnywhere,\ BlueprintReadOnly,\ Category\ =\ \textcolor{stringliteral}{"{}Combat"{}},\ meta\ =\ (AllowPrivateAccess\ =\ \textcolor{stringliteral}{"{}true"{}}))}
+\DoxyCodeLine{00050\ \ \ \ \ TObjectPtr<UHeroCombatComponent>\ HeroCombatComponent;}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \textcolor{preprocessor}{\#pragma\ endregion}}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#pragma\ region\ Inputs}}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ UPROPERTY(EditDefaultsOnly,\ BlueprintReadOnly,\ Category\ =\ \textcolor{stringliteral}{"{}CharacterData"{}},\ meta\ =\ (AllowPrivateAccess\ =\ \textcolor{stringliteral}{"{}true"{}}))}
+\DoxyCodeLine{00059\ \ \ \ \ TObjectPtr<UDataAsset\_InputConfig>\ InputConfigDataAsset;}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{void}\ Input\_Move(\textcolor{keyword}{const}\ FInputActionValue\&\ InputActionValue);}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{void}\ Input\_Look(\textcolor{keyword}{const}\ FInputActionValue\&\ InputActionValue);}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{void}\ Input\_AbilityInputPressed(FGameplayTag\ InInputTag);}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{void}\ Input\_AbilityInputReleased(FGameplayTag\ InInputTag);}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \textcolor{preprocessor}{\#pragma\ endregion}}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00070\ \ \ \ \ FORCEINLINE\ \mbox{\hyperlink{class_u_hero_combat_component}{UHeroCombatComponent}}*\ \mbox{\hyperlink{class_a_warrior_hero_character_a82845d8170b174b0eb8ccef3cc870530}{GetHeroCombatComponent}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ HeroCombatComponent;\ \}}
+\DoxyCodeLine{00071\ \};}
+
+\end{DoxyCode}

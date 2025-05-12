@@ -1,0 +1,40 @@
+\doxysection{Warrior\+Enemy\+Character.\+h}
+\hypertarget{_warrior_enemy_character_8h_source}{}\label{_warrior_enemy_character_8h_source}\index{Source/Warrior/Public/Characters/WarriorEnemyCharacter.h@{Source/Warrior/Public/Characters/WarriorEnemyCharacter.h}}
+\mbox{\hyperlink{_warrior_enemy_character_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}CoreMinimal.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_warrior_base_character_8h}{Characters/WarriorBaseCharacter.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}WarriorEnemyCharacter.generated.h"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_u_enemy_combat_component}{UEnemyCombatComponent}};}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00012\ UCLASS()}
+\DoxyCodeLine{00013\ class\ WARRIOR\_API\ \mbox{\hyperlink{class_a_warrior_enemy_character_aee65cf43e5625cd4f653a7d6efe0b7d6}{AWarriorEnemyCharacter}}\ :\ public\ \mbox{\hyperlink{class_a_warrior_base_character_a28915712af2f9bb19b59de277e799439}{AWarriorBaseCharacter}}}
+\DoxyCodeLine{00014\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ GENERATED\_BODY()}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{class_a_warrior_enemy_character_aee65cf43e5625cd4f653a7d6efe0b7d6}{AWarriorEnemyCharacter}}();}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{comment}{//\ \string~\ Begin\ IPawnCombatInterface\ Interface.}}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_u_pawn_combat_component}{UPawnCombatComponent}}*\ \mbox{\hyperlink{class_a_warrior_enemy_character_afba59582fe122bf60c52f3cfd1960ffe}{GetPawnCombatComponent}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{comment}{//\string~\ End\ IPawnCombatInterface\ Interface}}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{comment}{//\string~\ Begin\ APawn\ Interface.}}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_a_warrior_enemy_character_a10976d8f5ff85234b8d27030ce6c0e1f}{PossessedBy}}(AController*\ NewController)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{comment}{//\string~\ End\ APawn\ Interface}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ UPROPERTY(VisibleAnywhere,\ BlueprintReadOnly,\ Category\ =\ \textcolor{stringliteral}{"{}Combat"{}})}
+\DoxyCodeLine{00030\ \ \ \ \ TObjectPtr<\mbox{\hyperlink{class_u_enemy_combat_component}{UEnemyCombatComponent}}>\ \mbox{\hyperlink{class_a_warrior_enemy_character_ac0ffae933045ea4b8429a060f1324f73}{EnemyCombatComponent}};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ private:}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ InitEnemyStartUpData();}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ public:}
+\DoxyCodeLine{00036\ \ \ \ \ FORCEINLINE\ \mbox{\hyperlink{class_u_enemy_combat_component}{UEnemyCombatComponent}}*\ \mbox{\hyperlink{class_a_warrior_enemy_character_a90afabfcb8cb7c7f8f4e02901584a2b7}{GetEnemyCombatComponent}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_a_warrior_enemy_character_ac0ffae933045ea4b8429a060f1324f73}{EnemyCombatComponent}};\ \}}
+\DoxyCodeLine{00037\ \};}
+
+\end{DoxyCode}

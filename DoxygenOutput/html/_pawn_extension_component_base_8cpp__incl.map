@@ -1,0 +1,11 @@
+<map id="Source/Warrior/Private/Components/PawnExtensionComponentBase.cpp" name="Source/Warrior/Private/Components/PawnExtensionComponentBase.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="132,5,484,79"/>
+<area shape="rect" id="Node000002" href="$_pawn_extension_component_base_8h.html" title=" " alt="" coords="182,127,435,180"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="311,80,311,112,306,112,306,80"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,228,145,259"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="241,183,130,224,128,219,239,178"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="168,228,448,259"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="311,180,311,212,306,212,306,180"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="472,228,854,259"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="413,178,588,221,587,226,412,183"/>
+</map>

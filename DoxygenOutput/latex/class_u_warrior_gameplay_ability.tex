@@ -1,0 +1,140 @@
+\doxysection{UWarrior\+Gameplay\+Ability Class Reference}
+\hypertarget{class_u_warrior_gameplay_ability}{}\label{class_u_warrior_gameplay_ability}\index{UWarriorGameplayAbility@{UWarriorGameplayAbility}}
+
+
+{\ttfamily \#include $<$Warrior\+Gameplay\+Ability.\+h$>$}
+
+
+
+Inheritance diagram for UWarrior\+Gameplay\+Ability\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_warrior_gameplay_ability__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for UWarrior\+Gameplay\+Ability\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=249pt]{class_u_warrior_gameplay_ability__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_u_warrior_gameplay_ability_aabef342613d22ec3326ff0fa8a2b0853}{On\+Give\+Ability}} (const FGameplay\+Ability\+Actor\+Info \texorpdfstring{$\ast$}{*}Actor\+Info, const FGameplay\+Ability\+Spec \&Spec) override
+\item 
+virtual void \mbox{\hyperlink{class_u_warrior_gameplay_ability_a9dd2224f1ba96aeb090a1e499de9eade}{End\+Ability}} (const FGameplay\+Ability\+Spec\+Handle Handle, const FGameplay\+Ability\+Actor\+Info \texorpdfstring{$\ast$}{*}Actor\+Info, const FGameplay\+Ability\+Activation\+Info Activation\+Info, bool b\+Replicate\+End\+Ability, bool b\+Was\+Cancelled) override
+\item 
+virtual bool \mbox{\hyperlink{class_u_warrior_gameplay_ability_acee4a5ae213535c1c1d1ba922d6bd7bc}{Does\+Ability\+Satisfy\+Tag\+Requirements}} (const UAbility\+System\+Component \&Ability\+System\+Component, const FGameplay\+Tag\+Container \texorpdfstring{$\ast$}{*}Source\+Tags=nullptr, const FGameplay\+Tag\+Container \texorpdfstring{$\ast$}{*}Target\+Tags=nullptr, OUT FGameplay\+Tag\+Container \texorpdfstring{$\ast$}{*}Optional\+Relevant\+Tags=nullptr) const override
+\item 
+\mbox{\hyperlink{class_u_pawn_combat_component}{UPawn\+Combat\+Component}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_u_warrior_gameplay_ability_a14bf16ed90bc116b2482e4b39ae87440}{Get\+Pawn\+Combat\+Component\+From\+Actor\+Info}} () const
+\item 
+\mbox{\hyperlink{class_u_warrior_ability_system_component}{UWarrior\+Ability\+System\+Component}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_u_warrior_gameplay_ability_a13ada6208458341446b7b40654487d97}{Get\+Warrior\+Ability\+System\+Component\+From\+Actor\+Info}} () const
+\item 
+FActive\+Gameplay\+Effect\+Handle \mbox{\hyperlink{class_u_warrior_gameplay_ability_acb4fe3fb51d4c81eac389c2e0875d124}{Native\+Apply\+Effect\+Spec\+Handle\+To\+Target}} (AActor \texorpdfstring{$\ast$}{*}Target\+Actor, const FGameplay\+Effect\+Spec\+Handle \&In\+Spec\+Handle)
+\item 
+FActive\+Gameplay\+Effect\+Handle \mbox{\hyperlink{class_u_warrior_gameplay_ability_a974ff457514ddb69a74209560e9ebe33}{BP\+\_\+\+Apply\+Effect\+Spec\+Handle\+To\+Target}} (AActor \texorpdfstring{$\ast$}{*}Target\+Actor, const FGameplay\+Effect\+Spec\+Handle \&In\+Spec\+Handle, \mbox{\hyperlink{_warrior_enum_types_8h_a8f48d2bc081931019b4df8dc50c5835c}{EWarrior\+Success\+Type}} \&Out\+Success\+Type)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_warrior_gameplay_ability_8h_a394d9754f6ebff5ddd38f278d289f61e}{EWarrior\+Ability\+Activation\+Policy}} \mbox{\hyperlink{class_u_warrior_gameplay_ability_aacc1f82e4ad5c3859ec85590d69feac3}{Ability\+Activation\+Policy}} = \mbox{\hyperlink{_warrior_gameplay_ability_8h_a394d9754f6ebff5ddd38f278d289f61ea575dc4eff45105902da03c352a77c0e5}{EWarrior\+Ability\+Activation\+Policy\+::\+On\+Triggered}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_u_warrior_gameplay_ability_a974ff457514ddb69a74209560e9ebe33}\index{UWarriorGameplayAbility@{UWarriorGameplayAbility}!BP\_ApplyEffectSpecHandleToTarget@{BP\_ApplyEffectSpecHandleToTarget}}
+\index{BP\_ApplyEffectSpecHandleToTarget@{BP\_ApplyEffectSpecHandleToTarget}!UWarriorGameplayAbility@{UWarriorGameplayAbility}}
+\doxysubsubsection{\texorpdfstring{BP\_ApplyEffectSpecHandleToTarget()}{BP\_ApplyEffectSpecHandleToTarget()}}
+{\footnotesize\ttfamily \label{class_u_warrior_gameplay_ability_a974ff457514ddb69a74209560e9ebe33} 
+FActive\+Gameplay\+Effect\+Handle UWarrior\+Gameplay\+Ability\+::\+BP\+\_\+\+Apply\+Effect\+Spec\+Handle\+To\+Target (\begin{DoxyParamCaption}\item[{AActor \texorpdfstring{$\ast$}{*}}]{Target\+Actor}{, }\item[{const FGameplay\+Effect\+Spec\+Handle \&}]{In\+Spec\+Handle}{, }\item[{\mbox{\hyperlink{_warrior_enum_types_8h_a8f48d2bc081931019b4df8dc50c5835c}{EWarrior\+Success\+Type}} \&}]{Out\+Success\+Type}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_warrior_gameplay_ability_a974ff457514ddb69a74209560e9ebe33_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_u_warrior_gameplay_ability_acee4a5ae213535c1c1d1ba922d6bd7bc}\index{UWarriorGameplayAbility@{UWarriorGameplayAbility}!DoesAbilitySatisfyTagRequirements@{DoesAbilitySatisfyTagRequirements}}
+\index{DoesAbilitySatisfyTagRequirements@{DoesAbilitySatisfyTagRequirements}!UWarriorGameplayAbility@{UWarriorGameplayAbility}}
+\doxysubsubsection{\texorpdfstring{DoesAbilitySatisfyTagRequirements()}{DoesAbilitySatisfyTagRequirements()}}
+{\footnotesize\ttfamily \label{class_u_warrior_gameplay_ability_acee4a5ae213535c1c1d1ba922d6bd7bc} 
+bool UWarrior\+Gameplay\+Ability\+::\+Does\+Ability\+Satisfy\+Tag\+Requirements (\begin{DoxyParamCaption}\item[{const UAbility\+System\+Component \&}]{Ability\+System\+Component}{, }\item[{const FGameplay\+Tag\+Container \texorpdfstring{$\ast$}{*}}]{Source\+Tags}{ = {\ttfamily nullptr}, }\item[{const FGameplay\+Tag\+Container \texorpdfstring{$\ast$}{*}}]{Target\+Tags}{ = {\ttfamily nullptr}, }\item[{OUT FGameplay\+Tag\+Container \texorpdfstring{$\ast$}{*}}]{Optional\+Relevant\+Tags}{ = {\ttfamily nullptr}}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\Hypertarget{class_u_warrior_gameplay_ability_a9dd2224f1ba96aeb090a1e499de9eade}\index{UWarriorGameplayAbility@{UWarriorGameplayAbility}!EndAbility@{EndAbility}}
+\index{EndAbility@{EndAbility}!UWarriorGameplayAbility@{UWarriorGameplayAbility}}
+\doxysubsubsection{\texorpdfstring{EndAbility()}{EndAbility()}}
+{\footnotesize\ttfamily \label{class_u_warrior_gameplay_ability_a9dd2224f1ba96aeb090a1e499de9eade} 
+void UWarrior\+Gameplay\+Ability\+::\+End\+Ability (\begin{DoxyParamCaption}\item[{const FGameplay\+Ability\+Spec\+Handle}]{Handle}{, }\item[{const FGameplay\+Ability\+Actor\+Info \texorpdfstring{$\ast$}{*}}]{Actor\+Info}{, }\item[{const FGameplay\+Ability\+Activation\+Info}]{Activation\+Info}{, }\item[{bool}]{b\+Replicate\+End\+Ability}{, }\item[{bool}]{b\+Was\+Cancelled}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\Hypertarget{class_u_warrior_gameplay_ability_a14bf16ed90bc116b2482e4b39ae87440}\index{UWarriorGameplayAbility@{UWarriorGameplayAbility}!GetPawnCombatComponentFromActorInfo@{GetPawnCombatComponentFromActorInfo}}
+\index{GetPawnCombatComponentFromActorInfo@{GetPawnCombatComponentFromActorInfo}!UWarriorGameplayAbility@{UWarriorGameplayAbility}}
+\doxysubsubsection{\texorpdfstring{GetPawnCombatComponentFromActorInfo()}{GetPawnCombatComponentFromActorInfo()}}
+{\footnotesize\ttfamily \label{class_u_warrior_gameplay_ability_a14bf16ed90bc116b2482e4b39ae87440} 
+\mbox{\hyperlink{class_u_pawn_combat_component}{UPawn\+Combat\+Component}} \texorpdfstring{$\ast$}{*} UWarrior\+Gameplay\+Ability\+::\+Get\+Pawn\+Combat\+Component\+From\+Actor\+Info (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{class_u_warrior_gameplay_ability_a13ada6208458341446b7b40654487d97}\index{UWarriorGameplayAbility@{UWarriorGameplayAbility}!GetWarriorAbilitySystemComponentFromActorInfo@{GetWarriorAbilitySystemComponentFromActorInfo}}
+\index{GetWarriorAbilitySystemComponentFromActorInfo@{GetWarriorAbilitySystemComponentFromActorInfo}!UWarriorGameplayAbility@{UWarriorGameplayAbility}}
+\doxysubsubsection{\texorpdfstring{GetWarriorAbilitySystemComponentFromActorInfo()}{GetWarriorAbilitySystemComponentFromActorInfo()}}
+{\footnotesize\ttfamily \label{class_u_warrior_gameplay_ability_a13ada6208458341446b7b40654487d97} 
+\mbox{\hyperlink{class_u_warrior_ability_system_component}{UWarrior\+Ability\+System\+Component}} \texorpdfstring{$\ast$}{*} UWarrior\+Gameplay\+Ability\+::\+Get\+Warrior\+Ability\+System\+Component\+From\+Actor\+Info (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_warrior_gameplay_ability_a13ada6208458341446b7b40654487d97_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_u_warrior_gameplay_ability_acb4fe3fb51d4c81eac389c2e0875d124}\index{UWarriorGameplayAbility@{UWarriorGameplayAbility}!NativeApplyEffectSpecHandleToTarget@{NativeApplyEffectSpecHandleToTarget}}
+\index{NativeApplyEffectSpecHandleToTarget@{NativeApplyEffectSpecHandleToTarget}!UWarriorGameplayAbility@{UWarriorGameplayAbility}}
+\doxysubsubsection{\texorpdfstring{NativeApplyEffectSpecHandleToTarget()}{NativeApplyEffectSpecHandleToTarget()}}
+{\footnotesize\ttfamily \label{class_u_warrior_gameplay_ability_acb4fe3fb51d4c81eac389c2e0875d124} 
+FActive\+Gameplay\+Effect\+Handle UWarrior\+Gameplay\+Ability\+::\+Native\+Apply\+Effect\+Spec\+Handle\+To\+Target (\begin{DoxyParamCaption}\item[{AActor \texorpdfstring{$\ast$}{*}}]{Target\+Actor}{, }\item[{const FGameplay\+Effect\+Spec\+Handle \&}]{In\+Spec\+Handle}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_warrior_gameplay_ability_acb4fe3fb51d4c81eac389c2e0875d124_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_warrior_gameplay_ability_acb4fe3fb51d4c81eac389c2e0875d124_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_u_warrior_gameplay_ability_aabef342613d22ec3326ff0fa8a2b0853}\index{UWarriorGameplayAbility@{UWarriorGameplayAbility}!OnGiveAbility@{OnGiveAbility}}
+\index{OnGiveAbility@{OnGiveAbility}!UWarriorGameplayAbility@{UWarriorGameplayAbility}}
+\doxysubsubsection{\texorpdfstring{OnGiveAbility()}{OnGiveAbility()}}
+{\footnotesize\ttfamily \label{class_u_warrior_gameplay_ability_aabef342613d22ec3326ff0fa8a2b0853} 
+void UWarrior\+Gameplay\+Ability\+::\+On\+Give\+Ability (\begin{DoxyParamCaption}\item[{const FGameplay\+Ability\+Actor\+Info \texorpdfstring{$\ast$}{*}}]{Actor\+Info}{, }\item[{const FGameplay\+Ability\+Spec \&}]{Spec}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_u_warrior_gameplay_ability_aacc1f82e4ad5c3859ec85590d69feac3}\index{UWarriorGameplayAbility@{UWarriorGameplayAbility}!AbilityActivationPolicy@{AbilityActivationPolicy}}
+\index{AbilityActivationPolicy@{AbilityActivationPolicy}!UWarriorGameplayAbility@{UWarriorGameplayAbility}}
+\doxysubsubsection{\texorpdfstring{AbilityActivationPolicy}{AbilityActivationPolicy}}
+{\footnotesize\ttfamily \label{class_u_warrior_gameplay_ability_aacc1f82e4ad5c3859ec85590d69feac3} 
+\mbox{\hyperlink{_warrior_gameplay_ability_8h_a394d9754f6ebff5ddd38f278d289f61e}{EWarrior\+Ability\+Activation\+Policy}} UWarrior\+Gameplay\+Ability\+::\+Ability\+Activation\+Policy = \mbox{\hyperlink{_warrior_gameplay_ability_8h_a394d9754f6ebff5ddd38f278d289f61ea575dc4eff45105902da03c352a77c0e5}{EWarrior\+Ability\+Activation\+Policy\+::\+On\+Triggered}}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Source/\+Warrior/\+Public/\+Ability\+System/\+Abilities/\mbox{\hyperlink{_warrior_gameplay_ability_8h}{Warrior\+Gameplay\+Ability.\+h}}\item 
+Source/\+Warrior/\+Private/\+Ability\+System/\+Abilities/\mbox{\hyperlink{_warrior_gameplay_ability_8cpp}{Warrior\+Gameplay\+Ability.\+cpp}}\end{DoxyCompactItemize}

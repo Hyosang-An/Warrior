@@ -1,0 +1,43 @@
+\doxysection{Warrior\+Function\+Library.\+h}
+\hypertarget{_warrior_function_library_8h_source}{}\label{_warrior_function_library_8h_source}\index{Source/Warrior/Public/WarriorFunctionLibrary.h@{Source/Warrior/Public/WarriorFunctionLibrary.h}}
+\mbox{\hyperlink{_warrior_function_library_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}CoreMinimal.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}GameplayTagContainer.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}Kismet/BlueprintFunctionLibrary.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_warrior_enum_types_8h}{WarriorTypes/WarriorEnumTypes.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}WarriorFunctionLibrary.generated.h"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_u_pawn_combat_component}{UPawnCombatComponent}};}
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_u_warrior_ability_system_component}{UWarriorAbilitySystemComponent}};}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00016\ UCLASS()}
+\DoxyCodeLine{00017\ class\ WARRIOR\_API\ \mbox{\hyperlink{class_u_warrior_function_library}{UWarriorFunctionLibrary}}\ :\ public\ UBlueprintFunctionLibrary}
+\DoxyCodeLine{00018\ \{}
+\DoxyCodeLine{00019\ \ \ \ \ GENERATED\_BODY()}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_u_warrior_ability_system_component}{UWarriorAbilitySystemComponent}}*\ \mbox{\hyperlink{class_u_warrior_function_library_aa2b7623364d35b810e623db3986b13e4}{NativeGetWarriorASCFromActor}}(AActor*\ InActor);}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category\ =\ \textcolor{stringliteral}{"{}Warrior|FunctionLibrary"{}})}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_warrior_function_library_a165337bf5cee47884a4e1b4389c1de5d}{AddGameplayTagToActorIfNone}}(AActor*\ InActor,\ FGameplayTag\ TagToAdd);}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category\ =\ \textcolor{stringliteral}{"{}Warrior|FunctionLibrary"{}})}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_warrior_function_library_ac3739675c98cbb0ff6e842582ffcc117}{RemoveGameplayTagFromActorIfBound}}(AActor*\ InActor,\ FGameplayTag\ TagToRemove);}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_u_warrior_function_library_ac890312c27ee2dbbff8a257ba5cdede8}{NativeDoesActorHaveTag}}(AActor*\ InActor,\ FGameplayTag\ TagToCheck);}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category\ =\ \textcolor{stringliteral}{"{}Warrior|FunctionLibrary"{}},\ Meta\ =\ (DisplayName\ =\ \textcolor{stringliteral}{"{}Does\ Actor\ Have\ Tag"{}},\ ExpandEnumAsExecs\ =\ \textcolor{stringliteral}{"{}OutConfirmType"{}}))}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_warrior_function_library_a6538edc4e339cd3eaf22c4dc105b5b4e}{BP\_DoesActorHaveTag}}(AActor*\ InActor,\ FGameplayTag\ TagToCheck,\ \mbox{\hyperlink{_warrior_enum_types_8h_a48778324e3634b852ccf33ace8d6b1a7}{EWarriorConfirmType}}\&\ OutConfirmType);}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_u_pawn_combat_component}{UPawnCombatComponent}}*\ \mbox{\hyperlink{class_u_warrior_function_library_a7de0b5f483cdf19a35c2c40e8b978a60}{NativeGetPawnCombatComponentFromActor}}(AActor*\ InActor);}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category\ =\ \textcolor{stringliteral}{"{}Warrior|FunctionLibrary"{}},\ Meta\ =\ (DisplayName\ =\ \textcolor{stringliteral}{"{}Get\ Pawn\ Combat\ Component\ From\ Actor"{}},\ ExpandEnumAsExecs\ =\ \textcolor{stringliteral}{"{}OutValidType"{}}))}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_u_pawn_combat_component}{UPawnCombatComponent}}*\ \mbox{\hyperlink{class_u_warrior_function_library_a0be80d80549ae1facc7a0420c8a51258}{BP\_GetPawnCombatComponentFromActor}}(AActor*\ InActor,\ \mbox{\hyperlink{_warrior_enum_types_8h_abc2929b9258bb4b522e5134e5c920705}{EWarriorValidType}}\&\ OutValidType);}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \};}
+
+\end{DoxyCode}

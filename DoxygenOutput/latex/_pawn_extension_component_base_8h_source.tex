@@ -1,0 +1,38 @@
+\doxysection{Pawn\+Extension\+Component\+Base.\+h}
+\hypertarget{_pawn_extension_component_base_8h_source}{}\label{_pawn_extension_component_base_8h_source}\index{Source/Warrior/Public/Components/PawnExtensionComponentBase.h@{Source/Warrior/Public/Components/PawnExtensionComponentBase.h}}
+\mbox{\hyperlink{_pawn_extension_component_base_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}CoreMinimal.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Components/ActorComponent.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}PawnExtensionComponentBase.generated.h"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ UCLASS(ClassGroup=(Custom),\ meta=(BlueprintSpawnableComponent))}
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }WARRIOR\_API\ UPawnExtensionComponentBase\ :\ \textcolor{keyword}{public}\ UActorComponent}
+\DoxyCodeLine{00010\ \{}
+\DoxyCodeLine{00011\ \ \ \ \ GENERATED\_BODY()}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ protected:}
+\DoxyCodeLine{00014\ \ \ \ \ template<class\ T>}
+\DoxyCodeLine{00015\ \ \ \ \ T*\ GetOwningPawn()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00016\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static\_assert}(TPointerIsConvertibleFromTo<T,\ APawn>::Value,\ \textcolor{stringliteral}{"{}'T'\ Template\ Parameter\ to\ GetPawn\ must\ be\ a\ derived\ from\ APawn"{}});}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ CastChecked<T>(GetOwner());}
+\DoxyCodeLine{00019\ \ \ \ \ \}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ APawn*\ GetOwningPawn()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00022\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ GetOwningPawn<APawn>();}
+\DoxyCodeLine{00024\ \ \ \ \ \}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{template}<\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00027\ \ \ \ \ T*\ GetOwningController()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{00028\ \textcolor{keyword}{\ \ \ \ }\{}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static\_assert}(TPointerIsConvertibleFromTo<T,\ AController>::Value,\ \textcolor{stringliteral}{"{}'T'\ Template\ Parameter\ to\ GetController\ must\ be\ a\ derived\ from\ AController"{}});}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ GetOwningPawn<APawn>()-\/>GetController<T>();}
+\DoxyCodeLine{00031\ \ \ \ \ \}}
+\DoxyCodeLine{00032\ \};}
+
+\end{DoxyCode}

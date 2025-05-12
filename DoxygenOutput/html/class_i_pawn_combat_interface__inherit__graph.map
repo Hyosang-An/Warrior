@@ -1,0 +1,9 @@
+<map id="IPawnCombatInterface" name="IPawnCombatInterface">
+<area shape="rect" id="Node000001" title=" " alt="" coords="138,5,344,37"/>
+<area shape="rect" id="Node000002" href="$class_a_warrior_base_character.html" title=" " alt="" coords="135,85,347,117"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="244,52,244,85,238,85,238,52"/>
+<area shape="rect" id="Node000003" href="$class_a_warrior_enemy_character.html" title=" " alt="" coords="5,165,234,196"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="206,127,145,166,142,162,203,123"/>
+<area shape="rect" id="Node000004" href="$class_a_warrior_hero_character.html" title=" " alt="" coords="258,165,469,196"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="278,123,341,162,338,166,276,127"/>
+</map>

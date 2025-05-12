@@ -1,0 +1,21 @@
+<map id="Source/Warrior/Public/Components/Combat/HeroCombatComponent.h" name="Source/Warrior/Public/Components/Combat/HeroCombatComponent.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="72,5,379,79"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,328,145,360"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="114,82,85,102,63,128,52,151,46,175,45,225,53,273,66,313,60,314,48,275,40,226,41,174,47,149,58,126,81,98,111,77"/>
+<area shape="rect" id="Node000003" href="$_pawn_combat_component_8h.html" title=" " alt="" coords="72,127,379,180"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="228,80,228,112,223,112,223,80"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="403,138,723,169"/>
+<area shape="poly" id="edge10_Node000001_Node000009" title=" " alt="" coords="339,77,503,130,501,135,337,82"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="161,183,129,203,102,229,91,249,84,271,78,313,72,312,79,270,87,247,98,226,126,199,158,178"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="112,238,339,270"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="228,180,228,223,223,223,223,180"/>
+<area shape="rect" id="Node000005" href="$_pawn_extension_component_base_8h.html" title=" " alt="" coords="363,228,616,280"/>
+<area shape="poly" id="edge5_Node000003_Node000005" title=" " alt="" coords="296,178,408,219,406,224,294,183"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="640,238,966,270"/>
+<area shape="poly" id="edge9_Node000003_Node000008" title=" " alt="" coords="377,178,700,232,699,238,376,183"/>
+<area shape="poly" id="edge6_Node000005_Node000002" title=" " alt="" coords="369,284,160,328,159,322,368,278"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="259,328,539,360"/>
+<area shape="poly" id="edge7_Node000005_Node000006" title=" " alt="" coords="465,283,427,320,423,316,462,279"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="563,328,944,360"/>
+<area shape="poly" id="edge8_Node000005_Node000007" title=" " alt="" coords="568,278,695,320,693,326,566,284"/>
+</map>

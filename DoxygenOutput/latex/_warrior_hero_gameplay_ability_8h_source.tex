@@ -1,0 +1,37 @@
+\doxysection{Warrior\+Hero\+Gameplay\+Ability.\+h}
+\hypertarget{_warrior_hero_gameplay_ability_8h_source}{}\label{_warrior_hero_gameplay_ability_8h_source}\index{Source/Warrior/Public/AbilitySystem/Abilities/WarriorHeroGameplayAbility.h@{Source/Warrior/Public/AbilitySystem/Abilities/WarriorHeroGameplayAbility.h}}
+\mbox{\hyperlink{_warrior_hero_gameplay_ability_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}CoreMinimal.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_warrior_gameplay_ability_8h}{AbilitySystem/Abilities/WarriorGameplayAbility.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}WarriorHeroGameplayAbility.generated.h"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_u_hero_combat_component}{UHeroCombatComponent}};}
+\DoxyCodeLine{00008\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_a_warrior_hero_controller}{AWarriorHeroController}};}
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_a_warrior_hero_character}{AWarriorHeroCharacter}};}
+\DoxyCodeLine{00013\ UCLASS()}
+\DoxyCodeLine{00014\ class\ WARRIOR\_API\ \mbox{\hyperlink{class_u_warrior_hero_gameplay_ability}{UWarriorHeroGameplayAbility}}\ :\ public\ \mbox{\hyperlink{class_u_warrior_gameplay_ability}{UWarriorGameplayAbility}}}
+\DoxyCodeLine{00015\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ GENERATED\_BODY()}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ \ \ \ \ UFUNCTION(BlueprintPure,\ Category\ =\ \textcolor{stringliteral}{"{}Warrior|Ability"{}})}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{class_a_warrior_hero_character}{AWarriorHeroCharacter}}*\ \mbox{\hyperlink{class_u_warrior_hero_gameplay_ability_a5b56b412833539fd30a121d15ddafdd9}{GetHeroCharacterFromActorInfo}}();}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ UFUNCTION(BlueprintPure,\ Category\ =\ \textcolor{stringliteral}{"{}Warrior|Ability"{}})}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{class_a_warrior_hero_controller}{AWarriorHeroController}}*\ \mbox{\hyperlink{class_u_warrior_hero_gameplay_ability_a695135ad100d927af3a41dc7a67da23b}{GetHeroControllerFromActorInfo}}();}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ UFUNCTION(BlueprintPure,\ Category\ =\ \textcolor{stringliteral}{"{}Warrior|Ability"{}})}
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{class_u_hero_combat_component}{UHeroCombatComponent}}*\ \mbox{\hyperlink{class_u_warrior_hero_gameplay_ability_a6e2896f91be71fb6d5a3da46696a6e83}{GetHeroCombatComponentFromActorInfo}}();}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ UFUNCTION(BlueprintPure,\ Category\ =\ \textcolor{stringliteral}{"{}Warrior|Ability"{}})}
+\DoxyCodeLine{00029\ \ \ \ \ FGameplayEffectSpecHandle\ \mbox{\hyperlink{class_u_warrior_hero_gameplay_ability_a839214ff5fcc3260e823a00d240e817b}{MakeHeroDamageEffectSpecHandle}}(TSubclassOf<UGameplayEffect>\ EffectClass,\ \textcolor{keywordtype}{float}\ InWeaponBaseDamage,\ FGameplayTag\ InCurrentAttackTypeTag,\ int32\ InUsedComboCount);}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00032\ \ \ \ \ TWeakObjectPtr<AWarriorHeroCharacter>\ \ CachedWarriorHeroCharacter;}
+\DoxyCodeLine{00033\ \ \ \ \ TWeakObjectPtr<AWarriorHeroController>\ CachedWarriorHeroController;}
+\DoxyCodeLine{00034\ \};}
+
+\end{DoxyCode}

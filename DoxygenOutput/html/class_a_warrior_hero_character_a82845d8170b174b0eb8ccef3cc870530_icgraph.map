@@ -1,0 +1,5 @@
+<map id="AWarriorHeroCharacter::GetHeroCombatComponent" name="AWarriorHeroCharacter::GetHeroCombatComponent">
+<area shape="rect" id="Node000001" title=" " alt="" coords="427,5,685,58"/>
+<area shape="rect" id="Node000002" href="$class_u_warrior_hero_gameplay_ability.html#a6e2896f91be71fb6d5a3da46696a6e83" title=" " alt="" coords="5,5,379,58"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="411,34,379,34,379,29,411,29"/>
+</map>

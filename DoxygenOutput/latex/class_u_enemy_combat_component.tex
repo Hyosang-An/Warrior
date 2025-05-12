@@ -1,0 +1,57 @@
+\doxysection{UEnemy\+Combat\+Component Class Reference}
+\hypertarget{class_u_enemy_combat_component}{}\label{class_u_enemy_combat_component}\index{UEnemyCombatComponent@{UEnemyCombatComponent}}
+
+
+{\ttfamily \#include $<$Enemy\+Combat\+Component.\+h$>$}
+
+
+
+Inheritance diagram for UEnemy\+Combat\+Component\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=300pt]{class_u_enemy_combat_component__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for UEnemy\+Combat\+Component\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=300pt]{class_u_enemy_combat_component__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_u_pawn_combat_component}{UPawn\+Combat\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_u_pawn_combat_component_a8d8b98992b6071c8fc9429c33783231e}{Register\+Spawned\+Weapon}} (FGameplay\+Tag In\+Weapon\+Tag\+To\+Register, \mbox{\hyperlink{class_a_warrior_weapon_base}{AWarrior\+Weapon\+Base}} \texorpdfstring{$\ast$}{*}In\+Weapon\+To\+Register, bool b\+Register\+As\+Equipped\+Weapon=false)
+\item 
+\mbox{\hyperlink{class_a_warrior_weapon_base}{AWarrior\+Weapon\+Base}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_u_pawn_combat_component_a3734739144b2a3f70a67dd3fac633ae7}{Get\+Character\+Carried\+Weapon\+By\+Tag}} (FGameplay\+Tag In\+Weapon\+Tag\+To\+Get) const
+\item 
+\mbox{\hyperlink{class_a_warrior_weapon_base}{AWarrior\+Weapon\+Base}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_u_pawn_combat_component_ab669f96f25b4574384d8606e51621cef}{Get\+Character\+Current\+Equipped\+Weapon}} () const
+\item 
+void \mbox{\hyperlink{class_u_pawn_combat_component_a7728465b87abe639d707ac610e2a486b}{Toggle\+Weapon\+Collision}} (bool b\+Should\+Enable, \mbox{\hyperlink{_pawn_combat_component_8h_ac394cb2ab330dd6ec17d5f1db2e4ba79}{EToggle\+Damage\+Type}} Toggle\+Damage\+Type=\mbox{\hyperlink{_pawn_combat_component_8h_ac394cb2ab330dd6ec17d5f1db2e4ba79a38a59af5302deb905ed9ebcd64596ebf}{EToggle\+Damage\+Type\+::\+Current\+Equipped\+Weapon}})
+\item 
+virtual void \mbox{\hyperlink{class_u_pawn_combat_component_a45df3e63d3481c5153a548ac9732f239}{On\+Hit\+Target\+Actor}} (AActor \texorpdfstring{$\ast$}{*}Hit\+Actor)
+\item 
+virtual void \mbox{\hyperlink{class_u_pawn_combat_component_a5671a19b2f06de23935b6f67830bc7a5}{On\+Weapon\+Pulled\+From\+Target\+Actor}} (AActor \texorpdfstring{$\ast$}{*}Interacted\+Actor)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_u_pawn_combat_component}{UPawn\+Combat\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+FGameplay\+Tag \mbox{\hyperlink{class_u_pawn_combat_component_a7f8f481bcb250b06832ed09e4270bfbf}{Current\+Equipped\+Weapon\+Tag}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_u_pawn_combat_component}{UPawn\+Combat\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+TArray$<$ AActor \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_u_pawn_combat_component_aae4f22e217d5cbaa59ec53097d2f68ff}{Overlapped\+Actors}}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Source/\+Warrior/\+Public/\+Components/\+Combat/\mbox{\hyperlink{_enemy_combat_component_8h}{Enemy\+Combat\+Component.\+h}}\end{DoxyCompactItemize}

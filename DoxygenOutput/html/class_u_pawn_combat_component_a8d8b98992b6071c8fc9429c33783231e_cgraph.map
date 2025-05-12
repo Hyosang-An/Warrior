@@ -1,0 +1,7 @@
+<map id="UPawnCombatComponent::RegisterSpawnedWeapon" name="UPawnCombatComponent::RegisterSpawnedWeapon">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,44,246,97"/>
+<area shape="rect" id="Node000002" href="$class_u_pawn_combat_component.html#a45df3e63d3481c5153a548ac9732f239" title=" " alt="" coords="329,5,566,58"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="246,53,314,45,314,50,247,59"/>
+<area shape="rect" id="Node000003" href="$class_u_pawn_combat_component.html#a5671a19b2f06de23935b6f67830bc7a5" title=" " alt="" coords="294,83,602,135"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="247,82,278,86,278,91,246,87"/>
+</map>

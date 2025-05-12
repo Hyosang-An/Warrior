@@ -1,0 +1,9 @@
+<map id="Source/Warrior/Public/Interfaces/PawnCombatInterface.h" name="Source/Warrior/Public/Interfaces/PawnCombatInterface.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="105,5,410,58"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,106,145,138"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="205,61,121,101,119,96,203,56"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="169,106,346,138"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="260,58,260,91,255,91,255,58"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="371,106,672,138"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="336,56,463,98,461,103,334,61"/>
+</map>

@@ -1,0 +1,175 @@
+\doxysection{UPawn\+Combat\+Component Class Reference}
+\hypertarget{class_u_pawn_combat_component}{}\label{class_u_pawn_combat_component}\index{UPawnCombatComponent@{UPawnCombatComponent}}
+
+
+{\ttfamily \#include $<$Pawn\+Combat\+Component.\+h$>$}
+
+
+
+Inheritance diagram for UPawn\+Combat\+Component\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_pawn_combat_component__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for UPawn\+Combat\+Component\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=300pt]{class_u_pawn_combat_component__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_u_pawn_combat_component_a8d8b98992b6071c8fc9429c33783231e}{Register\+Spawned\+Weapon}} (FGameplay\+Tag In\+Weapon\+Tag\+To\+Register, \mbox{\hyperlink{class_a_warrior_weapon_base}{AWarrior\+Weapon\+Base}} \texorpdfstring{$\ast$}{*}In\+Weapon\+To\+Register, bool b\+Register\+As\+Equipped\+Weapon=false)
+\item 
+\mbox{\hyperlink{class_a_warrior_weapon_base}{AWarrior\+Weapon\+Base}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_u_pawn_combat_component_a3734739144b2a3f70a67dd3fac633ae7}{Get\+Character\+Carried\+Weapon\+By\+Tag}} (FGameplay\+Tag In\+Weapon\+Tag\+To\+Get) const
+\item 
+\mbox{\hyperlink{class_a_warrior_weapon_base}{AWarrior\+Weapon\+Base}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_u_pawn_combat_component_ab669f96f25b4574384d8606e51621cef}{Get\+Character\+Current\+Equipped\+Weapon}} () const
+\item 
+void \mbox{\hyperlink{class_u_pawn_combat_component_a7728465b87abe639d707ac610e2a486b}{Toggle\+Weapon\+Collision}} (bool b\+Should\+Enable, \mbox{\hyperlink{_pawn_combat_component_8h_ac394cb2ab330dd6ec17d5f1db2e4ba79}{EToggle\+Damage\+Type}} Toggle\+Damage\+Type=\mbox{\hyperlink{_pawn_combat_component_8h_ac394cb2ab330dd6ec17d5f1db2e4ba79a38a59af5302deb905ed9ebcd64596ebf}{EToggle\+Damage\+Type\+::\+Current\+Equipped\+Weapon}})
+\item 
+virtual void \mbox{\hyperlink{class_u_pawn_combat_component_a45df3e63d3481c5153a548ac9732f239}{On\+Hit\+Target\+Actor}} (AActor \texorpdfstring{$\ast$}{*}Hit\+Actor)
+\item 
+virtual void \mbox{\hyperlink{class_u_pawn_combat_component_a5671a19b2f06de23935b6f67830bc7a5}{On\+Weapon\+Pulled\+From\+Target\+Actor}} (AActor \texorpdfstring{$\ast$}{*}Interacted\+Actor)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+FGameplay\+Tag \mbox{\hyperlink{class_u_pawn_combat_component_a7f8f481bcb250b06832ed09e4270bfbf}{Current\+Equipped\+Weapon\+Tag}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+TArray$<$ AActor \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_u_pawn_combat_component_aae4f22e217d5cbaa59ec53097d2f68ff}{Overlapped\+Actors}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_u_pawn_combat_component_a3734739144b2a3f70a67dd3fac633ae7}\index{UPawnCombatComponent@{UPawnCombatComponent}!GetCharacterCarriedWeaponByTag@{GetCharacterCarriedWeaponByTag}}
+\index{GetCharacterCarriedWeaponByTag@{GetCharacterCarriedWeaponByTag}!UPawnCombatComponent@{UPawnCombatComponent}}
+\doxysubsubsection{\texorpdfstring{GetCharacterCarriedWeaponByTag()}{GetCharacterCarriedWeaponByTag()}}
+{\footnotesize\ttfamily \label{class_u_pawn_combat_component_a3734739144b2a3f70a67dd3fac633ae7} 
+\mbox{\hyperlink{class_a_warrior_weapon_base}{AWarrior\+Weapon\+Base}} \texorpdfstring{$\ast$}{*} UPawn\+Combat\+Component\+::\+Get\+Character\+Carried\+Weapon\+By\+Tag (\begin{DoxyParamCaption}\item[{FGameplay\+Tag}]{In\+Weapon\+Tag\+To\+Get}{}\end{DoxyParamCaption}) const}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_pawn_combat_component_a3734739144b2a3f70a67dd3fac633ae7_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_u_pawn_combat_component_ab669f96f25b4574384d8606e51621cef}\index{UPawnCombatComponent@{UPawnCombatComponent}!GetCharacterCurrentEquippedWeapon@{GetCharacterCurrentEquippedWeapon}}
+\index{GetCharacterCurrentEquippedWeapon@{GetCharacterCurrentEquippedWeapon}!UPawnCombatComponent@{UPawnCombatComponent}}
+\doxysubsubsection{\texorpdfstring{GetCharacterCurrentEquippedWeapon()}{GetCharacterCurrentEquippedWeapon()}}
+{\footnotesize\ttfamily \label{class_u_pawn_combat_component_ab669f96f25b4574384d8606e51621cef} 
+\mbox{\hyperlink{class_a_warrior_weapon_base}{AWarrior\+Weapon\+Base}} \texorpdfstring{$\ast$}{*} UPawn\+Combat\+Component\+::\+Get\+Character\+Current\+Equipped\+Weapon (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_pawn_combat_component_ab669f96f25b4574384d8606e51621cef_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_pawn_combat_component_ab669f96f25b4574384d8606e51621cef_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_u_pawn_combat_component_a45df3e63d3481c5153a548ac9732f239}\index{UPawnCombatComponent@{UPawnCombatComponent}!OnHitTargetActor@{OnHitTargetActor}}
+\index{OnHitTargetActor@{OnHitTargetActor}!UPawnCombatComponent@{UPawnCombatComponent}}
+\doxysubsubsection{\texorpdfstring{OnHitTargetActor()}{OnHitTargetActor()}}
+{\footnotesize\ttfamily \label{class_u_pawn_combat_component_a45df3e63d3481c5153a548ac9732f239} 
+void UPawn\+Combat\+Component\+::\+On\+Hit\+Target\+Actor (\begin{DoxyParamCaption}\item[{AActor \texorpdfstring{$\ast$}{*}}]{Hit\+Actor}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_u_hero_combat_component_affcc57291318eb363b31b6cf4d92f068}{UHero\+Combat\+Component}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_pawn_combat_component_a45df3e63d3481c5153a548ac9732f239_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_u_pawn_combat_component_a5671a19b2f06de23935b6f67830bc7a5}\index{UPawnCombatComponent@{UPawnCombatComponent}!OnWeaponPulledFromTargetActor@{OnWeaponPulledFromTargetActor}}
+\index{OnWeaponPulledFromTargetActor@{OnWeaponPulledFromTargetActor}!UPawnCombatComponent@{UPawnCombatComponent}}
+\doxysubsubsection{\texorpdfstring{OnWeaponPulledFromTargetActor()}{OnWeaponPulledFromTargetActor()}}
+{\footnotesize\ttfamily \label{class_u_pawn_combat_component_a5671a19b2f06de23935b6f67830bc7a5} 
+void UPawn\+Combat\+Component\+::\+On\+Weapon\+Pulled\+From\+Target\+Actor (\begin{DoxyParamCaption}\item[{AActor \texorpdfstring{$\ast$}{*}}]{Interacted\+Actor}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{class_u_hero_combat_component_a876ef89eee15890f2360377d8b9eee8b}{UHero\+Combat\+Component}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_pawn_combat_component_a5671a19b2f06de23935b6f67830bc7a5_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_u_pawn_combat_component_a8d8b98992b6071c8fc9429c33783231e}\index{UPawnCombatComponent@{UPawnCombatComponent}!RegisterSpawnedWeapon@{RegisterSpawnedWeapon}}
+\index{RegisterSpawnedWeapon@{RegisterSpawnedWeapon}!UPawnCombatComponent@{UPawnCombatComponent}}
+\doxysubsubsection{\texorpdfstring{RegisterSpawnedWeapon()}{RegisterSpawnedWeapon()}}
+{\footnotesize\ttfamily \label{class_u_pawn_combat_component_a8d8b98992b6071c8fc9429c33783231e} 
+void UPawn\+Combat\+Component\+::\+Register\+Spawned\+Weapon (\begin{DoxyParamCaption}\item[{FGameplay\+Tag}]{In\+Weapon\+Tag\+To\+Register}{, }\item[{\mbox{\hyperlink{class_a_warrior_weapon_base}{AWarrior\+Weapon\+Base}} \texorpdfstring{$\ast$}{*}}]{In\+Weapon\+To\+Register}{, }\item[{bool}]{b\+Register\+As\+Equipped\+Weapon}{ = {\ttfamily false}}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_pawn_combat_component_a8d8b98992b6071c8fc9429c33783231e_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_u_pawn_combat_component_a7728465b87abe639d707ac610e2a486b}\index{UPawnCombatComponent@{UPawnCombatComponent}!ToggleWeaponCollision@{ToggleWeaponCollision}}
+\index{ToggleWeaponCollision@{ToggleWeaponCollision}!UPawnCombatComponent@{UPawnCombatComponent}}
+\doxysubsubsection{\texorpdfstring{ToggleWeaponCollision()}{ToggleWeaponCollision()}}
+{\footnotesize\ttfamily \label{class_u_pawn_combat_component_a7728465b87abe639d707ac610e2a486b} 
+void UPawn\+Combat\+Component\+::\+Toggle\+Weapon\+Collision (\begin{DoxyParamCaption}\item[{bool}]{b\+Should\+Enable}{, }\item[{\mbox{\hyperlink{_pawn_combat_component_8h_ac394cb2ab330dd6ec17d5f1db2e4ba79}{EToggle\+Damage\+Type}}}]{Toggle\+Damage\+Type}{ = {\ttfamily \mbox{\hyperlink{_pawn_combat_component_8h_ac394cb2ab330dd6ec17d5f1db2e4ba79a38a59af5302deb905ed9ebcd64596ebf}{EToggle\+Damage\+Type\+::\+Current\+Equipped\+Weapon}}}}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_pawn_combat_component_a7728465b87abe639d707ac610e2a486b_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_u_pawn_combat_component_a7f8f481bcb250b06832ed09e4270bfbf}\index{UPawnCombatComponent@{UPawnCombatComponent}!CurrentEquippedWeaponTag@{CurrentEquippedWeaponTag}}
+\index{CurrentEquippedWeaponTag@{CurrentEquippedWeaponTag}!UPawnCombatComponent@{UPawnCombatComponent}}
+\doxysubsubsection{\texorpdfstring{CurrentEquippedWeaponTag}{CurrentEquippedWeaponTag}}
+{\footnotesize\ttfamily \label{class_u_pawn_combat_component_a7f8f481bcb250b06832ed09e4270bfbf} 
+FGameplay\+Tag UPawn\+Combat\+Component\+::\+Current\+Equipped\+Weapon\+Tag}
+
+\Hypertarget{class_u_pawn_combat_component_aae4f22e217d5cbaa59ec53097d2f68ff}\index{UPawnCombatComponent@{UPawnCombatComponent}!OverlappedActors@{OverlappedActors}}
+\index{OverlappedActors@{OverlappedActors}!UPawnCombatComponent@{UPawnCombatComponent}}
+\doxysubsubsection{\texorpdfstring{OverlappedActors}{OverlappedActors}}
+{\footnotesize\ttfamily \label{class_u_pawn_combat_component_aae4f22e217d5cbaa59ec53097d2f68ff} 
+TArray$<$AActor\texorpdfstring{$\ast$}{*}$>$ UPawn\+Combat\+Component\+::\+Overlapped\+Actors\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Source/\+Warrior/\+Public/\+Components/\+Combat/\mbox{\hyperlink{_pawn_combat_component_8h}{Pawn\+Combat\+Component.\+h}}\item 
+Source/\+Warrior/\+Private/\+Components/\+Combat/\mbox{\hyperlink{_pawn_combat_component_8cpp}{Pawn\+Combat\+Component.\+cpp}}\end{DoxyCompactItemize}

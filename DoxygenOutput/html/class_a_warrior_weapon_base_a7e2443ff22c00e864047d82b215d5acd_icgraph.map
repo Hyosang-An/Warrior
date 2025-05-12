@@ -1,0 +1,5 @@
+<map id="AWarriorWeaponBase::OnCollisionBoxEndOverlap" name="AWarriorWeaponBase::OnCollisionBoxEndOverlap">
+<area shape="rect" id="Node000001" title=" " alt="" coords="264,5,515,58"/>
+<area shape="rect" id="Node000002" href="$class_a_warrior_weapon_base.html#a3a36e9d62efefec46dca1e348c24993b" title=" " alt="" coords="5,5,216,58"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="248,34,216,34,216,29,248,29"/>
+</map>

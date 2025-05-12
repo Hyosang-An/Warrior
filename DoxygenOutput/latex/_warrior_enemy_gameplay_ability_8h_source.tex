@@ -1,0 +1,32 @@
+\doxysection{Warrior\+Enemy\+Gameplay\+Ability.\+h}
+\hypertarget{_warrior_enemy_gameplay_ability_8h_source}{}\label{_warrior_enemy_gameplay_ability_8h_source}\index{Source/Warrior/Public/AbilitySystem/Abilities/WarriorEnemyGameplayAbility.h@{Source/Warrior/Public/AbilitySystem/Abilities/WarriorEnemyGameplayAbility.h}}
+\mbox{\hyperlink{_warrior_enemy_gameplay_ability_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}CoreMinimal.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_warrior_gameplay_ability_8h}{AbilitySystem/Abilities/WarriorGameplayAbility.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}WarriorEnemyGameplayAbility.generated.h"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_u_enemy_combat_component}{UEnemyCombatComponent}};}
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_a_warrior_enemy_character}{AWarriorEnemyCharacter}};}
+\DoxyCodeLine{00014\ UCLASS()}
+\DoxyCodeLine{00015\ class\ WARRIOR\_API\ \mbox{\hyperlink{class_u_warrior_enemy_gameplay_ability}{UWarriorEnemyGameplayAbility}}\ :\ public\ \mbox{\hyperlink{class_u_warrior_gameplay_ability}{UWarriorGameplayAbility}}}
+\DoxyCodeLine{00016\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ GENERATED\_BODY()}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ \ \ \ \ UFUNCTION(BlueprintPure,\ Category\ =\ \textcolor{stringliteral}{"{}Warrior|Ability"{}})}
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{class_a_warrior_enemy_character}{AWarriorEnemyCharacter}}*\ \mbox{\hyperlink{class_u_warrior_enemy_gameplay_ability_a34d8a0032473b6db5e16630486b0de6e}{GetEnemyCharacterFromActorInfo}}();}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ UFUNCTION(BlueprintPure,\ Category\ =\ \textcolor{stringliteral}{"{}Warrior|Ability"{}})}
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{class_u_enemy_combat_component}{UEnemyCombatComponent}}*\ \mbox{\hyperlink{class_u_warrior_enemy_gameplay_ability_ac287c0a92a5bdc27fe89953670e481c8}{GetEnemyCombatComponentFromActorInfo}}();}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00027\ \ \ \ \ TWeakObjectPtr<AWarriorEnemyCharacter>\ CachedWarriorEnemyCharacter;}
+\DoxyCodeLine{00028\ \ \ \ \ TWeakObjectPtr<UEnemyCombatComponent>\ CachedEnemyCombatComponent;}
+\DoxyCodeLine{00029\ \};}
+
+\end{DoxyCode}

@@ -1,0 +1,33 @@
+\doxysection{Hero\+Combat\+Component.\+h}
+\hypertarget{_hero_combat_component_8h_source}{}\label{_hero_combat_component_8h_source}\index{Source/Warrior/Public/Components/Combat/HeroCombatComponent.h@{Source/Warrior/Public/Components/Combat/HeroCombatComponent.h}}
+\mbox{\hyperlink{_hero_combat_component_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}CoreMinimal.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_pawn_combat_component_8h}{Components/Combat/PawnCombatComponent.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}HeroCombatComponent.generated.h"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_a_warrior_hero_weapon}{AWarriorHeroWeapon}};}
+\DoxyCodeLine{00013\ UCLASS()}
+\DoxyCodeLine{00014\ class\ WARRIOR\_API\ \mbox{\hyperlink{class_u_hero_combat_component}{UHeroCombatComponent}}\ :\ public\ \mbox{\hyperlink{class_u_pawn_combat_component}{UPawnCombatComponent}}}
+\DoxyCodeLine{00015\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ GENERATED\_BODY()}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category\ =\ \textcolor{stringliteral}{"{}Warrior|Combat"{}})}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{class_a_warrior_hero_weapon}{AWarriorHeroWeapon}}*\ \mbox{\hyperlink{class_u_hero_combat_component_aa6e1965ce980760d85fda4fe5f678fae}{GetHeroCarriedWeaponByTag}}(FGameplayTag\ InWeaponTag)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category\ =\ \textcolor{stringliteral}{"{}Warrior|Combat"{}})}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{class_a_warrior_hero_weapon}{AWarriorHeroWeapon}}*\ \mbox{\hyperlink{class_u_hero_combat_component_a3caaf0315a3783a9b7814354f24014fb}{GetHeroCurrentEquippedWeapon}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category\ =\ \textcolor{stringliteral}{"{}Warrior|Combat"{}})}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_u_hero_combat_component_aa42be586fb6a59cee853cdcbbe9a5113}{GetHeroCurrentEqueippedWeaponDamageAtLevel}}(\textcolor{keywordtype}{float}\ InLevel)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_hero_combat_component_affcc57291318eb363b31b6cf4d92f068}{OnHitTargetActor}}(AActor*\ HitActor)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_hero_combat_component_a876ef89eee15890f2360377d8b9eee8b}{OnWeaponPulledFromTargetActor}}(AActor*\ InteractedActor)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00030\ \};}
+
+\end{DoxyCode}

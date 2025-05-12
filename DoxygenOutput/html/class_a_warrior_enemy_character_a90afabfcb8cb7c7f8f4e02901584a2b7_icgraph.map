@@ -1,0 +1,6 @@
+<map id="AWarriorEnemyCharacter::GetEnemyCombatComponent" name="AWarriorEnemyCharacter::GetEnemyCombatComponent">
+<area shape="rect" id="Node000001" title=" " alt="" coords="445,29,721,82"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="646,17,623,11,583,8,548,10,525,15,515,21,515,29,510,29,510,19,523,10,547,5,583,3,624,5,648,12"/>
+<area shape="rect" id="Node000002" href="$class_u_warrior_enemy_gameplay_ability.html#ac287c0a92a5bdc27fe89953670e481c8" title=" " alt="" coords="5,29,397,82"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="429,58,397,58,397,53,429,53"/>
+</map>

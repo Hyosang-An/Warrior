@@ -1,0 +1,34 @@
+<map id="Source/Warrior/Private/AnimInstances/WarriorCharacterAnimInstance.cpp" name="Source/Warrior/Private/AnimInstances/WarriorCharacterAnimInstance.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="1035,5,1323,79"/>
+<area shape="rect" id="Node000002" href="$_warrior_character_anim_instance_8h.html" title=" " alt="" coords="405,127,688,180"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1035,71,704,128,703,122,1034,66"/>
+<area shape="rect" id="Node000008" href="$_warrior_base_character_8h.html" title=" " alt="" coords="1025,138,1332,169"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="1182,80,1182,122,1176,122,1176,80"/>
+<area shape="rect" id="Node000015" title=" " alt="" coords="1356,127,1690,180"/>
+<area shape="poly" id="edge17_Node000001_Node000015" title=" " alt="" coords="1294,77,1428,119,1427,124,1293,82"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="714,328,854,360"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="505,182,481,203,463,229,454,255,455,267,462,278,492,292,552,306,700,329,699,335,551,311,490,297,458,282,450,268,448,255,458,226,477,199,501,178"/>
+<area shape="rect" id="Node000004" href="$_warrior_base_anim_instance_8h.html" title=" " alt="" coords="152,228,398,280"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="477,183,361,224,360,219,475,178"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="472,238,843,270"/>
+<area shape="poly" id="edge7_Node000002_Node000007" title=" " alt="" coords="577,178,631,226,628,230,574,182"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="399,275,417,278,700,326,699,331,416,283,398,280"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="5,328,238,360"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="231,283,162,323,160,318,229,279"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="262,328,594,360"/>
+<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="321,279,390,318,387,323,318,283"/>
+<area shape="poly" id="edge9_Node000008_Node000003" title=" " alt="" coords="1070,172,988,194,946,210,907,230,891,242,880,253,857,282,815,320,812,316,853,278,876,250,887,238,904,225,944,205,986,189,1069,167"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="918,238,1179,270"/>
+<area shape="poly" id="edge10_Node000008_Node000009" title=" " alt="" coords="1161,172,1082,231,1079,227,1157,167"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="1203,238,1418,270"/>
+<area shape="poly" id="edge11_Node000008_Node000010" title=" " alt="" coords="1200,167,1280,227,1277,231,1197,172"/>
+<area shape="rect" id="Node000011" href="$_pawn_combat_interface_8h.html" title=" " alt="" coords="1442,238,1742,270"/>
+<area shape="poly" id="edge12_Node000008_Node000011" title=" " alt="" coords="1243,167,1514,231,1513,237,1242,172"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="1766,238,2066,270"/>
+<area shape="poly" id="edge16_Node000008_Node000014" title=" " alt="" coords="1276,167,1345,177,1549,201,1754,225,1807,233,1806,238,1753,230,1549,206,1344,182,1275,172"/>
+<area shape="poly" id="edge13_Node000011_Node000003" title=" " alt="" coords="1501,273,1431,283,1122,317,870,339,869,334,1121,311,1431,278,1500,268"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="1372,328,1549,360"/>
+<area shape="poly" id="edge14_Node000011_Node000012" title=" " alt="" coords="1571,272,1496,322,1494,318,1568,268"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="1574,328,1875,360"/>
+<area shape="poly" id="edge15_Node000011_Node000013" title=" " alt="" coords="1616,268,1691,318,1688,322,1613,272"/>
+</map>

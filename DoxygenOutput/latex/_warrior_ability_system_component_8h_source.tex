@@ -1,0 +1,28 @@
+\doxysection{Warrior\+Ability\+System\+Component.\+h}
+\hypertarget{_warrior_ability_system_component_8h_source}{}\label{_warrior_ability_system_component_8h_source}\index{Source/Warrior/Public/AbilitySystem/WarriorAbilitySystemComponent.h@{Source/Warrior/Public/AbilitySystem/WarriorAbilitySystemComponent.h}}
+\mbox{\hyperlink{_warrior_ability_system_component_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}CoreMinimal.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}AbilitySystemComponent.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_warrior_struct_types_8h}{WarriorTypes/WarriorStructTypes.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}WarriorAbilitySystemComponent.generated.h"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00011\ UCLASS()}
+\DoxyCodeLine{00012\ class\ WARRIOR\_API\ \mbox{\hyperlink{class_u_warrior_ability_system_component}{UWarriorAbilitySystemComponent}}\ :\ public\ UAbilitySystemComponent}
+\DoxyCodeLine{00013\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ GENERATED\_BODY()}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_warrior_ability_system_component_a3bb94401c781fbac00b9af5e25b94df6}{OnAbilityInputPressed}}(\textcolor{keyword}{const}\ FGameplayTag\&\ InInputTag);}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_warrior_ability_system_component_a0ab3fe3ace067827eb83a25b6017a2c4}{OnAbilityInputReleased}}(\textcolor{keyword}{const}\ FGameplayTag\&\ InInputTag);}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category\ =\ \textcolor{stringliteral}{"{}Warrior|Ability"{}},\ meta\ =\ (ApplyLevel\ =\ \textcolor{stringliteral}{"{}1"{}}))}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_warrior_ability_system_component_a01b4bc099b7ebe4e1fbc1acdab7e434b}{GrantHeroWeaponAbilities}}(\textcolor{keyword}{const}\ TArray<FWarriorHeroAbilitySet>\&\ InDefaultWeaponAbilities,\ int32\ ApplyLevel,\ TArray<FGameplayAbilitySpecHandle>\&\ OutGrantedAbilitySpecHandles);}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ UFUNCTION(BlueprintCallable,\ Category\ =\ \textcolor{stringliteral}{"{}Warrior|Ability"{}})}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_warrior_ability_system_component_a5217b5c0e8362da2d032d2db5d70cd69}{RemoveGrantedHeroWeaponAbilities}}(UPARAM(ref)\ TArray<FGameplayAbilitySpecHandle>\&\ InSpecHandlesToRemove);}
+\DoxyCodeLine{00025\ \};}
+
+\end{DoxyCode}

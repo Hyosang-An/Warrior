@@ -1,0 +1,7 @@
+<map id="UHeroCombatComponent" name="UHeroCombatComponent">
+<area shape="rect" id="Node000001" title=" " alt="" coords="36,165,268,196"/>
+<area shape="rect" id="Node000002" href="$class_u_pawn_combat_component.html" title=" " alt="" coords="33,85,271,117"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="155,132,155,164,149,164,149,132"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,5,299,37"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="155,52,155,85,149,85,149,52"/>
+</map>

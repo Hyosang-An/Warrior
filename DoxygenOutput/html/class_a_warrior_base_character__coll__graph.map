@@ -1,0 +1,9 @@
+<map id="AWarriorBaseCharacter" name="AWarriorBaseCharacter">
+<area shape="rect" id="Node000001" title=" " alt="" coords="138,85,350,117"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,118,37"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="112,41,210,82,208,87,110,46"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="142,5,347,37"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="247,52,247,85,242,85,242,52"/>
+<area shape="rect" id="Node000004" href="$class_i_pawn_combat_interface.html" title=" " alt="" coords="371,5,576,37"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="415,45,290,87,288,82,414,40"/>
+</map>

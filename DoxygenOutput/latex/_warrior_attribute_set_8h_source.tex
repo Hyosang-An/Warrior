@@ -1,0 +1,58 @@
+\doxysection{Warrior\+Attribute\+Set.\+h}
+\hypertarget{_warrior_attribute_set_8h_source}{}\label{_warrior_attribute_set_8h_source}\index{Source/Warrior/Public/AbilitySystem/WarriorAttributeSet.h@{Source/Warrior/Public/AbilitySystem/WarriorAttributeSet.h}}
+\mbox{\hyperlink{_warrior_attribute_set_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}CoreMinimal.h"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}AbilitySystemComponent.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}AttributeSet.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}WarriorAttributeSet.generated.h"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#define\ ATTRIBUTE\_ACCESSORS(ClassName,\ PropertyName)\ \(\backslash\)}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{GAMEPLAYATTRIBUTE\_PROPERTY\_GETTER(ClassName,\ PropertyName)\ \(\backslash\)}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{GAMEPLAYATTRIBUTE\_VALUE\_GETTER(PropertyName)\ \(\backslash\)}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{GAMEPLAYATTRIBUTE\_VALUE\_SETTER(PropertyName)\ \(\backslash\)}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{GAMEPLAYATTRIBUTE\_VALUE\_INITTER(PropertyName)}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00017\ UCLASS()}
+\DoxyCodeLine{00018\ class\ WARRIOR\_API\ \mbox{\hyperlink{class_u_warrior_attribute_set_a068db20c1353f36b77cbac002bde6a3b}{UWarriorAttributeSet}}\ :\ public\ UAttributeSet}
+\DoxyCodeLine{00019\ \{}
+\DoxyCodeLine{00020\ \ \ \ \ GENERATED\_BODY()}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{class_u_warrior_attribute_set_a068db20c1353f36b77cbac002bde6a3b}{UWarriorAttributeSet}}();}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_u_warrior_attribute_set_a48c7f3978eefd657e9944e3316c14f6e}{PostGameplayEffectExecute}}(\textcolor{keyword}{const}\ \textcolor{keyword}{struct}\ FGameplayEffectModCallbackData\&\ Data)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00026\ \ \ \ \ }
+\DoxyCodeLine{00027\ \ \ \ \ UPROPERTY(BlueprintReadOnly,\ Category\ =\ \textcolor{stringliteral}{"{}Health"{}})}
+\DoxyCodeLine{00028\ \ \ \ \ FGameplayAttributeData\ \mbox{\hyperlink{class_u_warrior_attribute_set_afa4746e710a486822d81802afea7ecd0}{CurrentHealth}};}
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{_warrior_attribute_set_8h_a557ad7abc436418aee5d00d667d37f02}{ATTRIBUTE\_ACCESSORS}}(\mbox{\hyperlink{class_u_warrior_attribute_set_a068db20c1353f36b77cbac002bde6a3b}{UWarriorAttributeSet}},\ \mbox{\hyperlink{class_u_warrior_attribute_set_afa4746e710a486822d81802afea7ecd0}{CurrentHealth}})}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ UPROPERTY(BlueprintReadOnly,\ Category\ =\ \textcolor{stringliteral}{"{}Health"{}})}
+\DoxyCodeLine{00032\ \ \ \ \ FGameplayAttributeData\ \mbox{\hyperlink{class_u_warrior_attribute_set_ab951cf92ca6d7de316bcacb39db365cd}{MaxHealth}};}
+\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{_warrior_attribute_set_8h_a557ad7abc436418aee5d00d667d37f02}{ATTRIBUTE\_ACCESSORS}}(\mbox{\hyperlink{class_u_warrior_attribute_set_a068db20c1353f36b77cbac002bde6a3b}{UWarriorAttributeSet}},\ \mbox{\hyperlink{class_u_warrior_attribute_set_ab951cf92ca6d7de316bcacb39db365cd}{MaxHealth}})}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ UPROPERTY(BlueprintReadOnly,\ Category\ =\ \textcolor{stringliteral}{"{}Rage"{}})}
+\DoxyCodeLine{00036\ \ \ \ \ FGameplayAttributeData\ \mbox{\hyperlink{class_u_warrior_attribute_set_a3cf9524504515d1827673d49fc67ceb0}{CurrentRage}};}
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{_warrior_attribute_set_8h_a557ad7abc436418aee5d00d667d37f02}{ATTRIBUTE\_ACCESSORS}}(\mbox{\hyperlink{class_u_warrior_attribute_set_a068db20c1353f36b77cbac002bde6a3b}{UWarriorAttributeSet}},\ \mbox{\hyperlink{class_u_warrior_attribute_set_a3cf9524504515d1827673d49fc67ceb0}{CurrentRage}})}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ UPROPERTY(BlueprintReadOnly,\ Category\ =\ \textcolor{stringliteral}{"{}Rage"{}})}
+\DoxyCodeLine{00040\ \ \ \ \ FGameplayAttributeData\ \mbox{\hyperlink{class_u_warrior_attribute_set_aa82733a79a94e2b7c9c398ba693af619}{MaxRage}};}
+\DoxyCodeLine{00041\ \ \ \ \ \mbox{\hyperlink{_warrior_attribute_set_8h_a557ad7abc436418aee5d00d667d37f02}{ATTRIBUTE\_ACCESSORS}}(\mbox{\hyperlink{class_u_warrior_attribute_set_a068db20c1353f36b77cbac002bde6a3b}{UWarriorAttributeSet}},\ \mbox{\hyperlink{class_u_warrior_attribute_set_aa82733a79a94e2b7c9c398ba693af619}{MaxRage}})}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ UPROPERTY(BlueprintReadOnly,\ Category\ =\ \textcolor{stringliteral}{"{}Damage"{}})}
+\DoxyCodeLine{00044\ \ \ \ \ FGameplayAttributeData\ \mbox{\hyperlink{class_u_warrior_attribute_set_afba3fd683810766c4a84b127e4bab773}{AttackPower}};}
+\DoxyCodeLine{00045\ \ \ \ \ \mbox{\hyperlink{_warrior_attribute_set_8h_a557ad7abc436418aee5d00d667d37f02}{ATTRIBUTE\_ACCESSORS}}(\mbox{\hyperlink{class_u_warrior_attribute_set_a068db20c1353f36b77cbac002bde6a3b}{UWarriorAttributeSet}},\ \mbox{\hyperlink{class_u_warrior_attribute_set_afba3fd683810766c4a84b127e4bab773}{AttackPower}})}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ UPROPERTY(BlueprintReadOnly,\ Category\ =\ \textcolor{stringliteral}{"{}Damage"{}})}
+\DoxyCodeLine{00048\ \ \ \ \ FGameplayAttributeData\ \mbox{\hyperlink{class_u_warrior_attribute_set_ae6ab86106d196f541e2eacce2113c114}{DefensePower}};}
+\DoxyCodeLine{00049\ \ \ \ \ \mbox{\hyperlink{_warrior_attribute_set_8h_a557ad7abc436418aee5d00d667d37f02}{ATTRIBUTE\_ACCESSORS}}(\mbox{\hyperlink{class_u_warrior_attribute_set_a068db20c1353f36b77cbac002bde6a3b}{UWarriorAttributeSet}},\ \mbox{\hyperlink{class_u_warrior_attribute_set_ae6ab86106d196f541e2eacce2113c114}{DefensePower}})}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ UPROPERTY(BlueprintReadOnly,\ Category\ =\ \textcolor{stringliteral}{"{}Damage"{}})}
+\DoxyCodeLine{00052\ \ \ \ \ FGameplayAttributeData\ \mbox{\hyperlink{class_u_warrior_attribute_set_a559d147b488ace5f35281e75562c57ae}{DamageTaken}};}
+\DoxyCodeLine{00053\ \ \ \ \ \mbox{\hyperlink{_warrior_attribute_set_8h_a557ad7abc436418aee5d00d667d37f02}{ATTRIBUTE\_ACCESSORS}}(\mbox{\hyperlink{class_u_warrior_attribute_set_a068db20c1353f36b77cbac002bde6a3b}{UWarriorAttributeSet}},\ \mbox{\hyperlink{class_u_warrior_attribute_set_a559d147b488ace5f35281e75562c57ae}{DamageTaken}})}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \};}
+
+\end{DoxyCode}
