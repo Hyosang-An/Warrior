@@ -1,5 +1,6 @@
 #include "AbilitySystem/Abilities/WarriorGameplayAbility.h"
 
+#include "AbilitySystemBlueprintLibrary.h"
 #include "AbilitySystemComponent.h"
 #include "AbilitySystemGlobals.h"
 #include "AbilitySystem/WarriorAbilitySystemComponent.h"
@@ -30,6 +31,7 @@ void UWarriorGameplayAbility::EndAbility(const FGameplayAbilitySpecHandle Handle
 		}
 	}
 }
+
 bool UWarriorGameplayAbility::DoesAbilitySatisfyTagRequirements(const UAbilitySystemComponent& AbilitySystemComponent, const FGameplayTagContainer* SourceTags, const FGameplayTagContainer* TargetTags, FGameplayTagContainer* OptionalRelevantTags) const
 {
 	// Define a common lambda to check for blocked tags
@@ -41,24 +43,24 @@ bool UWarriorGameplayAbility::DoesAbilitySatisfyTagRequirements(const UAbilitySy
 		{
 			return;
 		}
- 
+
 		if (OptionalRelevantTags)
 		{
 			// Ensure the global blocking tag is only added once
 			if (!bBlocked)
 			{
 				UAbilitySystemGlobals& AbilitySystemGlobals = UAbilitySystemGlobals::Get();
-				const FGameplayTag& BlockedTag = AbilitySystemGlobals.ActivateFailTagsBlockedTag;
+				const FGameplayTag&    BlockedTag = AbilitySystemGlobals.ActivateFailTagsBlockedTag;
 				OptionalRelevantTags->AddTag(BlockedTag);
 			}
- 
+
 			// Now append all the blocking tags
 			OptionalRelevantTags->AppendMatchingTags(ContainerA, ContainerB);
 		}
- 
+
 		bBlocked = true;
 	};
- 
+
 	// Define a common lambda to check for missing required tags
 	bool bMissing = false;
 	auto CheckForRequired = [&](const FGameplayTagContainer& TagsToCheck, const FGameplayTagContainer& RequiredTags)
@@ -68,27 +70,27 @@ bool UWarriorGameplayAbility::DoesAbilitySatisfyTagRequirements(const UAbilitySy
 		{
 			return;
 		}
- 
+
 		if (OptionalRelevantTags)
 		{
 			// Ensure the global missing tag is only added once
 			if (!bMissing)
 			{
 				UAbilitySystemGlobals& AbilitySystemGlobals = UAbilitySystemGlobals::Get();
-				const FGameplayTag& MissingTag = AbilitySystemGlobals.ActivateFailTagsMissingTag;
+				const FGameplayTag&    MissingTag = AbilitySystemGlobals.ActivateFailTagsMissingTag;
 				OptionalRelevantTags->AddTag(MissingTag);
 			}
- 
-			FGameplayTagContainer MissingTags = RequiredTags; 
+
+			FGameplayTagContainer MissingTags = RequiredTags;
 			MissingTags.RemoveTags(TagsToCheck.GetGameplayTagParents());
 			OptionalRelevantTags->AppendTags(MissingTags);
 		}
- 
+
 		bMissing = true;
 	};
- 
+
 	// Start by checking all of the blocked tags first (so OptionalRelevantTags will contain blocked tags first)
-	CheckForBlocked(GetAssetTags(),AbilitySystemComponent.GetBlockedAbilityTags());
+	CheckForBlocked(GetAssetTags(), AbilitySystemComponent.GetBlockedAbilityTags());
 	CheckForBlocked(AbilitySystemComponent.GetOwnedGameplayTags(), ActivationBlockedTags);
 	if (SourceTags != nullptr)
 	{
@@ -98,7 +100,7 @@ bool UWarriorGameplayAbility::DoesAbilitySatisfyTagRequirements(const UAbilitySy
 	{
 		CheckForBlocked(*TargetTags, TargetBlockedTags);
 	}
- 
+
 	// Now check all required tags
 	CheckForRequired(AbilitySystemComponent.GetOwnedGameplayTags(), ActivationRequiredTags);
 	if (SourceTags != nullptr)
@@ -109,7 +111,7 @@ bool UWarriorGameplayAbility::DoesAbilitySatisfyTagRequirements(const UAbilitySy
 	{
 		CheckForRequired(*TargetTags, TargetRequiredTags);
 	}
- 
+
 	// We succeeded if there were no blocked tags and no missing required tags	
 	return !bBlocked && !bMissing;
 }
@@ -122,4 +124,19 @@ UPawnCombatComponent* UWarriorGameplayAbility::GetPawnCombatComponentFromActorIn
 UWarriorAbilitySystemComponent* UWarriorGameplayAbility::GetWarriorAbilitySystemComponentFromActorInfo() const
 {
 	return Cast<UWarriorAbilitySystemComponent>(CurrentActorInfo->AbilitySystemComponent);
+}
+
+FActiveGameplayEffectHandle UWarriorGameplayAbility::NativeApplyEffectSpecHandleToTarget(AActor* TargetActor, const FGameplayEffectSpecHandle& InSpecHandle)
+{
+	UAbilitySystemComponent* TargetASC = UAbilitySystemBlueprintLibrary::GetAbilitySystemComponent(TargetActor);
+
+	check(TargetASC && InSpecHandle.IsValid());
+	return GetWarriorAbilitySystemComponentFromActorInfo()->ApplyGameplayEffectSpecToTarget(*InSpecHandle.Data, TargetASC);
+}
+
+FActiveGameplayEffectHandle UWarriorGameplayAbility::BP_ApplyEffectSpecHandleToTarget(AActor* TargetActor, const FGameplayEffectSpecHandle& InSpecHandle, EWarriorSuccessType& OutSuccessType)
+{
+	FActiveGameplayEffectHandle ActiveGameplayEffectHandle = NativeApplyEffectSpecHandleToTarget(TargetActor, InSpecHandle);
+	ActiveGameplayEffectHandle.WasSuccessfullyApplied() ? OutSuccessType = EWarriorSuccessType::Successful : OutSuccessType = EWarriorSuccessType::Failed;
+	return ActiveGameplayEffectHandle;
 }

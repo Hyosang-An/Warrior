@@ -13,13 +13,13 @@ URealTimeTimerManager::URealTimeTimerManager()
 	// 초기화
 }
 
-FString URealTimeTimerManager::StartRealTimeTimer(float InDuration, FRealTimeTimerDelegate InCallback)
+FString URealTimeTimerManager::StartRealTimeTimer(float InDuration, FRealTimeTimerDynamicDelegate InCallback)
 {
 	// 새 타이머 정보 생성
 	FRealTimeTimerInfo TimerInfo;
 	TimerInfo.StartTime = FPlatformTime::Seconds();
 	TimerInfo.Duration = InDuration;
-	TimerInfo.Callback = InCallback;
+	TimerInfo.DynamicCallback = InCallback;
 	TimerInfo.Handle = GenerateTimerHandle();
 	TimerInfo.bIsActive = true;
 
@@ -27,6 +27,18 @@ FString URealTimeTimerManager::StartRealTimeTimer(float InDuration, FRealTimeTim
 	ActiveTimers.Add(TimerInfo.Handle, TimerInfo);
 
 	return TimerInfo.Handle;
+}
+
+FString URealTimeTimerManager::StartRealTimeTimer(float InDuration, FRealTimeTimerDelegate InCallback)
+{
+	FRealTimeTimerInfo Info;
+	Info.StartTime = FPlatformTime::Seconds();
+	Info.Duration = InDuration;
+	Info.Callback = InCallback;
+	Info.bIsActive = true;
+	Info.Handle = GenerateTimerHandle();
+	ActiveTimers.Add(Info.Handle, Info);
+	return Info.Handle;
 }
 
 void URealTimeTimerManager::CancelRealTimeTimer(const FString& InTimerHandle)
@@ -49,7 +61,11 @@ void URealTimeTimerManager::UpdateTimers()
 		if (TimerInfo.bIsActive && (CurrentTime - TimerInfo.StartTime >= TimerInfo.Duration))
 		{
 			// 타이머 완료
-			if (TimerInfo.Callback.IsBound())
+			if (TimerInfo.DynamicCallback.IsBound())
+			{
+				TimerInfo.DynamicCallback.Execute();
+			}
+			else if (TimerInfo.Callback.IsBound())
 			{
 				TimerInfo.Callback.Execute();
 			}
@@ -87,7 +103,7 @@ URealTimeTimerManager* URealTimeTimerLibrary::GetTimerManager()
 	return TimerManager;
 }
 
-FString URealTimeTimerLibrary::StartRealTimeTimer(float Duration, const FRealTimeTimerDelegate& Callback)
+FString URealTimeTimerLibrary::StartRealTimeTimer(float Duration, const FRealTimeTimerDynamicDelegate& Callback)
 {
 	return GetTimerManager()->StartRealTimeTimer(Duration, Callback);
 }

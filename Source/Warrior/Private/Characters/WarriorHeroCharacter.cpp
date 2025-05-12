@@ -13,6 +13,7 @@
 #include "DataAssets/Input/DataAsset_InputConfig.h"
 #include "DataAssets/StartUpData/DataAsset_HeroStartUpData.h"
 #include "Components/Combat/HeroCombatComponent.h"
+#include "Utilities/RealTimeTimer.h"
 
 AWarriorHeroCharacter::AWarriorHeroCharacter()
 {
@@ -38,11 +39,17 @@ AWarriorHeroCharacter::AWarriorHeroCharacter()
 	GetCharacterMovement()->BrakingDecelerationWalking = 2000.f;
 
 	HeroCombatComponent = CreateDefaultSubobject<UHeroCombatComponent>(TEXT("HeroCombatComponent"));
+
 }
 
 UPawnCombatComponent* AWarriorHeroCharacter::GetPawnCombatComponent() const
 {
 	return HeroCombatComponent;
+}
+
+void AWarriorHeroCharacter::OnRealTimeTimerTest()
+{
+	Debug::Print(TEXT("RealTimeTimer Test"), FColor::Red);
 }
 
 void AWarriorHeroCharacter::PossessedBy(AController* NewController)
@@ -56,6 +63,18 @@ void AWarriorHeroCharacter::PossessedBy(AController* NewController)
 			LoadedData->GiveToAbilitySystemComponent(WarriorAbilitySystemComponent);
 		}
 	}
+
+	// RealTImeTimer Test
+	FRealTimeTimerDynamicDelegate TimerDelegate;
+	TimerDelegate.BindDynamic(this, &AWarriorHeroCharacter::OnRealTimeTimerTest);
+	URealTimeTimerLibrary::GetTimerManager()->StartRealTimeTimer(3, TimerDelegate);
+
+	URealTimeTimerLibrary::GetTimerManager()->StartRealTimeTimer(4,
+		FRealTimeTimerDelegate::CreateLambda([]()
+		{
+			Debug::Print(TEXT("RealTimeTimer Test Lambda"), FColor::Green);
+		}));
+
 }
 
 void AWarriorHeroCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
