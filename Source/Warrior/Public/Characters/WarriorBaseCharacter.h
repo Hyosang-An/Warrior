@@ -8,6 +8,7 @@
 
 #include "WarriorBaseCharacter.generated.h"
 
+class UMotionWarpingComponent;
 class UDataAsset_StartUpDataBase;
 class UWarriorAbilitySystemComponent;
 class UWarriorAttributeSet;
@@ -43,6 +44,9 @@ protected:
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "AbilitySystem")
 	TObjectPtr<UWarriorAttributeSet> WarriorAttributeSet;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "MotionWarping")
+	TObjectPtr<UMotionWarpingComponent> MotionWarpingComponent;
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "CharacterData", meta = (AllowPrivateAccess = "true"))
 	TSoftObjectPtr<UDataAsset_StartUpDataBase> CharacterStartUpData;

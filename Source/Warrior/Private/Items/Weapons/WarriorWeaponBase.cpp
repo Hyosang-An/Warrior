@@ -1,6 +1,7 @@
 #include "Items/Weapons/WarriorWeaponBase.h"
 
 #include "WarriorDebugHelper.h"
+#include "WarriorFunctionLibrary.h"
 #include "Components/BoxComponent.h"
 
 // Sets default values
@@ -23,18 +24,17 @@ AWarriorWeaponBase::AWarriorWeaponBase()
 
 void AWarriorWeaponBase::OnCollisionBoxBeginOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
+	// Weapon을 Spawn할 때 Instigator를 설정하였음.
 	APawn* WeaponOwningPawn = GetInstigator();
 
 	checkf(WeaponOwningPawn, TEXT("Forgot to assign an instigator as the owning pawn for the weapon: %s"), *GetName());
 
 	if (APawn* HitPawn = Cast<APawn>(OtherActor))
 	{
-		if (WeaponOwningPawn != HitPawn)
+		if (UWarriorFunctionLibrary::IsTargetPawnHostile(WeaponOwningPawn, HitPawn))
 		{
 			OnWeaponHitTarget.ExecuteIfBound(OtherActor);
 		}
-
-		// TODO: Implement hit check for enemy characters
 	}
 }
 
@@ -46,11 +46,9 @@ void AWarriorWeaponBase::OnCollisionBoxEndOverlap(UPrimitiveComponent* Overlappe
 
 	if (APawn* HitPawn = Cast<APawn>(OtherActor))
 	{
-		if (WeaponOwningPawn != HitPawn)
+		if (UWarriorFunctionLibrary::IsTargetPawnHostile(WeaponOwningPawn, HitPawn))
 		{
 			OnWeaponPulledFromTarget.ExecuteIfBound(OtherActor);
 		}
-
-		// TODO: Implement hit check for enemy characters
 	}
 }
