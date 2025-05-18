@@ -25,4 +25,6 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "Warrior|Ability")
 	bool TryActivateAbilityByTag(FGameplayTag AbilityTagToActivate);
+
+	// TODO: TaskFinishedDelegate 구현
 };
