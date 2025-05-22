@@ -66,6 +66,12 @@ private:
 
 	void Input_Move(const FInputActionValue& InputActionValue);
 	void Input_Look(const FInputActionValue& InputActionValue);
+	
+	void Input_SwitchTargetTriggered(const FInputActionValue& InputActionValue);
+	void Input_SwitchTargetCompleted(const FInputActionValue& InputActionValue);
+
+	FVector2D SwitchDirection = FVector2D::ZeroVector;
+	FVector2D SwitchTargetInputAccumulation = FVector2D::ZeroVector;
 
 	void Input_AbilityInputPressed(FGameplayTag InInputTag);
 	void Input_AbilityInputReleased(FGameplayTag InInputTag);
@@ -74,4 +80,13 @@ private:
 
 public:
 	FORCEINLINE UHeroCombatComponent* GetHeroCombatComponent() const { return HeroCombatComponent; }
+	FORCEINLINE USpringArmComponent*  GetCameraBoom() const { return CameraBoom; }
+	void SetOrientRotationToMovement(bool bOrient) const;
+
+	// Restore CameraBoomOffset
+	FVector      CameraBoomOffset = FVector(0.f, 55.f, 65.f);
+	FTimerHandle CameraOffsetRestoreHandle;
+	void         BeginRestoreCameraBoomOffset();
+	void         RestoreCameraBoomOffsetTick();
+
 };

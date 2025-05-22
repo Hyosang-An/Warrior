@@ -1,5 +1,7 @@
 #include "Characters/WarriorHeroCharacter.h"
 
+#include "AbilitySystemBlueprintLibrary.h"
+#include "EnhancedActionKeyMapping.h"
 #include "WarriorDebugHelper.h"
 
 #include "Camera/CameraComponent.h"
@@ -27,7 +29,7 @@ AWarriorHeroCharacter::AWarriorHeroCharacter()
 	CameraBoom = CreateDefaultSubobject<USpringArmComponent>(TEXT("CameraBoom"));
 	CameraBoom->SetupAttachment(RootComponent);
 	CameraBoom->TargetArmLength = 200.f;
-	CameraBoom->SocketOffset = FVector(0.f, 55.f, 65.f);
+	CameraBoom->SocketOffset = CameraBoomOffset;
 	CameraBoom->bUsePawnControlRotation = true;
 
 	FollowCamera = CreateDefaultSubobject<UCameraComponent>(TEXT("FollowCamera"));
@@ -95,6 +97,9 @@ void AWarriorHeroCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInp
 	WarriorInputComponent->BindNativeInputAction(InputConfigDataAsset, WarriorGameplayTags::InputTag_Move, ETriggerEvent::Triggered, this, &ThisClass::Input_Move);
 	WarriorInputComponent->BindNativeInputAction(InputConfigDataAsset, WarriorGameplayTags::InputTag_Look, ETriggerEvent::Triggered, this, &ThisClass::Input_Look);
 
+	WarriorInputComponent->BindNativeInputAction(InputConfigDataAsset, WarriorGameplayTags::InputTag_SwitchTarget, ETriggerEvent::Triggered, this, &ThisClass::Input_SwitchTargetTriggered);
+	WarriorInputComponent->BindNativeInputAction(InputConfigDataAsset, WarriorGameplayTags::InputTag_SwitchTarget, ETriggerEvent::Completed, this, &ThisClass::Input_SwitchTargetCompleted);
+
 	WarriorInputComponent->BindAbilityInputAction(InputConfigDataAsset, this, &ThisClass::Input_AbilityInputPressed, &ThisClass::Input_AbilityInputReleased);
 }
 
@@ -136,6 +141,34 @@ void AWarriorHeroCharacter::Input_Look(const FInputActionValue& InputActionValue
 	}
 }
 
+void AWarriorHeroCharacter::Input_SwitchTargetTriggered(const FInputActionValue& InputActionValue)
+{
+	SwitchDirection = InputActionValue.Get<FVector2D>();
+
+	SwitchTargetInputAccumulation += SwitchDirection;
+}
+
+void AWarriorHeroCharacter::Input_SwitchTargetCompleted(const FInputActionValue& InputActionValue)
+{
+	//Debug::Print(FString::Printf(TEXT("Target Input Accumulation %f"), SwitchTargetInputAccumulation.Length()));
+
+	const float InputAccumulationLength = SwitchTargetInputAccumulation.Length();
+	SwitchTargetInputAccumulation = FVector2D::ZeroVector;
+	if (InputAccumulationLength < 10.f)
+	{
+		return;
+	}
+	//Debug::Print(TEXT("Switch!!!"), FColor::Green);
+
+	FGameplayEventData Data;
+
+	UAbilitySystemBlueprintLibrary::SendGameplayEventToActor(this,
+		SwitchDirection.X > 0.f ? WarriorGameplayTags::Player_Event_SwitchTarget_Right : WarriorGameplayTags::Player_Event_SwitchTarget_Left,
+		Data);
+
+	//Debug::Print(FString::Printf(TEXT("Switch Direction Input %s"), *SwitchDirection.ToString()));
+}
+
 void AWarriorHeroCharacter::Input_AbilityInputPressed(FGameplayTag InInputTag)
 {
 	WarriorAbilitySystemComponent->OnAbilityInputPressed(InInputTag);
@@ -144,4 +177,37 @@ void AWarriorHeroCharacter::Input_AbilityInputPressed(FGameplayTag InInputTag)
 void AWarriorHeroCharacter::Input_AbilityInputReleased(FGameplayTag InInputTag)
 {
 	WarriorAbilitySystemComponent->OnAbilityInputReleased(InInputTag);
+}
+
+void AWarriorHeroCharacter::SetOrientRotationToMovement(bool bOrient) const
+{
+	GetCharacterMovement()->bOrientRotationToMovement = bOrient;
+}
+
+void AWarriorHeroCharacter::BeginRestoreCameraBoomOffset()
+{
+	// 매 틱마다 RestoreCameraBoomOffsetTick 실행 (0.01초 간격, 반복)
+	GetWorldTimerManager().SetTimer(
+		CameraOffsetRestoreHandle,
+		this,
+		&AWarriorHeroCharacter::RestoreCameraBoomOffsetTick,
+		0.01f,
+		true
+		);
+}
+
+void AWarriorHeroCharacter::RestoreCameraBoomOffsetTick()
+{
+	const FVector CurrentOffset = GetCameraBoom()->SocketOffset;
+	const FVector TargetOffset = CameraBoomOffset;
+	const FVector NewOffset = FMath::VInterpTo(CurrentOffset, TargetOffset, GetWorld()->GetDeltaSeconds(), 5.f);
+
+	GetCameraBoom()->SocketOffset = NewOffset;
+
+	// 충분히 가까워지면 타이머 종료
+	if (NewOffset.Equals(TargetOffset, 0.1f))
+	{
+		GetCameraBoom()->SocketOffset = CameraBoomOffset;
+		GetWorldTimerManager().ClearTimer(CameraOffsetRestoreHandle);
+	}
 }

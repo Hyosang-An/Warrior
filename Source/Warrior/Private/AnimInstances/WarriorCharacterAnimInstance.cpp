@@ -29,4 +29,10 @@ void UWarriorCharacterAnimInstance::NativeThreadSafeUpdateAnimation(float DeltaS
 	bHasAcceleration = OwningMovementComponent->GetCurrentAcceleration().SizeSquared2D() > 0.f;
 
 	LocomotionDirection = UKismetAnimationLibrary::CalculateDirection(OwningCharacter->GetVelocity(), OwningCharacter->GetActorRotation());
+
+	// Blend Space 축 값 계산
+	const float Degree = FMath::DegreesToRadians(LocomotionDirection);
+	float XValue = GroundSpeed * FMath::Sin(Degree);
+	float YValue = GroundSpeed * FMath::Cos(Degree);
+	MovementVelocity = FVector2D(XValue, YValue);
 }
