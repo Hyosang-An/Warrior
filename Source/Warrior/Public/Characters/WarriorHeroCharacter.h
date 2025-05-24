@@ -39,6 +39,7 @@ protected:
 
 	virtual void SetupPlayerInputComponent(UInputComponent* PlayerInputComponent) override;
 	virtual void BeginPlay() override;
+	virtual void Tick(float DeltaTime) override;
 
 private:
 #pragma region Components
@@ -66,7 +67,7 @@ private:
 
 	void Input_Move(const FInputActionValue& InputActionValue);
 	void Input_Look(const FInputActionValue& InputActionValue);
-	
+
 	void Input_SwitchTargetTriggered(const FInputActionValue& InputActionValue);
 	void Input_SwitchTargetCompleted(const FInputActionValue& InputActionValue);
 
@@ -81,12 +82,15 @@ private:
 public:
 	FORCEINLINE UHeroCombatComponent* GetHeroCombatComponent() const { return HeroCombatComponent; }
 	FORCEINLINE USpringArmComponent*  GetCameraBoom() const { return CameraBoom; }
-	void SetOrientRotationToMovement(bool bOrient) const;
+	void                              SetOrientRotationToMovement(bool bOrient) const;
 
 	// Restore CameraBoomOffset
-	FVector      CameraBoomOffset = FVector(0.f, 55.f, 65.f);
-	FTimerHandle CameraOffsetRestoreHandle;
-	void         BeginRestoreCameraBoomOffset();
-	void         RestoreCameraBoomOffsetTick();
+	bool    bShouldRestoreCameraBoomOffset = false;
+	bool    bShouldRestoreCameraRotationOffset = false;
+	FVector CameraBoomOffset = FVector(0.f, 55.f, 65.f);
+	float   TargetCameraPitch = 0.f;
+	void    BeginRestoreCameraOffset(float OriginalCameraPitch);
+	void    CancelCameraOffsetRestore();
+	void    RestoreCameraOffsetTick(float DeltaTime);
 
 };

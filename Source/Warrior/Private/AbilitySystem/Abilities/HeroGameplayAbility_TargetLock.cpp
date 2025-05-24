@@ -29,6 +29,11 @@ void UHeroGameplayAbility_TargetLock::EndAbility(const FGameplayAbilitySpecHandl
 {
 	ResetTargetLockMovement();
 	ResetTargetLockMappingContext();
+	
+	if (AWarriorHeroCharacter* Hero = GetHeroCharacterFromActorInfo())
+	{
+		Hero->BeginRestoreCameraOffset(CachedOriginalCameraPitch);
+	}	
 	CleanUp();
 
 	Super::EndAbility(Handle, ActorInfo, ActivationInfo, bReplicateEndAbility, bWasCancelled);
@@ -46,12 +51,14 @@ void UHeroGameplayAbility_TargetLock::OnTargetLockTick(float DeltaTime)
 
 	SetTargetLockWidgetPosition();
 
-	const bool bShouldOverrideRotation = !UWarriorFunctionLibrary::NativeDoesActorHaveTag(GetHeroCharacterFromActorInfo(), WarriorGameplayTags::Player_Status_Rolling)
-		&& !UWarriorFunctionLibrary::NativeDoesActorHaveTag(GetHeroCharacterFromActorInfo(), WarriorGameplayTags::Player_Status_Blocking);
+	const bool bShouldOverrideRotation = !UWarriorFunctionLibrary::NativeDoesActorHaveTag(GetHeroCharacterFromActorInfo(), WarriorGameplayTags::Player_Status_Rolling) &&
+		!UWarriorFunctionLibrary::NativeDoesActorHaveTag(GetHeroCharacterFromActorInfo(), WarriorGameplayTags::Player_Status_Blocking);
 
 	if (bShouldOverrideRotation)
 	{
-		const FRotator LookAtRot = UKismetMathLibrary::FindLookAtRotation(GetHeroCharacterFromActorInfo()->GetActorLocation(), CurrentLockedActor->GetActorLocation());
+		FRotator LookAtRot = UKismetMathLibrary::FindLookAtRotation(GetHeroCharacterFromActorInfo()->GetActorLocation(), CurrentLockedActor->GetActorLocation());
+
+		LookAtRot -= FRotator(TargetLockCameraOffsetDistance, 0.f, 0.f);
 
 		const FRotator CurrentControlRot = GetHeroControllerFromActorInfo()->GetControlRotation();
 		const FRotator NewControlRot = FMath::RInterpTo(CurrentControlRot, LookAtRot, DeltaTime, TargetLockRotationInterpSpeed);
@@ -129,10 +136,13 @@ void UHeroGameplayAbility_TargetLock::TryLockOnTarget()
 
 		SetTargetLockWidgetPosition();
 
-		// Custom
-		OriginalCameraBoomSocketOffset = GetHeroCharacterFromActorInfo()->CameraBoomOffset;
-		LockOnCameraBoomSocketOffset = OriginalCameraBoomSocketOffset + FVector(-100.f, 0.f, 50.f);
-		GetWorld()->GetTimerManager().ClearTimer(GetHeroCharacterFromActorInfo()->CameraOffsetRestoreHandle); // 이걸 안하면 Offset 보간이 서로 충돌함
+		// Camera Offset
+		AWarriorHeroCharacter* Hero = GetHeroCharacterFromActorInfo();
+		LockOnCameraBoomSocketOffset = Hero->CameraBoomOffset + FVector(-100.f, 0.f, 50.f);
+
+		CachedOriginalCameraPitch = GetHeroControllerFromActorInfo()->GetControlRotation().Pitch;
+		// 복원 중단
+		Hero->CancelCameraOffsetRestore();
 	}
 	else
 	{
@@ -274,11 +284,6 @@ void UHeroGameplayAbility_TargetLock::CleanUp()
 	TargetLockWidgetSize = FVector2D::ZeroVector;
 
 	CachedDefaultMaxWalkSpeed = 0.f;
-
-	if (AWarriorHeroCharacter* Hero = GetHeroCharacterFromActorInfo())
-	{
-		Hero->BeginRestoreCameraBoomOffset();
-	}
 }
 
 void UHeroGameplayAbility_TargetLock::ResetTargetLockMovement()

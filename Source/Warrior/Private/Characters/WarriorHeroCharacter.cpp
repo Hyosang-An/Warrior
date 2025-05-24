@@ -20,6 +20,9 @@
 
 AWarriorHeroCharacter::AWarriorHeroCharacter()
 {
+	PrimaryActorTick.bCanEverTick = true;
+	PrimaryActorTick.bStartWithTickEnabled = true;
+
 	GetCapsuleComponent()->InitCapsuleSize(42.f, 96.f);
 
 	bUseControllerRotationRoll = false;
@@ -108,6 +111,14 @@ void AWarriorHeroCharacter::BeginPlay()
 	Super::BeginPlay();
 }
 
+void AWarriorHeroCharacter::Tick(float DeltaTime)
+{
+	Super::Tick(DeltaTime);
+
+	if (bShouldRestoreCameraBoomOffset || bShouldRestoreCameraRotationOffset)
+		RestoreCameraOffsetTick(DeltaTime);
+}
+
 void AWarriorHeroCharacter::Input_Move(const FInputActionValue& InputActionValue)
 {
 	const FVector2D MovementVector = InputActionValue.Get<FVector2D>();
@@ -139,6 +150,8 @@ void AWarriorHeroCharacter::Input_Look(const FInputActionValue& InputActionValue
 	{
 		AddControllerPitchInput(LookVector.Y);
 	}
+
+	bShouldRestoreCameraRotationOffset = false;
 }
 
 void AWarriorHeroCharacter::Input_SwitchTargetTriggered(const FInputActionValue& InputActionValue)
@@ -150,15 +163,14 @@ void AWarriorHeroCharacter::Input_SwitchTargetTriggered(const FInputActionValue&
 
 void AWarriorHeroCharacter::Input_SwitchTargetCompleted(const FInputActionValue& InputActionValue)
 {
-	//Debug::Print(FString::Printf(TEXT("Target Input Accumulation %f"), SwitchTargetInputAccumulation.Length()));
-
 	const float InputAccumulationLength = SwitchTargetInputAccumulation.Length();
 	SwitchTargetInputAccumulation = FVector2D::ZeroVector;
 	if (InputAccumulationLength < 10.f)
 	{
 		return;
 	}
-	//Debug::Print(TEXT("Switch!!!"), FColor::Green);
+	//Debug::Print(FString::Printf(TEXT("Target Input Accumulation %f"), InputAccumulationLength));
+
 
 	FGameplayEventData Data;
 
@@ -184,30 +196,51 @@ void AWarriorHeroCharacter::SetOrientRotationToMovement(bool bOrient) const
 	GetCharacterMovement()->bOrientRotationToMovement = bOrient;
 }
 
-void AWarriorHeroCharacter::BeginRestoreCameraBoomOffset()
+void AWarriorHeroCharacter::BeginRestoreCameraOffset(float OriginalCameraPitch)
 {
-	// 매 틱마다 RestoreCameraBoomOffsetTick 실행 (0.01초 간격, 반복)
-	GetWorldTimerManager().SetTimer(
-		CameraOffsetRestoreHandle,
-		this,
-		&AWarriorHeroCharacter::RestoreCameraBoomOffsetTick,
-		0.01f,
-		true
-		);
+	bShouldRestoreCameraBoomOffset = true;
+	bShouldRestoreCameraRotationOffset = true;
+
+	TargetCameraPitch = OriginalCameraPitch;
 }
 
-void AWarriorHeroCharacter::RestoreCameraBoomOffsetTick()
+void AWarriorHeroCharacter::CancelCameraOffsetRestore()
 {
-	const FVector CurrentOffset = GetCameraBoom()->SocketOffset;
-	const FVector TargetOffset = CameraBoomOffset;
-	const FVector NewOffset = FMath::VInterpTo(CurrentOffset, TargetOffset, GetWorld()->GetDeltaSeconds(), 5.f);
+	bShouldRestoreCameraBoomOffset = false;
+	bShouldRestoreCameraRotationOffset = false;
+}
 
-	GetCameraBoom()->SocketOffset = NewOffset;
-
-	// 충분히 가까워지면 타이머 종료
-	if (NewOffset.Equals(TargetOffset, 0.1f))
+void AWarriorHeroCharacter::RestoreCameraOffsetTick(float DeltaTime)
+{
+	if (bShouldRestoreCameraBoomOffset)
 	{
-		GetCameraBoom()->SocketOffset = CameraBoomOffset;
-		GetWorldTimerManager().ClearTimer(CameraOffsetRestoreHandle);
+		const FVector CurrentOffset = GetCameraBoom()->SocketOffset;
+		const FVector TargetOffset = CameraBoomOffset;
+		const FVector NewOffset = FMath::VInterpTo(CurrentOffset, TargetOffset, DeltaTime, 5.f);
+
+		GetCameraBoom()->SocketOffset = NewOffset;
+
+		// 충분히 가까워지면 종료
+		if (NewOffset.Equals(TargetOffset, 0.1f))
+		{
+			GetCameraBoom()->SocketOffset = CameraBoomOffset;
+			bShouldRestoreCameraBoomOffset = false;
+		}
+	}
+
+	if (bShouldRestoreCameraRotationOffset)
+	{
+		const float    CurrentCameraPitch = GetController()->GetControlRotation().Pitch;
+		const FRotator TargetRotator      = FRotator(TargetCameraPitch, GetController()->GetControlRotation().Yaw, GetController()->GetControlRotation().Roll);
+		const FRotator NewRotator         = FMath::RInterpTo(GetController()->GetControlRotation(), TargetRotator, DeltaTime, 5.f);
+
+		GetController()->SetControlRotation(NewRotator);	
+
+		// 충분히 가까워지면 종료
+		if (FMath::Abs( CurrentCameraPitch - TargetCameraPitch) < 0.2f)
+		{
+			GetController()->SetControlRotation(NewRotator);
+			bShouldRestoreCameraRotationOffset = false;
+		}
 	}
 }
