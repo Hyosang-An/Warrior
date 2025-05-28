@@ -19,6 +19,7 @@ void UWarriorFunctionLibrary::AddGameplayTagToActorIfNone(AActor* InActor, FGame
 {
 	UWarriorAbilitySystemComponent* ASC = NativeGetWarriorASCFromActor(InActor);
 
+	// TODO: ASC->GetOwnedGameplayTags().HasTagExact(TagToAdd) 사용
 	if (!ASC->HasMatchingGameplayTag(TagToAdd))
 	{
 		ASC->AddLooseGameplayTag(TagToAdd);
@@ -35,6 +36,7 @@ void UWarriorFunctionLibrary::RemoveGameplayTagFromActorIfFound(AActor* InActor,
 	}
 }
 
+// TODO: NativeDoesActorHaveTagExact()도 추가 및 구현 (ASC->GetOwnedGameplayTags().HasTagExact() 사용)
 bool UWarriorFunctionLibrary::NativeDoesActorHaveTag(AActor* InActor, FGameplayTag TagToCheck)
 {
 	UWarriorAbilitySystemComponent* ASC = NativeGetWarriorASCFromActor(InActor);

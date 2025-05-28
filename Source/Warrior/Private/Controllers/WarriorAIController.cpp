@@ -15,7 +15,7 @@ AWarriorAIController::AWarriorAIController(const FObjectInitializer& ObjectIniti
 	AISenseConfig_Sight->DetectionByAffiliation.bDetectFriendlies = false;
 	AISenseConfig_Sight->DetectionByAffiliation.bDetectNeutrals = false;
 	AISenseConfig_Sight->SightRadius = 5000.f;
-	AISenseConfig_Sight->LoseSightRadius = 0;
+	AISenseConfig_Sight->LoseSightRadius = 5000.f;
 	AISenseConfig_Sight->PeripheralVisionAngleDegrees = 360.f;
 
 	// UAIPerceptionComponent를 AIController에서 설정하지만 위치나 회전 기준은 Possess된 Pawn이다.
@@ -49,7 +49,17 @@ void AWarriorAIController::BeginPlay()
 
 	if (UCrowdFollowingComponent* CrowdComp = Cast<UCrowdFollowingComponent>(GetPathFollowingComponent()))
 	{
-		CrowdComp->SetCrowdSimulationState(bEnableDetourCrowdAvoidance ? ECrowdSimulationState::Enabled : ECrowdSimulationState::Disabled);
+		if (bEnableDetourCrowdAvoidance)
+		{
+			if (!bUseObstacleOnly)
+				CrowdComp->SetCrowdSimulationState(ECrowdSimulationState::Enabled);
+			else
+				CrowdComp->SetCrowdSimulationState(ECrowdSimulationState::ObstacleOnly);
+		}
+		else
+		{
+			CrowdComp->SetCrowdSimulationState(ECrowdSimulationState::Disabled);
+		}
 
 		switch (DetourCrowdAvoidanceQuality)
 		{

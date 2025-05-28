@@ -33,6 +33,11 @@ void UDataAsset_StartUpDataBase::GrantAbilities(const TArray<TSubclassOf<UWarrio
 	if (InAbilitiesToGive.IsEmpty())
 		return;
 
+	if (!InASCToGive)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("UDataAsset_StartUpDataBase::GrantAbilities called with nullptr InASCToGive"));
+	}
+
 	for (const TSubclassOf<UWarriorGameplayAbility>& Ability : InAbilitiesToGive)
 	{
 		if (!Ability)

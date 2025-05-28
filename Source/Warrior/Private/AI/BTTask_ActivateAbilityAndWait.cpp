@@ -9,6 +9,7 @@ UBTTask_ActivateAbilityAndWait::UBTTask_ActivateAbilityAndWait()
 {
 	NodeName = "Activate Ability By Tag and Wait";
 	bNotifyTaskFinished = true;
+	bCreateNodeInstance = true;
 	bIsWaitingForAbility = false;
 }
 
@@ -95,8 +96,14 @@ EBTNodeResult::Type UBTTask_ActivateAbilityAndWait::ExecuteTask(UBehaviorTreeCom
 
 EBTNodeResult::Type UBTTask_ActivateAbilityAndWait::AbortTask(UBehaviorTreeComponent& OwnerComp, uint8* NodeMemory)
 {
-	CleanupDelegates();
+	// CleanupDelegates();
 	return EBTNodeResult::Aborted;
+}
+
+void UBTTask_ActivateAbilityAndWait::OnTaskFinished(UBehaviorTreeComponent& OwnerComp, uint8* NodeMemory, EBTNodeResult::Type TaskResult)
+{
+	CleanupDelegates();
+	Super::OnTaskFinished(OwnerComp, NodeMemory, TaskResult);
 }
 
 FString UBTTask_ActivateAbilityAndWait::GetStaticDescription() const
@@ -118,7 +125,7 @@ void UBTTask_ActivateAbilityAndWait::OnAbilityEnded(const FAbilityEndedData& Abi
 			FinishLatentTask(*CachedOwnerComp.Get(), EBTNodeResult::Succeeded);
 		}
 
-		CleanupDelegates();
+		// CleanupDelegates();
 	}
 }
 

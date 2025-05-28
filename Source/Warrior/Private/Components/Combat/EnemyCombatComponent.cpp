@@ -4,6 +4,8 @@
 #include "WarriorDebugHelper.h"
 #include "WarriorFunctionLibrary.h"
 #include "WarriorGameplayTags.h"
+#include "Characters/WarriorEnemyCharacter.h"
+#include "Components/BoxComponent.h"
 
 void UEnemyCombatComponent::OnHitTargetActor(AActor* HitActor)
 {
@@ -13,7 +15,7 @@ void UEnemyCombatComponent::OnHitTargetActor(AActor* HitActor)
 	}
 
 	OverlappedActors.AddUnique(HitActor);
-	
+
 	bool bIsValidBlock = false;
 
 	const bool bIsPlayerBlocking = UWarriorFunctionLibrary::NativeDoesActorHaveTag(HitActor, WarriorGameplayTags::Player_Status_Blocking);
@@ -42,4 +44,35 @@ void UEnemyCombatComponent::OnWeaponPulledFromTargetActor(AActor* InteractedActo
 {
 	Super::OnWeaponPulledFromTargetActor(InteractedActor);
 
+}
+
+void UEnemyCombatComponent::ToggleBodyCollisionBoxCollision(bool bShouldEnable, EToggleDamageType ToggleDamageType)
+{
+	AWarriorEnemyCharacter* OwningEnemyCharacter = GetOwningPawn<AWarriorEnemyCharacter>();
+
+	check(OwningEnemyCharacter);
+
+	UBoxComponent* LeftHandCollisionBox = OwningEnemyCharacter->GetLeftHandCollisionBox();
+	UBoxComponent* RightHandCollisionBox = OwningEnemyCharacter->GetRightHandCollisionBox();
+
+	check(LeftHandCollisionBox && RightHandCollisionBox);
+
+	switch (ToggleDamageType)
+	{
+		case EToggleDamageType::LeftHand:
+			LeftHandCollisionBox->SetCollisionEnabled(bShouldEnable ? ECollisionEnabled::Type::QueryOnly : ECollisionEnabled::Type::NoCollision);
+			break;
+
+		case EToggleDamageType::RightHand:
+			RightHandCollisionBox->SetCollisionEnabled(bShouldEnable ? ECollisionEnabled::Type::QueryOnly : ECollisionEnabled::Type::NoCollision);
+			break;
+
+		default:
+			break;
+	}
+
+	if (!bShouldEnable)
+	{
+		OverlappedActors.Empty();
+	}
 }
