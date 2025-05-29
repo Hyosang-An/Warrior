@@ -122,5 +122,7 @@ void UGEExecCalc_DamageTaken::Execute_Implementation(const FGameplayEffectCustom
 	if (FinalDamageDone > 0.f)
 	{
 		OutExecutionOutput.AddOutputModifier(FGameplayModifierEvaluatedData(GetWarriorDamageCapture().DamageTakenProperty, EGameplayModOp::Override, FinalDamageDone));
+
+		// TODO: Gain Rage를 여기서 처리 (EffectSpec.GetContext().GetInstigator() 사용)
 	}
 }

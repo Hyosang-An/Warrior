@@ -54,3 +54,5 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Warrior|FunctionLibrary")
 	static bool ApplyGameplayEffectSpecHandleToTargetActor(AActor* InInstigator, AActor* InTargetActor, const FGameplayEffectSpecHandle& InSpecHandle);
 };
+
+// TODO: Timed Niagara Effects 를 무기 소켓에 적용되도록 구현

@@ -11,6 +11,7 @@
 #include "EnhancedInputSubsystems.h"
 #include "WarriorGameplayTags.h"
 #include "AbilitySystem/WarriorAbilitySystemComponent.h"
+#include "AbilitySystem/WarriorAttributeSet.h"
 #include "Components/Input/WarriorInputComponent.h"
 #include "DataAssets/Input/DataAsset_InputConfig.h"
 #include "DataAssets/StartUpData/DataAsset_HeroStartUpData.h"

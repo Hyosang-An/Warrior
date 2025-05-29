@@ -75,7 +75,7 @@ void AWarriorProjectileBase::OnProjectileHit(UPrimitiveComponent* HitComponent, 
 	}
 
 	FGameplayEventData Data;
-	Data.Instigator = this;
+	Data.Instigator = this; // HitReact에서 사용되는 용도
 	Data.Target = HitPawn;
 
 	if (bIsValidBlock)
@@ -92,6 +92,24 @@ void AWarriorProjectileBase::OnProjectileHit(UPrimitiveComponent* HitComponent, 
 
 void AWarriorProjectileBase::OnProjectileBeginOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
+	if (OverlappedActors.Contains(OtherActor))
+	{
+		return;
+	}
+
+	OverlappedActors.AddUnique(OtherActor);
+
+	if (APawn* HitPawn = Cast<APawn>(OtherActor))
+	{
+		FGameplayEventData Data;
+		Data.Instigator = this; // HitReact에서 사용되는 용도
+		Data.Target = HitPawn;
+		
+		if (UWarriorFunctionLibrary::IsTargetPawnHostile(GetInstigator(), HitPawn))
+		{
+			HandleApplyProjectileDamage(HitPawn, Data);
+		}
+	}
 }
 
 void AWarriorProjectileBase::HandleApplyProjectileDamage(AActor* InHitPawn, const FGameplayEventData& InPayload)

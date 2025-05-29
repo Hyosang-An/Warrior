@@ -12,7 +12,7 @@ AWarriorHeroCharacter* UWarriorHeroGameplayAbility::GetHeroCharacterFromActorInf
 	{
 		CachedWarriorHeroCharacter = Cast<AWarriorHeroCharacter>(CurrentActorInfo->AvatarActor);
 	}
-	
+
 	return CachedWarriorHeroCharacter.IsValid() ? CachedWarriorHeroCharacter.Get() : nullptr;
 }
 
@@ -38,15 +38,31 @@ FGameplayEffectSpecHandle UWarriorHeroGameplayAbility::MakeHeroDamageEffectSpecH
 	ContextHandle.SetAbility(this);
 	ContextHandle.AddSourceObject(GetAvatarActorFromActorInfo());
 	ContextHandle.AddInstigator(GetAvatarActorFromActorInfo(), GetAvatarActorFromActorInfo());
-	
+
 	FGameplayEffectSpecHandle EffectSpecHandle = GetWarriorAbilitySystemComponentFromActorInfo()->MakeOutgoingSpec(EffectClass, GetAbilityLevel(), ContextHandle);
 
 	EffectSpecHandle.Data->SetSetByCallerMagnitude(WarriorGameplayTags::Shared_SetByCaller_BaseDamage, InWeaponBaseDamage);
 
 	if (InCurrentAttackTypeTag.IsValid())
 	{
-		EffectSpecHandle.Data->SetSetByCallerMagnitude(InCurrentAttackTypeTag, InUsedComboCount);		
+		EffectSpecHandle.Data->SetSetByCallerMagnitude(InCurrentAttackTypeTag, InUsedComboCount);
 	}
+
+	return EffectSpecHandle;
+}
+
+FGameplayEffectSpecHandle UWarriorHeroGameplayAbility::MakeHeroGainRageEffectSpecHandle(TSubclassOf<UGameplayEffect> EffectClass, float InRageGainAmountFromCombo)
+{
+	check(EffectClass);
+
+	FGameplayEffectContextHandle ContextHandle = GetAbilitySystemComponentFromActorInfo()->MakeEffectContext();
+	ContextHandle.SetAbility(this);
+	ContextHandle.AddSourceObject(GetAvatarActorFromActorInfo());
+	ContextHandle.AddInstigator(GetAvatarActorFromActorInfo(), GetAvatarActorFromActorInfo());
+
+	FGameplayEffectSpecHandle EffectSpecHandle = GetWarriorAbilitySystemComponentFromActorInfo()->MakeOutgoingSpec(EffectClass, GetAbilityLevel(), ContextHandle);
+
+	EffectSpecHandle.Data->SetSetByCallerMagnitude(WarriorGameplayTags::Player_SetByCaller_RageGainAmountFromCombo, InRageGainAmountFromCombo);
 
 	return EffectSpecHandle;
 }

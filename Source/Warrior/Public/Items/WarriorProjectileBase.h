@@ -61,4 +61,6 @@ public:
 
 private:
 	void HandleApplyProjectileDamage(AActor* InHitPawn, const FGameplayEventData& InPayload);
+
+	TArray<TWeakObjectPtr<AActor>> OverlappedActors;
 };

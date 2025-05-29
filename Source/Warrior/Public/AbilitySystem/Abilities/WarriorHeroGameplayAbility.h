@@ -28,6 +28,9 @@ public:
 	UFUNCTION(BlueprintPure, Category = "Warrior|Ability")
 	FGameplayEffectSpecHandle MakeHeroDamageEffectSpecHandle(TSubclassOf<UGameplayEffect> EffectClass, float InWeaponBaseDamage, FGameplayTag InCurrentAttackTypeTag, int32 InUsedComboCount);
 
+	UFUNCTION(BlueprintPure, Category = "Warrior|Ability")
+	FGameplayEffectSpecHandle MakeHeroGainRageEffectSpecHandle(TSubclassOf<UGameplayEffect> EffectClass, float InRageGainAmountFromCombo);
+
 private:
 	TWeakObjectPtr<AWarriorHeroCharacter>  CachedWarriorHeroCharacter;
 	TWeakObjectPtr<AWarriorHeroController> CachedWarriorHeroController;

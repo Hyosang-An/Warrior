@@ -107,6 +107,7 @@ void UWarriorAttributeSet::PostGameplayEffectExecute(const struct FGameplayEffec
 		if (GetCurrentHealth() == 0.f)
 		{
 			UWarriorFunctionLibrary::AddGameplayTagToActorIfNone(Data.Target.GetAvatarActor(), WarriorGameplayTags::Shared_Status_Dead);
-		}
+		}		
 	}
+
 }
