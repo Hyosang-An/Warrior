@@ -20,8 +20,9 @@ void UEnemyCombatComponent::OnHitTargetActor(AActor* HitActor)
 
 	const bool bIsPlayerBlocking = UWarriorFunctionLibrary::NativeDoesActorHaveTag(HitActor, WarriorGameplayTags::Player_Status_Blocking);
 	const bool bIsMyAttackUnblockable = UWarriorFunctionLibrary::NativeDoesActorHaveTag(GetOwningPawn(), WarriorGameplayTags::Enemy_Status_Unblockable);
+	const bool bIsPlayerPerfectBLock = UWarriorFunctionLibrary::NativeDoesActorHaveTag(HitActor, WarriorGameplayTags::Player_Status_PerfectBlock);
 
-	if (bIsPlayerBlocking && !bIsMyAttackUnblockable)
+	if (bIsPlayerBlocking && !bIsMyAttackUnblockable || bIsPlayerPerfectBLock)
 	{
 		bIsValidBlock = UWarriorFunctionLibrary::IsValidBlock(GetOwningPawn(), HitActor);
 	}

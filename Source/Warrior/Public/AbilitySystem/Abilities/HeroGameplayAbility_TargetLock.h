@@ -42,6 +42,8 @@ private:
 	void ResetTargetLockMovement();
 	void ResetTargetLockMappingContext();
 
+	void SortActorsByLeftRight(const AActor* ReferenceActor, TArray<AActor*>& TargetActors);
+
 	UPROPERTY(EditDefaultsOnly, Category= "Target Lock")
 	float BoxTraceDistance = 5000.f;
 

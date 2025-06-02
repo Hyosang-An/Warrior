@@ -103,13 +103,38 @@ void UHeroGameplayAbility_TargetLock::SwitchTarget(const FGameplayTag& InSwitchD
 	AActor*         NewTargetActor = nullptr;
 	GetAvailableActorsAroundTarget(ActorsOnLeft, ActorsOnRight);
 
+	// if (InSwitchDirectionTag == WarriorGameplayTags::Player_Event_SwitchTarget_Left)
+	// {
+	// 	NewTargetActor = GetNearestTargetFromAvailableActors(ActorsOnLeft);
+	// }
+	// else
+	// {
+	// 	NewTargetActor = GetNearestTargetFromAvailableActors(ActorsOnRight);
+	// }
+
 	if (InSwitchDirectionTag == WarriorGameplayTags::Player_Event_SwitchTarget_Left)
 	{
-		NewTargetActor = GetNearestTargetFromAvailableActors(ActorsOnLeft);
+		if (ActorsOnLeft.IsEmpty())
+		{
+			NewTargetActor = nullptr;
+		}
+		else
+		{
+			SortActorsByLeftRight(GetHeroCharacterFromActorInfo(), ActorsOnLeft);
+			NewTargetActor = ActorsOnLeft.Last();
+		}
 	}
 	else
 	{
-		NewTargetActor = GetNearestTargetFromAvailableActors(ActorsOnRight);
+		if (ActorsOnRight.IsEmpty())
+		{
+			NewTargetActor = nullptr;
+		}
+		else
+		{
+			SortActorsByLeftRight(GetHeroCharacterFromActorInfo(), ActorsOnRight);
+			NewTargetActor = ActorsOnRight[0];
+		}
 	}
 
 	if (NewTargetActor)
@@ -306,4 +331,26 @@ void UHeroGameplayAbility_TargetLock::ResetTargetLockMappingContext()
 
 		Subsystem->RemoveMappingContext(TargetLockMappingContext);
 	}
+}
+
+void UHeroGameplayAbility_TargetLock::SortActorsByLeftRight(const AActor* ReferenceActor, TArray<AActor*>& TargetActors)
+{
+	if (!IsValid(ReferenceActor) || TargetActors.IsEmpty())
+	{
+		return;
+	}
+
+	const FVector ReferenceLocation = ReferenceActor->GetActorLocation();
+	const FVector ReferenceRight = ReferenceActor->GetActorRightVector();
+
+	TargetActors.Sort([ReferenceLocation, ReferenceRight](const AActor& A, const AActor& B)
+	{
+		const FVector ToA = A.GetActorLocation() - ReferenceLocation;
+		const FVector ToB = B.GetActorLocation() - ReferenceLocation;
+
+		const float DotA = FVector::DotProduct(ToA, ReferenceRight);
+		const float DotB = FVector::DotProduct(ToB, ReferenceRight);
+
+		return DotA < DotB; // 왼쪽부터 정렬
+	});
 }

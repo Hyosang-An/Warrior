@@ -99,6 +99,14 @@ private:
 /**
  * 리얼타임 타이머 서브시스템
  * Engine Tick을 통해 타이머를 업데이트
+ * 
+ * URealTimeTimerSubsystem이 UEngineSubsystem을 상속하고 있어서,
+ * Unreal Engine의 엔진 서브시스템 매니저가 실행 시점에 자동으로:
+ * 1. 클래스를 찾아 NewObject로 인스턴스 생성
+ * 2. Initialize(FSubsystemCollectionBase&) 호출
+ * 
+ * 별도의 모듈 설정이나 DefaultEngine.ini 등록 없이도
+ * 엔진이 부팅될 때 서브시스템으로 자동 등록됩니다.
  */
 UCLASS()
 class WARRIOR_API URealTimeTimerSubsystem : public UEngineSubsystem

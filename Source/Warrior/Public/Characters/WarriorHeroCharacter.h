@@ -74,6 +74,8 @@ private:
 	FVector2D SwitchDirection = FVector2D::ZeroVector;
 	FVector2D SwitchTargetInputAccumulation = FVector2D::ZeroVector;
 
+	void Input_PickUpStonesStarted(const FInputActionValue& InputActionValue);
+
 	void Input_AbilityInputPressed(FGameplayTag InInputTag);
 	void Input_AbilityInputReleased(FGameplayTag InInputTag);
 
