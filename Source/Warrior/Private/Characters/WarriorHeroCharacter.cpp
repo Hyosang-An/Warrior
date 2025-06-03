@@ -17,6 +17,7 @@
 #include "DataAssets/StartUpData/DataAsset_HeroStartUpData.h"
 #include "Components/Combat/HeroCombatComponent.h"
 #include "Components/UI/HeroUIComponent.h"
+#include "GameModes/WarriorBaseGameMode.h"
 #include "Utilities/RealTimeTimer.h"
 
 AWarriorHeroCharacter::AWarriorHeroCharacter()
@@ -73,7 +74,34 @@ void AWarriorHeroCharacter::PossessedBy(AController* NewController)
 	{
 		if (UDataAsset_StartUpDataBase* LoadedData = CharacterStartUpData.LoadSynchronous())
 		{
-			LoadedData->GiveToAbilitySystemComponent(WarriorAbilitySystemComponent);
+			int32 AbilityApplyLevel = 1;
+
+			if (AWarriorBaseGameMode* BaseGameMode = GetWorld()->GetAuthGameMode<AWarriorBaseGameMode>())
+			{
+				switch (BaseGameMode->GetCurrentGameDifficulty())
+				{
+					case EWarriorGameDifficulty::Easy:
+						AbilityApplyLevel = 4;
+						break;
+
+					case EWarriorGameDifficulty::Normal:
+						AbilityApplyLevel = 3;
+						break;
+
+					case EWarriorGameDifficulty::Hard:
+						AbilityApplyLevel = 2;
+						break;
+
+					case EWarriorGameDifficulty::VeryHard:
+						AbilityApplyLevel = 1;
+						break;
+
+					default:
+						break;
+				}
+			}
+
+			LoadedData->GiveToAbilitySystemComponent(WarriorAbilitySystemComponent, AbilityApplyLevel);
 		}
 	}
 }
@@ -174,7 +202,6 @@ void AWarriorHeroCharacter::Input_SwitchTargetCompleted(const FInputActionValue&
 	}
 	//Debug::Print(FString::Printf(TEXT("Target Input Accumulation %f"), InputAccumulationLength));
 
-
 	FGameplayEventData Data;
 
 	UAbilitySystemBlueprintLibrary::SendGameplayEventToActor(this,
@@ -187,7 +214,7 @@ void AWarriorHeroCharacter::Input_SwitchTargetCompleted(const FInputActionValue&
 void AWarriorHeroCharacter::Input_PickUpStonesStarted(const FInputActionValue& InputActionValue)
 {
 	FGameplayEventData Data;
-	
+
 	UAbilitySystemBlueprintLibrary::SendGameplayEventToActor(this, WarriorGameplayTags::Player_Event_ConsumeStones, Data);
 }
 
@@ -241,13 +268,13 @@ void AWarriorHeroCharacter::RestoreCameraOffsetTick(float DeltaTime)
 	if (bShouldRestoreCameraRotationOffset)
 	{
 		const float    CurrentCameraPitch = GetController()->GetControlRotation().Pitch;
-		const FRotator TargetRotator      = FRotator(TargetCameraPitch, GetController()->GetControlRotation().Yaw, GetController()->GetControlRotation().Roll);
-		const FRotator NewRotator         = FMath::RInterpTo(GetController()->GetControlRotation(), TargetRotator, DeltaTime, 5.f);
+		const FRotator TargetRotator = FRotator(TargetCameraPitch, GetController()->GetControlRotation().Yaw, GetController()->GetControlRotation().Roll);
+		const FRotator NewRotator = FMath::RInterpTo(GetController()->GetControlRotation(), TargetRotator, DeltaTime, 5.f);
 
-		GetController()->SetControlRotation(NewRotator);	
+		GetController()->SetControlRotation(NewRotator);
 
 		// 충분히 가까워지면 종료
-		if (FMath::Abs( CurrentCameraPitch - TargetCameraPitch) < 0.2f)
+		if (FMath::Abs(CurrentCameraPitch - TargetCameraPitch) < 0.2f)
 		{
 			GetController()->SetControlRotation(NewRotator);
 			bShouldRestoreCameraRotationOffset = false;
