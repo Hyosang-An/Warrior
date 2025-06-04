@@ -153,7 +153,8 @@ bool UWarriorFunctionLibrary::ApplyGameplayEffectSpecHandleToTargetActor(AActor*
 	return ActiveGameplayEffectHandle.WasSuccessfullyApplied();
 }
 
-void UWarriorFunctionLibrary::CountDown(const UObject* WorldContextObject, float TotalTime, float UpdateInterval, float& OutRemainingTime, EWarriorCountDownActionInput CountDownInput,UPARAM(DisplayName = "Output") EWarriorCountDownActionOutput& CountDownOutput, FLatentActionInfo LatentInfo)
+void UWarriorFunctionLibrary::CountDown(const UObject* WorldContextObject, float          TotalTime, float UpdateInterval, float& OutRemainingTime, EWarriorCountDownActionInput CountDownInput,UPARAM(DisplayName = "Output")
+	EWarriorCountDownActionOutput&                     CountDownOutput, FLatentActionInfo LatentInfo)
 {
 	UWorld* World = nullptr;
 
@@ -199,4 +200,42 @@ UWarriorGameInstance* UWarriorFunctionLibrary::GetWarriorGameInstance(const UObj
 	}
 
 	return nullptr;
+}
+
+void UWarriorFunctionLibrary::ToggleInputMode(const UObject* WorldContextObject, EWarriorInputMode InInputMode)
+{
+	APlayerController* PlayerController = nullptr;
+
+	if (GEngine)
+	{
+		if (UWorld* World = GEngine->GetWorldFromContextObject(WorldContextObject, EGetWorldErrorMode::LogAndReturnNull))
+		{
+			PlayerController = World->GetFirstPlayerController();
+		}
+	}
+
+	if (!PlayerController)
+	{
+		return;
+	}
+
+	FInputModeGameOnly GameOnlyMode;
+	FInputModeUIOnly   UIOnlyMode;
+	//UIOnlyMode.SetLockMouseToViewportBehavior()
+
+	switch (InInputMode)
+	{
+		case EWarriorInputMode::GameOnly:
+			PlayerController->SetInputMode(GameOnlyMode);
+			PlayerController->SetShowMouseCursor(false);
+			break;
+
+		case EWarriorInputMode::UIOnly:
+			PlayerController->SetInputMode(UIOnlyMode);
+			PlayerController->SetShowMouseCursor(true);
+			break;
+
+		default:
+			break;
+	}
 }
