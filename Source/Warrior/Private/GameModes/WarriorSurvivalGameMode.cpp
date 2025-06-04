@@ -174,7 +174,7 @@ int32 AWarriorSurvivalGameMode::TrySpawnWaveEnemies()
 
 			float HalfHeight = LoadedEnemyClass->GetDefaultObject<AWarriorEnemyCharacter>()->GetCapsuleComponent()->GetScaledCapsuleHalfHeight();
 			//Debug::Print(FString::FromInt(HalfHeight));
-			RandomLocation += FVector(0, 0, HalfHeight);
+			RandomLocation += FVector(0, 0, HalfHeight + 10.f); // Adjust the spawn location to be above the ground
 
 			AWarriorEnemyCharacter* SpawnedEnemy = GetWorld()->SpawnActor<AWarriorEnemyCharacter>(LoadedEnemyClass, RandomLocation, SpawnRotation, SpawnParams);
 
