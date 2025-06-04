@@ -63,6 +63,13 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "Warrior|FunctionLibrary", meta = (WorldContext = "WorldContextObject"))
 	static void ToggleInputMode(const UObject* WorldContextObject, EWarriorInputMode InInputMode);
+
+	UFUNCTION(BlueprintCallable, Category = "Warrior|FunctionLibrary")
+	static void SaveCurrentGameDifficulty(EWarriorGameDifficulty InDifficultyToSave);
+
+	UFUNCTION(BlueprintCallable, Category = "Warrior|FunctionLibrary")
+	static bool TryLoadSavedGameDifficulty(EWarriorGameDifficulty& OutSavedDifficulty);
+	
 };
 
 // TODO: Timed Niagara Effects 를 무기 소켓에 적용되도록 구현
